@@ -1,0 +1,36 @@
+@import '@styles/mixins';
+
+.navMenu {
+  @include flex($align: center);
+
+  margin: 0 -12px;
+}
+
+.navLink {
+  @include font($size: 16px, $family: var(--font-secondary));
+
+  color: var(--color-white);
+  margin: 0 12px;
+  position: relative;
+
+  &::after {
+    background: var(--color-white);
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition: 0.3s;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::after {
+      display: block;
+      transition: 0.3s;
+      transform: translate(0, -6px);
+      opacity: 1;
+    }
+  }
+}

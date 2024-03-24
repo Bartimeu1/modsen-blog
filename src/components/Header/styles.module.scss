@@ -1,0 +1,38 @@
+@import '@styles/mixins';
+
+.header {
+  background: var(--color-darkblue);
+  padding: 10px 0;
+}
+
+.headerContainer {
+  @include flex($align: center, $justify: space-between);
+}
+
+.headerControls {
+  @include flex($align: center);
+}
+
+.headerTitle {
+  @include font($size: 24px, $weight: bold, $family: var(--font-secondary));
+
+  color: var(--color-white);
+}
+
+.videoButton {
+  @include font($size: 18px, $weight: bold);
+
+  color: var(--color-darkblue);
+  background: var(--color-white);
+  border: 1px solid var(--color-darkblue);
+  padding: 16px 48px;
+  margin-left: 32px;
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    background: inherit;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+  }
+}
