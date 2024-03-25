@@ -14,13 +14,17 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+  params: { locale: string };
+}
+
+export default async function RootLayout({
+  children,
+  params: { locale },
+}: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`${fontSen.variable} ${fontInter.variable}`}>
         <Header />
         {children}
