@@ -1,0 +1,39 @@
+@import '@styles/mixins';
+
+.story {
+  @include flex($justify: flex-end, $align: flex-end);
+
+  margin-bottom: 128px;
+  padding-top: 120px;
+  position: relative;
+
+  &::before {
+    @include bgImage($image: '../assets/images/storyBg.jpg');
+    z-index: 1;
+    position: absolute;
+    width: 73%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: '';
+  }
+}
+
+.storyContent {
+  background: var(--color-white);
+  padding: 80px;
+  max-width: 550px;
+  z-index: 2;
+
+  & button {
+    margin-top: 32px;
+  }
+}
+
+.storyTitle {
+  @include font($size: 48px, $weight: 700, $line: 64px);
+
+  letter-spacing: -2px;
+  max-width: 550px;
+  margin-bottom: 16px;
+}
