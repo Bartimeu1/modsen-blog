@@ -1,0 +1,9 @@
+.social {
+  @include flex();
+
+  margin: 0 -8px;
+}
+
+.socialLink {
+  margin: 0 8px;
+}

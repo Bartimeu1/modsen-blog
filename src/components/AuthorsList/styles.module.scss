@@ -1,0 +1,43 @@
+.authors {
+  margin-bottom: 96px;
+
+  & h2 {
+    text-align: center;
+  }
+}
+
+.authorsList {
+  @include flex($align: center, $justify: space-between);
+}
+
+.authorItem {
+  @include flex($align: center, $justify: center, $direction: column);
+
+  width: 100%;
+  max-width: 296px;
+  background: var(--color-light-grey);
+  padding: 40px 0;
+  transition: 0.3s;
+
+  &:hover {
+    background: var(--color-light-yellow);
+    transition: 0.3s;
+  }
+
+  & img {
+    border-radius: 100%;
+  }
+
+  & h4 {
+    @include font($size: 28px, $weight: 700);
+
+    letter-spacing: -1px;
+    margin-top: 20px;
+  }
+
+  & p {
+    @include font($size: 14px, $family: var(--font-secondary));
+
+    margin-bottom: 20px;
+  }
+}
