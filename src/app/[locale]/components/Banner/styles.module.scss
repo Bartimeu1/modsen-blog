@@ -1,0 +1,50 @@
+@import '@styles/mixins';
+
+.banner {
+  width: 100%;
+  padding: 128px 0 192px 0;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url('../../../../assets/images/homeBanner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--color-white);
+  margin-bottom: 128px;
+}
+
+.bannerMeta {
+  @include font($size: 16px, $family: var(--font-secondary));
+
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+
+  & span {
+    font-weight: 800;
+  }
+}
+
+.bannerTitle {
+  @include font($size: 56px, $weight: bold, $line: 64px);
+
+  max-width: 800px;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.bannerAuthor {
+  @include font($size: 16px, $family: var(--font-secondary));
+
+  margin-bottom: 16px;
+
+  & span {
+    color: var(--color-yellow);
+  }
+}
+
+.bannerText {
+  @include font($size: 16px, $line: 28px, $family: var(--font-secondary));
+
+  max-width: 600px;
+  margin-bottom: 48px;
+}
