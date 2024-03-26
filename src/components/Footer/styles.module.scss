@@ -1,0 +1,75 @@
+.footer {
+  background: var(--color-darkblue);
+  padding: 59px 0 56px 0;
+}
+
+.footerTopper {
+  @include flex($align: center, $justify: space-between);
+
+  margin-bottom: 48px;
+}
+
+.topperLink {
+  @include font($size: 24px, $weight: bold, $family: var(--font-secondary));
+
+  color: var(--color-white);
+}
+
+.subscribe {
+  @include flex($justify: space-between, $align: flex-start);
+
+  background: var(--color-footer-subscribe);
+  padding: 80px 64px;
+  margin-bottom: 48px;
+}
+
+.subscribeTitle {
+  @include font($line: 48px, $weight: bold, $size: 36px);
+
+  letter-spacing: -2px;
+  color: var(--color-white);
+}
+
+.subscribeControls {
+  @include flex($align: center);
+}
+
+.subscribeInput {
+  @include font($family: var(--font-secondary), $size: 16px, $line: 28px);
+
+  border: 1px solid var(--color-dark-grey);
+  padding: 14px 0 14px 25px;
+  background: inherit;
+  margin-right: 24px;
+  color: var(--color-white);
+  min-width: 323px;
+
+  &::placeholder {
+    color: var(--color-grey);
+  }
+}
+
+.footerBottomer {
+  @include flex($align: center, $justify: space-between);
+
+  & a {
+    & path {
+      transition: 0.2s;
+      fill: var(--color-grey);
+    }
+
+    &:hover {
+      & path {
+        transition: 0.2s;
+        fill: var(--color-white);
+      }
+    }
+  }
+}
+
+.bottomerText {
+  @include font($family: var(--font-secondary), $size: 16px, $line: 28px);
+
+  color: var(--color-white);
+  opacity: 70%;
+}
