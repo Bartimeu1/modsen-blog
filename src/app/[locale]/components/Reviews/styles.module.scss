@@ -1,0 +1,37 @@
+.reviews {
+  @include flex($justify: space-between, $align: center);
+
+  background: var(--color-light-yellow);
+  padding: 38px 112px 80px 112px;
+  margin-bottom: 125px;
+}
+
+.reviewsInfo {
+  color: var(--color-darkblue);
+  max-width: 350px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: var(--color-grey);
+    opacity: 40%;
+    content: '';
+  }
+}
+
+.reviewsText {
+  color: var(--color-darkblue);
+  margin-top: 16px;
+}
+
+.reviewsSubtitle {
+  margin-bottom: 12px;
+}
+
+.reviewsTitle {
+  margin-bottom: 16px;
+}
