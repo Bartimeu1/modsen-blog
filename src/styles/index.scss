@@ -8,3 +8,23 @@
   width: 100%;
   margin: 0 auto;
 }
+
+.title {
+  @include font($size: 36px, $weight: bold);
+
+  margin-bottom: 32px;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  @include font($size: 16px, $weight: 600, $family: var(--font-secondary));
+
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.infoText {
+  @include font($size: 16px, $line: 28px, $family: var(--font-secondary));
+
+  color: var(--color-grey);
+}
