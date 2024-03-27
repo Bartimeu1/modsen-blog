@@ -31,7 +31,11 @@
 }
 
 .storyTitle {
-  @include font($size: 48px, $weight: 700, $line: 64px);
+  @include font(
+    $size: var(--font-size-xl),
+    $weight: var(--font-weight-bold),
+    $line: 64px
+  );
 
   letter-spacing: -2px;
   max-width: 550px;

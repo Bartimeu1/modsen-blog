@@ -17,7 +17,11 @@
 }
 
 .slideText {
-  @include font($size: 24px, $weight: bold, $line: 32px);
+  @include font(
+    $size: var(--font-size-sm),
+    $weight: var(--font-weight-bold),
+    $line: 32px
+  );
 
   max-width: 470px;
 }

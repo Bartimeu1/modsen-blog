@@ -7,7 +7,7 @@
 }
 
 .navLink {
-  @include font($size: 16px, $family: var(--font-secondary));
+  @include font($size: var(--font-size-xs3), $family: var(--font-secondary));
 
   color: var(--color-white);
   margin: 0 12px;

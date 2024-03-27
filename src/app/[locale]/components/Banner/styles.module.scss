@@ -4,7 +4,11 @@
   width: 100%;
   padding: 128px 0 192px 0;
   position: relative;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(
+      to bottom,
+      var(--color-banner-shadow),
+      var(--color-banner-shadow)
+    ),
     url('../../../../assets/images/homeBanner.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -14,18 +18,22 @@
 }
 
 .bannerMeta {
-  @include font($size: 16px, $family: var(--font-secondary));
+  @include font($size: var(--font-size-xs3), $family: var(--font-secondary));
 
   letter-spacing: 3px;
   margin-bottom: 24px;
 
   & span {
-    font-weight: 800;
+    font-weight: var(--font-weight-extraBold);
   }
 }
 
 .bannerTitle {
-  @include font($size: 56px, $weight: bold, $line: 64px);
+  @include font(
+    $size: var(--font-size-xl2),
+    $weight: var(--font-weight-bold),
+    $line: 64px
+  );
 
   max-width: 800px;
   letter-spacing: -2px;
@@ -33,7 +41,7 @@
 }
 
 .bannerAuthor {
-  @include font($size: 16px, $family: var(--font-secondary));
+  @include font($size: var(--font-size-xs3), $family: var(--font-secondary));
 
   margin-bottom: 16px;
 
@@ -43,7 +51,11 @@
 }
 
 .bannerText {
-  @include font($size: 16px, $line: 28px, $family: var(--font-secondary));
+  @include font(
+    $size: var(--font-size-xs3),
+    $line: 28px,
+    $family: var(--font-secondary)
+  );
 
   max-width: 600px;
   margin-bottom: 48px;

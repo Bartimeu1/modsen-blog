@@ -14,13 +14,17 @@
 }
 
 .headerTitle {
-  @include font($size: 24px, $weight: bold, $family: var(--font-secondary));
+  @include font(
+    $size: var(--font-size-sm),
+    $weight: var(--font-weight-bold),
+    $family: var(--font-secondary)
+  );
 
   color: var(--color-white);
 }
 
 .videoButton {
-  @include font($size: 18px, $weight: bold);
+  @include font($size: var(--font-size-xs2), $weight: var(--font-weight-bold));
 
   color: var(--color-darkblue);
   background: var(--color-white);

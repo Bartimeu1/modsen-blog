@@ -35,7 +35,7 @@
 }
 
 .categoryTitle {
-  @include font($size: 28px, $weight: 700);
+  @include font($size: var(--font-size-md), $weight: var(--font-weight-bold));
 
   letter-spacing: -1px;
   color: var(--color-darkblue);

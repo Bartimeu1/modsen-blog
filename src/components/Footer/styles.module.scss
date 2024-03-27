@@ -10,7 +10,11 @@
 }
 
 .topperLink {
-  @include font($size: 24px, $weight: bold, $family: var(--font-secondary));
+  @include font(
+    $size: var(--font-size-sm),
+    $weight: var(--font-weight-bold),
+    $family: var(--font-secondary)
+  );
 
   color: var(--color-white);
 }
@@ -24,7 +28,11 @@
 }
 
 .subscribeTitle {
-  @include font($line: 48px, $weight: bold, $size: 36px);
+  @include font(
+    $line: 48px,
+    $weight: var(--font-weight-bold),
+    $size: var(--font-size-lg)
+  );
 
   letter-spacing: -2px;
   color: var(--color-white);
@@ -35,7 +43,11 @@
 }
 
 .subscribeInput {
-  @include font($family: var(--font-secondary), $size: 16px, $line: 28px);
+  @include font(
+    $family: var(--font-secondary),
+    $size: var(--font-size-xs3),
+    $line: 28px
+  );
 
   border: 1px solid var(--color-dark-grey);
   padding: 14px 0 14px 25px;
@@ -68,7 +80,11 @@
 }
 
 .bottomerText {
-  @include font($family: var(--font-secondary), $size: 16px, $line: 28px);
+  @include font(
+    $family: var(--font-secondary),
+    $size: var(--font-size-xs3),
+    $line: 28px
+  );
 
   color: var(--color-white);
   opacity: 70%;

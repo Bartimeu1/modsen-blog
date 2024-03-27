@@ -10,21 +10,29 @@
 }
 
 .title {
-  @include font($size: 36px, $weight: bold);
+  @include font($size: var(--font-size-lg), $weight: var(--font-weight-bold));
 
   margin-bottom: 32px;
   letter-spacing: -2px;
 }
 
 .subtitle {
-  @include font($size: 16px, $weight: 600, $family: var(--font-secondary));
+  @include font(
+    $size: var(--font-size-xs3),
+    $weight: var(--font-weight-bold),
+    $family: var(--font-secondary)
+  );
 
   letter-spacing: 3px;
   margin-bottom: 24px;
 }
 
 .infoText {
-  @include font($size: 16px, $line: 28px, $family: var(--font-secondary));
+  @include font(
+    $size: var(--font-size-xs3),
+    $line: 28px,
+    $family: var(--font-secondary)
+  );
 
   color: var(--color-grey);
 }
