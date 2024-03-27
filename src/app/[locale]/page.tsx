@@ -1,6 +1,5 @@
 import { AuthorsList } from '@components/AuthorsList';
 import { CategoryList } from '@components/CategotyList';
-import { Footer } from '@components/Footer';
 
 // import { useTranslations } from 'next-intl';
 import {
@@ -30,7 +29,6 @@ const HomePage = () => {
         <Reviews />
         <JoinUs />
       </div>
-      <Footer />
     </main>
   );
 };
