@@ -1,0 +1,38 @@
+@import '_normallize';
+@import '_globals';
+@import '_mixins';
+
+.container {
+  max-width: 1300px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  @include font($size: var(--font-size-lg), $weight: var(--font-weight-bold));
+
+  margin-bottom: 32px;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  @include font(
+    $size: var(--font-size-xs3),
+    $weight: var(--font-weight-bold),
+    $family: var(--font-secondary)
+  );
+
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.infoText {
+  @include font(
+    $size: var(--font-size-xs3),
+    $line: 28px,
+    $family: var(--font-secondary)
+  );
+
+  color: var(--color-grey);
+}

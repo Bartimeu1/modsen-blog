@@ -1,0 +1,43 @@
+@import '@styles/mixins';
+
+.listWrapper {
+  @include flex($direction: column, $align: center);
+}
+
+.categoryList {
+  @include flex($justify: space-between, $align: center);
+
+  margin: 0 -16px 128px -16px;
+}
+
+.categoryItem {
+  padding: 32px;
+  margin: 0 16px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: var(--color-yellow);
+    transition: 0.3s;
+    border: 1px solid var(--color-yellow);
+  }
+}
+
+.IconWrapper {
+  @include flex($align: center, $justify: center);
+
+  margin-bottom: 16px;
+  border-radius: var(--border-radius-md);
+  width: 48px;
+  height: 48px;
+  background: var(--color-light-yellow);
+}
+
+.categoryTitle {
+  @include font($size: var(--font-size-md), $weight: var(--font-weight-bold));
+
+  letter-spacing: -1px;
+  color: var(--color-darkblue);
+  margin-bottom: 4px;
+}
