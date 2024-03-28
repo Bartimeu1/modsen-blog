@@ -1,16 +1,9 @@
 import { AuthorsList } from '@components/AuthorsList';
-import { CategoryList } from '@components/CategotyList';
+import { CategoryList } from '@components/CategoryList';
+import { JoinUs } from '@components/JoinUs';
 
 // import { useTranslations } from 'next-intl';
-import {
-  About,
-  Banner,
-  JoinUs,
-  Logos,
-  Posts,
-  Reviews,
-  Story,
-} from './components';
+import { About, Banner, Logos, Posts, Reviews, Story } from './components';
 import { authors } from './config';
 
 const HomePage = () => {

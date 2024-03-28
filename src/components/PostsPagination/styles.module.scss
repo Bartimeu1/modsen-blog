@@ -1,0 +1,36 @@
+.pagination {
+  margin-bottom: 67px;
+
+  & > article {
+    margin-bottom: 64px;
+  }
+}
+
+.controls {
+  @include flex($align: center, $justify: center);
+
+  & button {
+    background: inherit;
+  }
+}
+
+.prevButton {
+  @include font(
+    $size: var(--font-size-sm),
+    $line: 32px,
+    $weight: var(--font-weight-bold)
+  );
+
+  color: var(--color-grey);
+  margin-right: 17px;
+}
+
+.nextButton {
+  @include font(
+    $size: var(--font-size-md),
+    $line: 40px,
+    $weight: var(--font-weight-bold)
+  );
+
+  letter-spacing: -1px;
+}

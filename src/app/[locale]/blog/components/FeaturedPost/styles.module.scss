@@ -1,0 +1,56 @@
+.featuredPost {
+  background: var(--color-light-purple);
+  padding: 80px 0;
+  margin-bottom: 64px;
+}
+
+.postContainer {
+  @include flex($align: center, $justify: space-between);
+}
+
+.postContent {
+  @include flex($direction: column, $align: flex-start);
+
+  max-width: 630px;
+}
+
+.postSubtitle {
+  @include font(
+    $size: var(--font-size-xs3),
+    $weight: var(--font-weight-medium),
+    $family: var(--font-secondary),
+    $line: 20px
+  );
+
+  margin-bottom: 20px;
+  color: var(--color-darkblue);
+  letter-spacing: 3px;
+}
+
+.postTitle {
+  @include font(
+    $size: var(--font-size-lg),
+    $line: 48px,
+    $weight: var(--font-weight-bold)
+  );
+
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+  color: var(--color-darkblue);
+}
+
+.postInfo {
+  @include font(
+    $size: var(--font-size-xs3),
+    $line: 28px,
+    $family: var(--font-secondary),
+    $weight: var(--font-weight-medium)
+  );
+
+  margin-bottom: 16px;
+  color: var(--color-dark-grey);
+}
+
+.postText {
+  margin-bottom: 32px;
+}
