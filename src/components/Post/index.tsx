@@ -1,16 +1,21 @@
 import React from 'react';
 
+import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from './styles.module.scss';
 import { IPostProps } from './types';
 
 export const Post = (props: IPostProps) => {
-  const { type, title, author, date, text, image } = props;
+  const { id, type, title, author, date, text, image } = props;
 
   return (
-    <article className={classNames(styles.post, styles[`post--${type}`])}>
+    <Link
+      href={`${routes.post}/${id}`}
+      className={classNames(styles.post, styles[`post--${type}`])}
+    >
       {image && (
         <Image
           className={styles.postImage}
@@ -23,10 +28,10 @@ export const Post = (props: IPostProps) => {
         />
       )}
       <p className={styles.postInfo}>
-        By {author} | {date}
+        By {author.name} | {date}
       </p>
       <h4 className={styles.postTitle}>{title}</h4>
       {text && <p className="infoText">{text}</p>}
-    </article>
+    </Link>
   );
 };
