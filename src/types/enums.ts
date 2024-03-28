@@ -10,3 +10,10 @@ export enum NetworksEnum {
   twitter = 'twitter',
   facebook = 'facebook',
 }
+
+export enum CategoriesEnum {
+  business = 'business',
+  economy = 'economy',
+  startup = 'startup',
+  technology = 'technology',
+}
