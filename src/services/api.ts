@@ -25,3 +25,13 @@ export const getLimitedPosts = async (
 
   return posts;
 };
+
+export const getPostById = async (id: number): Promise<IPostData> => {
+  const response = await fetch(`${process.env.BASE_URL}/posts?id=${id}`, {
+    cache: 'force-cache',
+  });
+
+  const post = await response.json();
+
+  return post[0];
+};
