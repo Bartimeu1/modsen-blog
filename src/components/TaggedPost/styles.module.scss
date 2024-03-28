@@ -1,0 +1,32 @@
+.tagPost {
+  @include flex($align: center);
+
+  & img {
+    width: 100%;
+    max-width: 490px;
+    height: auto;
+  }
+}
+
+.postContent {
+  @include flex($direction: column, $align: flex-start);
+
+  margin-left: 32px;
+}
+
+.postTag {
+  color: var(--color-purple);
+  margin-bottom: 20px;
+}
+
+.postTitle {
+  @include font(
+    $size: var(--font-size-lg),
+    $line: 48px,
+    $weight: var(--font-weight-bold)
+  );
+
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+  color: var(--color-darkblue);
+}

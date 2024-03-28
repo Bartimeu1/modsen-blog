@@ -11,6 +11,17 @@ const nextConfig = {
     includePaths: [join(__dirname, 'styles')],
     additionalData: '@import "./src/styles/_mixins.scss";',
   },
+  env: {
+    BASE_URL: process.env.BASE_URL,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/i,
