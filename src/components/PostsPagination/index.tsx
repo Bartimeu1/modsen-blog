@@ -30,8 +30,6 @@ export const PostsPagination = (props: IPostsPaginationProps) => {
     }
   };
 
-  console.log(currentSlidePosts);
-
   return (
     <div className={styles.pagination}>
       {currentSlidePosts.map(({ id, title, text, image, category }) => (
