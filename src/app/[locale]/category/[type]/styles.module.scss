@@ -2,6 +2,7 @@
   @include flex($align: center, $direction: column);
   background: var(--color-light-purple);
   padding: 80px 0;
+  margin-bottom: 100px;
 
   & h1 {
     @include font(
@@ -47,6 +48,10 @@
     position: relative;
     transition: 0.3s;
 
+    &.active {
+      display: none;
+    }
+
     &:first-child {
       margin-right: 5px;
     }
@@ -55,5 +60,117 @@
       color: var(--color-yellow);
       transition: 0.3s;
     }
+  }
+}
+
+.postsFilter {
+  @include flex($justify: space-between);
+  margin-bottom: 100px;
+}
+
+.posts {
+  & a {
+    max-width: 840px;
+    margin-bottom: 32px;
+  }
+}
+
+.filterAside {
+  @include flex($direction: column);
+
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 48px;
+
+  & h2 {
+    @include font(
+      $size: var(--font-size-lg),
+      $weight: var(--font-weight-bold),
+      $line: 40px
+    );
+
+    margin-bottom: 40px;
+    letter-spacing: -2px;
+  }
+}
+
+.categoryItem {
+  @include flex($align: center);
+
+  width: 100%;
+  padding: 24px 0 24px 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid var(--color-border);
+  margin-bottom: 24px;
+
+  &.active {
+    background: var(--color-yellow);
+  }
+
+  &:hover {
+    background: var(--color-yellow);
+    transition: 0.3s;
+    border: 1px solid var(--color-yellow);
+  }
+
+  &::last-child {
+    margin-bottom: 0;
+  }
+
+  & p {
+    @include font(
+      $family: var(--font-secondary),
+      $size: var(--font-size-md),
+      $weight: var(--font-weight-bold),
+      $line: 40px
+    );
+
+    letter-spacing: -1px;
+    color: var(--color-darkblue);
+  }
+}
+
+.iconWrapper {
+  @include flex($align: center, $justify: center);
+
+  margin-right: 16px;
+  border-radius: var(--border-radius-md);
+  width: 48px;
+  height: 48px;
+  background: var(--color-light-yellow);
+}
+
+.tagsControls {
+  width: 100%;
+}
+
+.tagsList {
+  @include flex($justify: space-between, $wrap: wrap);
+}
+
+.tagButton {
+  @include font(
+    $weight: var(--font-weight-bold),
+    $size: var(--font-size-xs4),
+    $line: 32px
+  );
+
+  margin-bottom: 16px;
+  background: inherit;
+  border: 2px solid var(--color-grey);
+  border-radius: var(--border-radius-lg);
+  padding: 8px 38px;
+  max-width: max-content;
+  transition: 0.3s;
+
+  &.active {
+    background: var(--color-yellow);
+    color: var(--color-white);
+  }
+
+  &:hover {
+    background: var(--color-yellow);
+    transition: 0.3s;
   }
 }

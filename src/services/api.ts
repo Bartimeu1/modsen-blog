@@ -2,7 +2,7 @@ import { IPostData } from '@root/types/api';
 
 export const getAllPosts = async (): Promise<IPostData[]> => {
   const response = await fetch(`${process.env.BASE_URL}/posts`, {
-    cache: 'force-cache',
+    cache: 'no-store',
   });
 
   const posts = await response.json();
@@ -16,9 +16,6 @@ export const getLimitedPosts = async (
 ): Promise<IPostData[]> => {
   const response = await fetch(
     `${process.env.BASE_URL}/posts?_start=${start}&_limit=${limit}`,
-    {
-      cache: 'force-cache',
-    },
   );
 
   const posts = await response.json();
@@ -27,11 +24,29 @@ export const getLimitedPosts = async (
 };
 
 export const getPostById = async (id: number): Promise<IPostData> => {
-  const response = await fetch(`${process.env.BASE_URL}/posts?id=${id}`, {
-    cache: 'force-cache',
-  });
+  const response = await fetch(`${process.env.BASE_URL}/posts?id=${id}`);
 
   const post = await response.json();
 
   return post[0];
+};
+
+export const getPostsByCategory = async (
+  category: string,
+  tags: string[] = ['experience'],
+) => {
+  let queryString = `${process.env.BASE_URL}/posts?category=${category}`;
+
+  if (tags.length > 0) {
+    const tagsString = tags.join(',');
+    queryString += `&tags_like=${tagsString}`;
+  }
+
+  const response = await fetch(queryString, {
+    cache: 'force-cache',
+  });
+
+  const posts = await response.json();
+
+  return posts;
 };
