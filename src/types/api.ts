@@ -8,8 +8,14 @@ export interface IPostData {
     city: string;
     avatar: string;
   };
-  tag: keyof typeof CategoriesEnum;
+  category: keyof typeof CategoriesEnum;
+  tags: string[];
   image: string;
   createdDate: string;
   text: string;
+}
+export interface ITagItem {
+  id: number;
+  title: string;
+  value: string;
 }

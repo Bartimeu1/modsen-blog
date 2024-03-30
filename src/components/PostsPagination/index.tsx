@@ -30,15 +30,18 @@ export const PostsPagination = (props: IPostsPaginationProps) => {
     }
   };
 
+  console.log(currentSlidePosts);
+
   return (
     <div className={styles.pagination}>
-      {currentSlidePosts.map(({ id, title, text, image, tag }) => (
+      {currentSlidePosts.map(({ id, title, text, image, category }) => (
         <TaggedPost
+          id={id}
           key={id}
           title={title}
           text={text}
           image={image}
-          tag={tag}
+          category={category}
         />
       ))}
       <div className={styles.controls}>

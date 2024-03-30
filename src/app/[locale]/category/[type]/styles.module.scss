@@ -1,0 +1,95 @@
+.banner {
+  @include flex($align: center, $direction: column);
+  background: var(--color-light-purple);
+  padding: 80px 0;
+  margin-bottom: 100px;
+
+  & h1 {
+    @include font(
+      $size: var(--font-size-xl2),
+      $line: 64px,
+      $weight: var(--font-weight-bold)
+    );
+
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+  }
+
+  & p {
+    max-width: 515px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+
+.bannerLinks {
+  @include flex($align: center);
+}
+
+.bannerSubtitle {
+  @include font(
+    $size: var(--font-size-xl2),
+    $line: 64px,
+    $weight: var(--font-weight-bold)
+  );
+}
+
+.bannerLinks {
+  a {
+    @include font(
+      $family: var(--font-secondary),
+      $size: var(--font-size-xs3),
+      $weight: var(--font-weight-semiBold),
+      $line: 20px
+    );
+
+    color: var(--color-darkblue);
+    letter-spacing: 3px;
+    position: relative;
+    transition: 0.3s;
+
+    &.active {
+      display: none;
+    }
+
+    &:first-child {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      color: var(--color-yellow);
+      transition: 0.3s;
+    }
+  }
+}
+
+.postsFilter {
+  @include flex($justify: space-between);
+  margin-bottom: 100px;
+}
+
+.posts {
+  & a {
+    max-width: 840px;
+    margin-bottom: 32px;
+  }
+}
+
+.filterAside {
+  @include flex($direction: column);
+
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 48px;
+
+  & h2 {
+    @include font(
+      $size: var(--font-size-lg),
+      $weight: var(--font-weight-bold),
+      $line: 40px
+    );
+
+    margin-bottom: 40px;
+    letter-spacing: -2px;
+  }
+}

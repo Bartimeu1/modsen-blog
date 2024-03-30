@@ -1,4 +1,5 @@
-import { categoryItems } from './config';
+import { categoryItems } from '@root/constants';
+
 import styles from './styles.module.scss';
 
 export const CategoryList = () => {

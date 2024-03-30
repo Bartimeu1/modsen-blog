@@ -1,14 +1,16 @@
+import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from './styles.module.scss';
 import { ITaggedPostProps } from './types';
 
 export const TaggedPost = (props: ITaggedPostProps) => {
-  const { title, text, image, tag } = props;
+  const { id, title, text, image, category } = props;
 
   return (
-    <article className={styles.tagPost}>
+    <Link href={`${routes.post}/${id}`} className={styles.tagPost}>
       <Image
         src={image}
         alt="tag-post-image"
@@ -19,11 +21,11 @@ export const TaggedPost = (props: ITaggedPostProps) => {
       />
       <div className={styles.postContent}>
         <p className={classNames('subtitle', styles.postTag)}>
-          {tag.toUpperCase()}
+          {category.toUpperCase()}
         </p>
         <h2 className={styles.postTitle}>{title}</h2>
         <p className="infoText">{text}</p>
       </div>
-    </article>
+    </Link>
   );
 };

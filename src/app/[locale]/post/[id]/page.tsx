@@ -16,7 +16,6 @@ const PostPage = async (props: IPostPageProps) => {
   const postId = Number(params.id);
   const postData = await getPostById(postId);
   const recommendedPosts = await getLimitedPosts(3, 1);
-  console.log(postData);
 
   const { title, tag, image, text, author } = postData;
   const { avatar, name, city } = author;
