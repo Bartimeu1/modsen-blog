@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { TaggedPost } from '@components/TaggedPost';
 import { categoryItems, routes, tagItems } from '@root/constants';
@@ -9,27 +9,50 @@ import { getPostsByCategory } from '@services/api';
 import classNames from 'classnames';
 import Link from 'next/link';
 
+import { TagSearch } from './components';
 import styles from './styles.module.scss';
 import { ICategoryPageProps } from './type';
 
 const CategoryPage = (props: ICategoryPageProps) => {
   const { params } = props;
 
-  const [currentPosts, setCurrentPosts] = useState<IPostData[]>();
-  const [currentTags, setCurrentTags] = useState<string[]>([]);
-
   const targetCategory = params.type;
 
-  getPostsByCategory(targetCategory, currentTags).then((data) =>
-    setCurrentPosts(data),
-  );
+  const [currentPosts, setCurrentPosts] = useState<IPostData[]>();
+  const [targetTags, setTargetTags] = useState<string[]>([]);
+  const [searchInputValue, setSearchInputValue] = useState('');
+
+  useEffect(() => {
+    getPostsByCategory(targetCategory, targetTags).then((data) =>
+      setCurrentPosts(data),
+    );
+  }, [targetTags, targetCategory]);
 
   const onTagButtonClick = (value: string) => () => {
-    setCurrentTags((prevState) =>
-      prevState.includes(value)
+    setTargetTags((prevState) => {
+      const isTagIncluded = prevState.includes(value);
+      const inputValue = searchInputValue.toLowerCase();
+
+      const updatedTags = isTagIncluded
         ? prevState.filter((tag) => tag !== value)
-        : [...prevState, value],
-    );
+        : [...prevState, value];
+
+      if (isTagIncluded && inputValue === value) {
+        setSearchInputValue('');
+      }
+
+      return updatedTags;
+    });
+  };
+
+  const onSearchInputChange = (value: string) => {
+    setSearchInputValue(value);
+  };
+
+  const onSearchButtonClick = () => {
+    const inputValue = searchInputValue.toLowerCase();
+
+    setTargetTags([inputValue]);
   };
 
   return (
@@ -63,6 +86,12 @@ const CategoryPage = (props: ICategoryPageProps) => {
               ))}
           </div>
           <aside className={styles.filterAside}>
+            <TagSearch
+              tags={tagItems}
+              value={searchInputValue}
+              onChange={onSearchInputChange}
+              onSearch={onSearchButtonClick}
+            />
             <div className={styles.categoryControls}>
               <h2>Categories</h2>
               {categoryItems.map(({ id, value, title, icon }) => (
@@ -86,7 +115,7 @@ const CategoryPage = (props: ICategoryPageProps) => {
                     key={id}
                     onClick={onTagButtonClick(value)}
                     className={classNames(styles.tagButton, {
-                      [styles.active]: currentTags.includes(value),
+                      [styles.active]: targetTags.includes(value),
                     })}
                   >
                     {title}

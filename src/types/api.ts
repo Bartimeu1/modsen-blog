@@ -14,3 +14,8 @@ export interface IPostData {
   createdDate: string;
   text: string;
 }
+export interface ITagItem {
+  id: number;
+  title: string;
+  value: string;
+}
