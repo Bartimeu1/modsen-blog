@@ -1,0 +1,56 @@
+.banner {
+  background: var(--color-light-purple);
+  padding: 130px 0 128px 0;
+  margin-bottom: 128px;
+
+  & img {
+    width: auto;
+    height: 100%;
+    max-height: 250px;
+    margin-right: 32px;
+  }
+}
+
+.bannerContainer {
+  @include flex($align: center);
+
+  max-width: 1024px;
+  position: relative;
+
+  & h2 {
+    @include font(
+      $size: var(--font-size-xl),
+      $weight: var(--font-weight-bold),
+      $line: 64px
+    );
+
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+  }
+
+  & p {
+    margin-bottom: 24px;
+  }
+
+  &::after {
+    height: 23px;
+    width: 100%;
+    content: '';
+    position: absolute;
+    bottom: -128px;
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--color-yellow) 0%,
+      var(--color-yellow) 70%,
+      var(--color-purple) 70%,
+      var(--color-purple) 100%
+    );
+  }
+}
+
+.posts {
+  margin-bottom: 128px;
+  max-width: 1024px;
+  margin: 0 auto 128px auto;
+}

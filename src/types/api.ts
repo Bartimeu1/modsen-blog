@@ -1,4 +1,5 @@
 import { CategoriesEnum } from './enums';
+import { IAuthorLink } from './common';
 
 export interface IPostData {
   id: number;
@@ -14,8 +15,17 @@ export interface IPostData {
   createdDate: string;
   text: string;
 }
+
 export interface ITagItem {
   id: number;
   title: string;
   value: string;
+}
+
+export interface IAuthorData {
+  id: number;
+  name: string;
+  city: string;
+  avatar: string;
+  links: IAuthorLink[];
 }
