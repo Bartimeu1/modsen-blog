@@ -3,15 +3,14 @@
 import { useEffect, useState } from 'react';
 
 import { TaggedPost } from '@components/TaggedPost';
-import { categoryItems, routes, tagItems } from '@root/constants';
+import { routes, tagItems } from '@root/constants';
 import { IPostData } from '@root/types/api';
 import { getPostsByCategory } from '@services/api';
-import classNames from 'classnames';
 import Link from 'next/link';
 
-import { TagSearch } from './components';
+import { CategoryControls, TagsControls, TagSearch } from './components';
 import styles from './styles.module.scss';
-import { ICategoryPageProps } from './type';
+import { ICategoryPageProps } from './types';
 
 const CategoryPage = (props: ICategoryPageProps) => {
   const { params } = props;
@@ -92,37 +91,11 @@ const CategoryPage = (props: ICategoryPageProps) => {
               onChange={onSearchInputChange}
               onSearch={onSearchButtonClick}
             />
-            <div className={styles.categoryControls}>
-              <h2>Categories</h2>
-              {categoryItems.map(({ id, value, title, icon }) => (
-                <Link
-                  key={id}
-                  className={classNames(styles.categoryItem, {
-                    [styles.active]: value === targetCategory,
-                  })}
-                  href={`${routes.category}/${value}`}
-                >
-                  <div className={styles.iconWrapper}>{icon}</div>
-                  <p>{title}</p>
-                </Link>
-              ))}
-            </div>
-            <div className={styles.tagsControls}>
-              <h2>All Tags</h2>
-              <div className={styles.tagsList}>
-                {tagItems.map(({ id, value, title }) => (
-                  <button
-                    key={id}
-                    onClick={onTagButtonClick(value)}
-                    className={classNames(styles.tagButton, {
-                      [styles.active]: targetTags.includes(value),
-                    })}
-                  >
-                    {title}
-                  </button>
-                ))}
-              </div>
-            </div>
+            <CategoryControls targetCategory={targetCategory} />
+            <TagsControls
+              onTagButtonClick={onTagButtonClick}
+              targetTags={targetTags}
+            />
           </aside>
         </section>
       </div>
