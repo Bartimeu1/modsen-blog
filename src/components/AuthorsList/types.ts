@@ -1,11 +1,5 @@
-import { IAuthorLink } from '@root/types/common';
+import { IAuthorData } from '@root/types/api';
 
 export interface IAuthorsListProps {
-  authors: {
-    id: number;
-    name: string;
-    desc: string;
-    image: string;
-    links: IAuthorLink[];
-  }[];
+  authors: IAuthorData[];
 }

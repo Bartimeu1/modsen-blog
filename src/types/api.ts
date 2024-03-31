@@ -27,5 +27,6 @@ export interface IAuthorData {
   name: string;
   city: string;
   avatar: string;
+  description: string;
   links: IAuthorLink[];
 }

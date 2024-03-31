@@ -7,6 +7,10 @@
     .postText {
       max-width: 550px;
     }
+
+    & h4 {
+      font-weight: var(--font-weight-bold);
+    }
   }
 
   &--small {

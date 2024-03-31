@@ -25,7 +25,9 @@ export const getLimitedPosts = async (
 };
 
 export const getPostById = async (id: number): Promise<IPostData> => {
-  const response = await fetch(`${BASE_URL}/posts?id=${id}`);
+  const response = await fetch(`${BASE_URL}/posts?id=${id}`, {
+    cache: 'no-store',
+  });
 
   const post = await response.json();
 
@@ -58,6 +60,22 @@ export const getPostsByAuthorId = async (id: string): Promise<IPostData[]> => {
   const posts = await response.json();
 
   return posts;
+};
+
+export const getLimitedAuthors = async (
+  limit: number,
+  start: number = 1,
+): Promise<IAuthorData[]> => {
+  const response = await fetch(
+    `${BASE_URL}/authors?_start=${start}&_limit=${limit}`,
+    {
+      cache: 'no-store',
+    },
+  );
+
+  const authors = await response.json();
+
+  return authors;
 };
 
 export const getAuthorById = async (id: string): Promise<IAuthorData> => {

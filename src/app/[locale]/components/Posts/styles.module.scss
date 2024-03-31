@@ -17,7 +17,7 @@
   border: 1px solid var(--color-border);
   padding: 32px;
 
-  & > article {
+  & > a {
     margin-bottom: 32px;
   }
 }
@@ -32,7 +32,7 @@
 .postsList {
   @include flex($direction: column);
 
-  & > article {
+  & > a {
     padding: 32px 0 25px 32px;
   }
 }
