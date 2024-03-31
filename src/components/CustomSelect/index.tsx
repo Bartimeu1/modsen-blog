@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import styles from './styles.module.scss';
 import { ICustomSelectProps } from './types';
 export const CustomSelect = (props: ICustomSelectProps) => {
-  const { options } = props;
+  const { options, onSelect } = props;
 
   const selectRef = useRef(null);
 
@@ -26,6 +26,7 @@ export const CustomSelect = (props: ICustomSelectProps) => {
 
   const onSelectOptionClick = (value: string) => () => {
     setTargetOption(value);
+    onSelect(value);
     closeSelect();
   };
 

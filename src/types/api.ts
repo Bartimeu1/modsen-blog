@@ -1,5 +1,5 @@
-import { CategoriesEnum } from './enums';
 import { IAuthorLink } from './common';
+import { CategoriesEnum } from './enums';
 
 export interface IPostData {
   id: number;
