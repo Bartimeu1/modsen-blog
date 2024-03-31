@@ -1,0 +1,29 @@
+.test {
+  @include flex($align: center, $justify: center);
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  transition: 0.5s all;
+}
+
+.modalContent {
+  @include flex($align: center, $justify: center, $direction: column);
+
+  width: 100%;
+  max-width: 600px;
+  padding: 20px 20px 35px 20px;
+  border-radius: var(--border-radius-lg);
+  background: var(--color-darkblue);
+
+  & h2 {
+    @include font($size: var(--font-size-md), $weight: var(--font-weight-bold));
+
+    color: var(--color-white);
+    margin-bottom: 20px;
+  }
+}
