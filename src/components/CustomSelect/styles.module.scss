@@ -6,13 +6,13 @@
   );
 
   position: relative;
+  z-index: 10;
 }
 
 .label {
   position: relative;
   cursor: pointer;
   border: 1px solid var(--color-input-border);
-  margin-bottom: 16px;
   padding: 24px 0 24px 24px;
   border-radius: var(--border-radius-sm);
 
@@ -41,7 +41,7 @@
 
   position: absolute;
   background: var(--color-white);
-  top: 90%;
+  top: 100%;
   width: 100%;
   border: 1px solid var(--color-input-border);
   border-radius: var(--border-radius-md);

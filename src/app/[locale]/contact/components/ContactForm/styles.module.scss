@@ -14,10 +14,10 @@
   );
 
   border: 1px solid var(--color-input-border);
-  margin-bottom: 16px;
   padding: 24px 0 24px 24px;
   outline: none;
   border-radius: var(--border-radius-sm);
+  width: calc(100% - 24px);
 }
 
 .contactTextarea {

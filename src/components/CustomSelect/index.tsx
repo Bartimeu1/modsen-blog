@@ -9,11 +9,10 @@ import classNames from 'classnames';
 import styles from './styles.module.scss';
 import { ICustomSelectProps } from './types';
 export const CustomSelect = (props: ICustomSelectProps) => {
-  const { options, onSelect } = props;
+  const { options, onSelect, targetOption } = props;
 
   const selectRef = useRef(null);
 
-  const [targetOption, setTargetOption] = useState('');
   const [isSelectActive, setIsSelectActive] = useState(false);
 
   const onLabelClick = () => {
@@ -25,7 +24,6 @@ export const CustomSelect = (props: ICustomSelectProps) => {
   };
 
   const onSelectOptionClick = (value: string) => () => {
-    setTargetOption(value);
     onSelect(value);
     closeSelect();
   };
