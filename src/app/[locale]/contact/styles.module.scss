@@ -1,0 +1,94 @@
+.contactPage {
+  margin-top: 128px;
+}
+
+.topper {
+  text-align: center;
+  margin-bottom: 64px;
+
+  & h1 {
+    @include font(
+      $size: var(--font-size-xl),
+      $line: 64px,
+      $weight: var(--font-weight-bold)
+    );
+
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+  }
+}
+
+.topperSubtitle {
+  @include font(
+    $size: var(--font-size-xs3),
+    $line: 20px,
+    $weight: var(--font-weight-extraBold),
+    $family: var(--font-secondary)
+  );
+
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.contactContainer {
+  max-width: 770px;
+}
+
+.contactInfo {
+  @include flex($justify: space-between);
+
+  padding: 48px 64px;
+  background: var(--color-purple);
+  margin-bottom: 32px;
+}
+
+.contactBlock {
+  width: 100%;
+  color: var(--color-white);
+
+  &:first-child {
+    margin-right: 42px;
+  }
+
+  & h6 {
+    @include font(
+      $size: var(--font-size-xs4),
+      $line: 20px,
+      $family: var(--font-secondary)
+    );
+
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    opacity: 60%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: var(--color-white);
+      opacity: 20%;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  & h5 {
+    @include font(
+      $size: var(--font-size-xs),
+      $line: 32px,
+      $weight: var(--font-weight-bold)
+    );
+  }
+
+  & p {
+    @include font(
+      $size: var(--font-size-xs3),
+      $line: 28px,
+      $family: var(--font-secondary)
+    );
+
+    opacity: 60%;
+  }
+}

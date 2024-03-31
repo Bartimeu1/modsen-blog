@@ -3,3 +3,7 @@ export const mockedContentText =
 
 export const mockedContentTitle =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.';
+
+export const emailValidationText = 'Must be a valid email';
+
+export const requiredValidationText = 'This field is required';

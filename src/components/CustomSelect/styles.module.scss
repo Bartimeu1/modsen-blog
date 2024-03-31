@@ -1,0 +1,74 @@
+.select {
+  @include font(
+    $size: var(--font-size-xs3),
+    $line: 28px,
+    $family: var(--font-secondary)
+  );
+
+  position: relative;
+  z-index: 10;
+}
+
+.label {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid var(--color-input-border);
+  padding: 24px 0 24px 24px;
+  border-radius: var(--border-radius-sm);
+
+  & svg {
+    position: absolute;
+    right: 63px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: 0.3s;
+  }
+
+  &.active {
+    & svg {
+      transform: translate(0, -50%) rotate(180deg);
+      transition: 0.3s;
+    }
+  }
+}
+
+.placeholder {
+  opacity: 80%;
+}
+
+.options {
+  @include flex($direction: column, $align: flex-start);
+
+  position: absolute;
+  background: var(--color-white);
+  top: 100%;
+  width: 100%;
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--border-radius-md);
+}
+
+.option {
+  @include font(
+    $size: var(--font-size-xs2),
+    $line: 28px,
+    $weight: var(--font-weight-bold),
+    $family: var(--font-secondary)
+  );
+
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: inherit;
+  width: 100%;
+  padding: 24px 0 24px 24px;
+  transition: 0.2s;
+  border-radius: var(--border-radius-md);
+
+  &:hover {
+    background: var(--color-yellow);
+    transition: 0.2s;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

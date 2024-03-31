@@ -1,15 +1,12 @@
-import { getAuthorById, getPostsByAuthorId } from '@services/api';
-import { mockedContentText } from '@root/constants';
-
-import { IAuthorPageProps } from './types';
 import { Social } from '@components/Social';
-
+import { TaggedPost } from '@components/TaggedPost';
+import { mockedContentText } from '@root/constants';
+import { getAuthorById, getPostsByAuthorId } from '@services/api';
+import classNames from 'classnames';
 import Image from 'next/image';
 
 import styles from './styles.module.scss';
-import classNames from 'classnames';
-
-import { TaggedPost } from '@components/TaggedPost';
+import { IAuthorPageProps } from './types';
 
 const AuthorPage = async (props: IAuthorPageProps) => {
   const { params } = props;
@@ -42,6 +39,7 @@ const AuthorPage = async (props: IAuthorPageProps) => {
         <h2 className="title">My Posts</h2>
         {postsData.map(({ id, title, text, image, category }) => (
           <TaggedPost
+            key={id}
             id={id}
             title={title}
             text={text}

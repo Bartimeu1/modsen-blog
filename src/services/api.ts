@@ -1,7 +1,8 @@
-import { IPostData, IAuthorData } from '@root/types/api';
+import { BASE_URL } from '@root/config';
+import { IAuthorData, IPostData } from '@root/types/api';
 
 export const getAllPosts = async (): Promise<IPostData[]> => {
-  const response = await fetch(`${process.env.BASE_URL}/posts`, {
+  const response = await fetch(`${BASE_URL}/posts`, {
     cache: 'no-store',
   });
 
@@ -15,7 +16,7 @@ export const getLimitedPosts = async (
   start: number = 1,
 ): Promise<IPostData[]> => {
   const response = await fetch(
-    `${process.env.BASE_URL}/posts?_start=${start}&_limit=${limit}`,
+    `${BASE_URL}/posts?_start=${start}&_limit=${limit}`,
   );
 
   const posts = await response.json();
@@ -24,7 +25,7 @@ export const getLimitedPosts = async (
 };
 
 export const getPostById = async (id: number): Promise<IPostData> => {
-  const response = await fetch(`${process.env.BASE_URL}/posts?id=${id}`);
+  const response = await fetch(`${BASE_URL}/posts?id=${id}`);
 
   const post = await response.json();
 
@@ -35,7 +36,7 @@ export const getPostsByCategory = async (
   category: string,
   tags: string[] = ['experience'],
 ): Promise<IPostData> => {
-  let queryString = `${process.env.BASE_URL}/posts?category=${category}`;
+  let queryString = `${BASE_URL}/posts?category=${category}`;
 
   if (tags.length > 0) {
     const tagsString = tags.join(',');
@@ -52,7 +53,7 @@ export const getPostsByCategory = async (
 };
 
 export const getPostsByAuthorId = async (id: string): Promise<IPostData[]> => {
-  const response = await fetch(`${process.env.BASE_URL}/posts?authorId=${id}`);
+  const response = await fetch(`${BASE_URL}/posts?authorId=${id}`);
 
   const posts = await response.json();
 
@@ -60,7 +61,7 @@ export const getPostsByAuthorId = async (id: string): Promise<IPostData[]> => {
 };
 
 export const getAuthorById = async (id: string): Promise<IAuthorData> => {
-  const response = await fetch(`${process.env.BASE_URL}/authors?id=${id}`, {
+  const response = await fetch(`${BASE_URL}/authors?id=${id}`, {
     cache: 'no-store',
   });
 

@@ -1,6 +1,7 @@
 import ArrowNext from '@assets/images/arrowNext.svg';
 import ArrowPrev from '@assets/images/arrowPrev.svg';
 import BusinessIcon from '@assets/images/business.svg';
+import ChevronIcon from '@assets/images/chevron.svg';
 import EconomyIcon from '@assets/images/economy.svg';
 import FacebookIcon from '@assets/images/facebook.svg';
 import InstagramIcon from '@assets/images/instagram.svg';
@@ -20,4 +21,5 @@ export {
   LinkedinIcon,
   ArrowPrev,
   ArrowNext,
+  ChevronIcon,
 };
