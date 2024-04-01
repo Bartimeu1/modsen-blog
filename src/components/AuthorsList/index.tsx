@@ -6,7 +6,7 @@ import Link from 'next/link';
 import styles from './styles.module.scss';
 import { IAuthorsListProps } from './types';
 
-export const AuthorsList = async (props: IAuthorsListProps) => {
+export const AuthorsList = (props: IAuthorsListProps) => {
   const { authors } = props;
 
   return (
