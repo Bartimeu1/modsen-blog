@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { ContactForm } from './components';
+import { ContactForm, Map } from './components';
 import styles from './styles.module.scss';
 
 const ContactPage = () => {
@@ -31,6 +31,7 @@ const ContactPage = () => {
         </section>
         <ContactForm />
       </div>
+      <Map />
     </main>
   );
 };

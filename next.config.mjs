@@ -16,6 +16,7 @@ const nextConfig = {
     SENDMAIL_SERVICE_ID: process.env.SENDMAIL_SERVICE_ID,
     SENDMAIL_TEMPLATE_ID: process.env.SENDMAIL_TEMPLATE_ID,
     SENDMAIL_PUBLIC_KEY: process.env.SENDMAIL_PUBLIC_KEY,
+    MAPBOX_TOKEN: process.env.MAPBOX_TOKEN,
   },
   images: {
     remotePatterns: [
