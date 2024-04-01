@@ -5,17 +5,17 @@
   padding: 24px 0 24px 24px;
   cursor: pointer;
   transition: 0.3s;
-  border: 1px solid var(--color-border);
+  border: 1px solid $color-border;
   margin-bottom: 24px;
 
   &.active {
-    background: var(--color-yellow);
+    background: $color-yellow;
   }
 
   &:hover {
-    background: var(--color-yellow);
+    background: $color-yellow;
     transition: 0.3s;
-    border: 1px solid var(--color-yellow);
+    border: 1px solid $color-yellow;
   }
 
   &::last-child {
@@ -25,13 +25,13 @@
   & p {
     @include font(
       $family: var(--font-secondary),
-      $size: var(--font-size-md),
-      $weight: var(--font-weight-bold),
+      $size: $font-size-md,
+      $weight: $font-weight-bold,
       $line: 40px
     );
 
     letter-spacing: -1px;
-    color: var(--color-darkblue);
+    color: $color-darkblue;
   }
 }
 
@@ -39,8 +39,8 @@
   @include flex($align: center, $justify: center);
 
   margin-right: 16px;
-  border-radius: var(--border-radius-md);
+  border-radius: $border-radius-md;
   width: 48px;
   height: 48px;
-  background: var(--color-light-yellow);
+  background: $color-light-yellow;
 }

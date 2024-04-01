@@ -7,31 +7,31 @@
 }
 
 .searchInput {
-  @include font($size: var(--font-size-xs4), $line: 24px, $weight: bold);
+  @include font($size: $font-size-xs4, $line: 24px, $weight: bold);
 
-  color: var(--color-darkblue);
-  border: 1px solid var(--color-grey);
+  color: $color-darkblue;
+  border: 1px solid $color-grey;
   padding: 15px 0 15px 25px;
-  border-radius: var(--border-radius-md);
+  border-radius: $border-radius-md;
   outline: none;
   width: 100%;
 }
 
 .searchButton {
-  @include font($size: var(--font-size-xs3), $line: 24px, $weight: bold);
+  @include font($size: $font-size-xs3, $line: 24px, $weight: bold);
 
-  background: var(--color-yellow);
-  color: var(--color-darkblue);
+  background: $color-yellow;
+  color: $color-darkblue;
   height: 100%;
   width: 83px;
-  border-radius: var(--border-radius-md);
+  border-radius: $border-radius-md;
   position: absolute;
-  border: 1px solid var(--color-yellow);
+  border: 1px solid $color-yellow;
   right: 0;
   transition: 0.3s;
 
   &:hover {
-    background: var(--color-white);
+    background: $color-white;
     transition: 0.3s;
   }
 }
@@ -43,13 +43,13 @@
   left: 0;
   top: 105%;
   width: 100%;
-  border: 1px solid var(--color-grey);
-  border-radius: var(--border-radius-md);
-  background: var(--color-white);
+  border: 1px solid $color-grey;
+  border-radius: $border-radius-md;
+  background: $color-white;
 }
 
 .elasticButton {
-  @include font($size: var(--font-size-xs2), $line: 24px, $weight: bold);
+  @include font($size: $font-size-xs2, $line: 24px, $weight: bold);
 
   background: none;
   width: 100%;
@@ -57,6 +57,6 @@
   text-align: left;
 
   &:hover {
-    background: var(--color-yellow);
+    background: $color-yellow;
   }
 }
