@@ -37,7 +37,7 @@ export const getPostById = async (id: number): Promise<IPostData> => {
 export const getPostsByCategory = async (
   category: string,
   tags: string[] = ['experience'],
-): Promise<IPostData> => {
+): Promise<IPostData[]> => {
   let queryString = `${BASE_URL}/posts?category=${category}`;
 
   if (tags.length > 0) {

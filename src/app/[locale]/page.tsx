@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { AuthorsList } from '@components/AuthorsList';
 import { CategoryList } from '@components/CategoryList';
 import { JoinUs } from '@components/JoinUs';
+import { Loader } from '@components/Loader';
 import { IAuthorData, IPostData } from '@root/types/api';
 import { getLimitedAuthors, getLimitedPosts } from '@services/api';
 import { WithLazyLoad } from '@services/hocs/WithLazyLoad';
@@ -37,7 +38,7 @@ const HomePage = () => {
   // const t = useTranslations('Index');
 
   if (!postsData || !authorsData) {
-    return null;
+    return <Loader />;
   }
 
   return (

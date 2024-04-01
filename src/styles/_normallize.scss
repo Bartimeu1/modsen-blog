@@ -100,9 +100,15 @@ nav,
 section {
   display: block;
 }
+html {
+  height: 100%;
+}
 body {
+  @include flex($direction: column);
+
   line-height: 1;
   position: relative;
+  height: 100%;
 }
 ol,
 ul {
@@ -130,4 +136,7 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
+}
+main {
+  flex: 1 1 auto;
 }

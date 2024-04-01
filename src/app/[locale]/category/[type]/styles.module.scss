@@ -65,13 +65,18 @@
 
 .postsFilter {
   @include flex($justify: space-between);
+
   margin-bottom: 100px;
 }
 
 .posts {
+  position: relative;
+  max-width: 840px;
+  width: 100%;
+
   & a {
-    max-width: 840px;
     margin-bottom: 32px;
+    width: 100%;
   }
 }
 
@@ -92,4 +97,13 @@
     margin-bottom: 40px;
     letter-spacing: -2px;
   }
+}
+
+.notFoundText {
+  @include font($size: var(--font-size-xl), $weight: var(--font-weight-bold));
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
