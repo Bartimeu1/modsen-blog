@@ -1,5 +1,6 @@
 import featuredPostImage from '@assets/images/blogFeatured.jpg';
 import { Button } from '@components/Button';
+import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Image from 'next/image';
 
@@ -20,7 +21,7 @@ export const FeaturedPost = () => {
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident.
           </p>
-          <Button text="Read More >" />
+          <Button text="Read More >" href={`${routes.post}/${1}`} />
         </div>
         <Image alt="post-image" src={featuredPostImage} />
       </div>

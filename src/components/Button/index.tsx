@@ -1,12 +1,14 @@
+import Link from 'next/link';
+
 import styles from './styles.module.scss';
 import { IButtonProps } from './types';
 
 export const Button = (props: IButtonProps) => {
-  const { text, onClick } = props;
+  const { text, href } = props;
 
   return (
-    <button className={styles.button} onClick={onClick} type="button">
+    <Link href={href || '#'} className={styles.button}>
       {text}
-    </button>
+    </Link>
   );
 };

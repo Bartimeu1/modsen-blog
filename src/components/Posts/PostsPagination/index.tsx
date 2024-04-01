@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { TaggedPost } from '@components/TaggedPost';
+import { TaggedPost } from '@components/Posts';
 
 import styles from './styles.module.scss';
 import { IPostsPaginationProps } from './types';

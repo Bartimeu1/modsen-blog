@@ -1,8 +1,8 @@
 import { PostTypesEnum } from '@root/types/enums';
 
 export interface IPostProps {
-  id: number;
   type: keyof typeof PostTypesEnum;
+  id: number;
   title: string;
   author: {
     name: string;
@@ -10,6 +10,6 @@ export interface IPostProps {
     avatar: string;
   };
   createdDate: string;
-  text?: string;
   image?: string;
+  text?: string;
 }

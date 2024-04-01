@@ -1,5 +1,5 @@
 import { JoinUs } from '@components/JoinUs';
-import { Post } from '@components/Post';
+import { Post } from '@components/Posts';
 import { UserPreview } from '@components/UserPreview';
 import { mockedContentText, mockedContentTitle } from '@root/constants';
 import { PostTypesEnum } from '@root/types/enums';
@@ -17,7 +17,7 @@ const PostPage = async (props: IPostPageProps) => {
   const postData = await getPostById(postId);
   const recommendedPosts = await getLimitedPosts(3, 1);
 
-  const { title, tag, image, text, author } = postData;
+  const { title, category, image, text, author } = postData;
   const { avatar, name, city } = author;
 
   return (
@@ -27,8 +27,8 @@ const PostPage = async (props: IPostPageProps) => {
           <UserPreview imageUrl={avatar} name={name} city={city} />
           <h1 className={styles.topperTitle}>{title}</h1>
           <div className={styles.category}>
-            {categoryImages[tag]}
-            <p className={styles.categoryName}>{tag}</p>
+            {categoryImages[category]}
+            <p className={styles.categoryName}>{category}</p>
           </div>
         </section>
         <section className={styles.content}>

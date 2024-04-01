@@ -18,6 +18,7 @@
   background: var(--color-light-grey);
   padding: 40px 0;
   transition: 0.3s;
+  cursor: pointer;
 
   &:hover {
     background: var(--color-light-yellow);
@@ -26,18 +27,35 @@
 
   & img {
     border-radius: 100%;
+    object-fit: cover;
+    width: 128px;
+    height: 128px;
   }
 
   & h4 {
-    @include font($size: var(--font-size-md), $weight: var(--font-weight-bold));
+    @include font(
+      $size: var(--font-size-md),
+      $weight: var(--font-weight-bold),
+      $line: 40px
+    );
 
     letter-spacing: -1px;
     margin-top: 20px;
+    color: var(--color-darkblue);
   }
 
   & p {
-    @include font($size: var(--font-size-xs4), $family: var(--font-secondary));
+    @include font(
+      $size: var(--font-size-xs4),
+      $family: var(--font-secondary),
+      $line: 20px
+    );
 
     margin-bottom: 20px;
+    color: var(--color-grey);
+  }
+
+  & a {
+    @include flex($align: center, $direction: column);
   }
 }

@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 import { IPostProps } from './types';
 
 export const Post = (props: IPostProps) => {
-  const { id, type, title, author, date, text, image } = props;
+  const { id, title, author, type, image, createdDate, text } = props;
 
   return (
     <Link
@@ -28,7 +28,7 @@ export const Post = (props: IPostProps) => {
         />
       )}
       <p className={styles.postInfo}>
-        By {author.name} | {date}
+        By {author.name} | {createdDate}
       </p>
       <h4 className={styles.postTitle}>{title}</h4>
       {text && <p className="infoText">{text}</p>}

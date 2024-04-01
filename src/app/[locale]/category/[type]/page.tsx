@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import { TaggedPost } from '@components/TaggedPost';
+import { TaggedPost } from '@components/Posts';
 import { routes, tagItems } from '@root/constants';
 import { IPostData } from '@root/types/api';
 import { getPostsByCategory } from '@services/api';
@@ -72,7 +72,7 @@ const CategoryPage = (props: ICategoryPageProps) => {
       <div className="container">
         <section className={styles.postsFilter}>
           <div className={styles.posts}>
-            {currentPosts &&
+            {currentPosts && currentPosts.length ? (
               currentPosts.map(({ id, title, text, image, category }) => (
                 <TaggedPost
                   key={id}
@@ -82,7 +82,10 @@ const CategoryPage = (props: ICategoryPageProps) => {
                   text={text}
                   image={image}
                 />
-              ))}
+              ))
+            ) : (
+              <p className={styles.notFoundText}>Nothing found</p>
+            )}
           </div>
           <aside className={styles.filterAside}>
             <TagSearch

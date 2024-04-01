@@ -8,7 +8,14 @@ export const UserPreview = (props: IUserPreviewProps) => {
 
   return (
     <div className={styles.userPreview}>
-      <Image src={imageUrl} alt="user-avatar" height={48} width={48} />
+      <Image
+        src={imageUrl}
+        alt="user-avatar"
+        height={0}
+        width={0}
+        sizes="100%"
+        priority
+      />
       <div className={styles.userInfo}>
         <h4>{name}</h4>
         <p>{city}</p>
