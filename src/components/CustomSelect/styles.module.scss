@@ -1,6 +1,6 @@
 .select {
   @include font(
-    $size: var(--font-size-xs3),
+    $size: $font-size-xs3,
     $line: 28px,
     $family: var(--font-secondary)
   );
@@ -12,9 +12,9 @@
 .label {
   position: relative;
   cursor: pointer;
-  border: 1px solid var(--color-input-border);
+  border: 1px solid $color-input-border;
   padding: 24px 0 24px 24px;
-  border-radius: var(--border-radius-sm);
+  border-radius: $border-radius-sm;
 
   & svg {
     position: absolute;
@@ -40,35 +40,40 @@
   @include flex($direction: column, $align: flex-start);
 
   position: absolute;
-  background: var(--color-white);
+  background: $color-white;
   top: 100%;
   width: 100%;
-  border: 1px solid var(--color-input-border);
-  border-radius: var(--border-radius-md);
+  border: 1px solid $color-input-border;
+  border-radius: $border-radius-md;
 }
 
 .option {
   @include font(
-    $size: var(--font-size-xs2),
+    $size: $font-size-xs2,
     $line: 28px,
-    $weight: var(--font-weight-bold),
+    $weight: $font-weight-bold,
     $family: var(--font-secondary)
   );
 
-  margin-bottom: 5px;
   cursor: pointer;
   background: inherit;
   width: 100%;
-  padding: 24px 0 24px 24px;
+  padding: 24px 0;
   transition: 0.2s;
-  border-radius: var(--border-radius-md);
+  border-radius: $border-radius-md;
 
   &:hover {
-    background: var(--color-yellow);
+    background: $color-yellow;
     transition: 0.2s;
   }
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tabletM) {
+  .label svg {
+    right: 30px;
   }
 }

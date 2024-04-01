@@ -33,7 +33,7 @@
     animation: swing 1s infinite;
 
     & path {
-      fill: var(--color-white);
+      fill: $color-white;
     }
   }
 }

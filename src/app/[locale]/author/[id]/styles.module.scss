@@ -1,5 +1,5 @@
 .banner {
-  background: var(--color-light-purple);
+  background: $color-light-purple;
   padding: 130px 0 128px 0;
   margin-bottom: 128px;
 
@@ -19,8 +19,8 @@
 
   & h2 {
     @include font(
-      $size: var(--font-size-xl),
-      $weight: var(--font-weight-bold),
+      $size: $font-size-xl,
+      $weight: $font-weight-bold,
       $line: 64px
     );
 
@@ -41,10 +41,10 @@
     left: 0;
     background: linear-gradient(
       to right,
-      var(--color-yellow) 0%,
-      var(--color-yellow) 70%,
-      var(--color-purple) 70%,
-      var(--color-purple) 100%
+      $color-yellow 0%,
+      $color-yellow 70%,
+      $color-purple 70%,
+      $color-purple 100%
     );
   }
 }
@@ -53,4 +53,34 @@
   margin-bottom: 128px;
   max-width: 1024px;
   margin: 0 auto 128px auto;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: $breakpoint-laptopM) {
+  .banner {
+    padding: 40px 0;
+    margin-bottom: 60px;
+
+    & img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .bannerContainer {
+    flex-direction: column;
+    text-align: center;
+
+    &::after {
+      bottom: -40px;
+    }
+
+    & h2 {
+      font-size: $font-size-md2;
+      line-height: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
 }

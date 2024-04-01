@@ -13,15 +13,15 @@
 .authorItem {
   @include flex($align: center, $justify: center, $direction: column);
 
-  width: 100%;
+  width: 32%;
   max-width: 296px;
-  background: var(--color-light-grey);
+  background: $color-light-grey;
   padding: 40px 0;
   transition: 0.3s;
   cursor: pointer;
 
   &:hover {
-    background: var(--color-light-yellow);
+    background: $color-light-yellow;
     transition: 0.3s;
   }
 
@@ -34,28 +34,47 @@
 
   & h4 {
     @include font(
-      $size: var(--font-size-md),
-      $weight: var(--font-weight-bold),
+      $size: $font-size-md,
+      $weight: $font-weight-bold,
       $line: 40px
     );
 
     letter-spacing: -1px;
     margin-top: 20px;
-    color: var(--color-darkblue);
+    color: $color-darkblue;
   }
 
   & p {
     @include font(
-      $size: var(--font-size-xs4),
+      $size: $font-size-xs4,
       $family: var(--font-secondary),
       $line: 20px
     );
 
     margin-bottom: 20px;
-    color: var(--color-grey);
+    color: $color-grey;
   }
 
   & a {
     @include flex($align: center, $direction: column);
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .authorsList {
+    flex-wrap: wrap;
+  }
+
+  .authorItem {
+    width: 49%;
+    max-width: none;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tabletS) {
+  .authorItem {
+    width: 100%;
+    max-width: none;
   }
 }

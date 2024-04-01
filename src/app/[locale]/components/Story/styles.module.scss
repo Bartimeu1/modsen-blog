@@ -20,7 +20,7 @@
 }
 
 .storyContent {
-  background: var(--color-white);
+  background: $color-white;
   padding: 80px;
   max-width: 550px;
   z-index: 2;
@@ -31,13 +31,30 @@
 }
 
 .storyTitle {
-  @include font(
-    $size: var(--font-size-xl),
-    $weight: var(--font-weight-bold),
-    $line: 64px
-  );
+  @include font($size: $font-size-xl, $weight: $font-weight-bold, $line: 64px);
 
   letter-spacing: -2px;
   max-width: 550px;
   margin-bottom: 16px;
+}
+
+@media screen and (max-width: $breakpoint-tabletM) {
+  .story {
+    justify-content: center;
+    text-align: center;
+    padding-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .storyContent {
+    padding: 0;
+  }
+
+  .storyTitle {
+    font-size: $font-size-md2;
+    line-height: 50px;
+  }
 }

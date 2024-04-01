@@ -1,4 +1,4 @@
-.test {
+.modalWrapper {
   @include flex($align: center, $justify: center);
 
   position: fixed;
@@ -9,6 +9,7 @@
   backdrop-filter: blur(10px);
   z-index: 10;
   transition: 0.5s all;
+  z-index: 20;
 }
 
 .modalContent {
@@ -17,13 +18,23 @@
   width: 100%;
   max-width: 600px;
   padding: 20px 20px 35px 20px;
-  border-radius: var(--border-radius-lg);
-  background: var(--color-darkblue);
+  margin: 0 10px;
+  border-radius: $border-radius-lg;
+  background: $color-darkblue;
 
   & h2 {
-    @include font($size: var(--font-size-md), $weight: var(--font-weight-bold));
+    @include font($size: $font-size-md, $weight: $font-weight-bold);
 
-    color: var(--color-white);
+    color: $color-white;
     margin-bottom: 20px;
+  }
+
+  & iframe {
+    width: 100%;
+  }
+
+  @media screen and (max-width: ($breakpoint-tabletS)) {
+    padding: 15px 10px 25px 10px;
+    margin: 0 5px;
   }
 }

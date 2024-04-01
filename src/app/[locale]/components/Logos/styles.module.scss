@@ -5,12 +5,12 @@
 
   & h4 {
     @include font(
-      $size: var(--font-size-sm),
-      $weight: var(--font-weight-bold),
+      $size: $font-size-sm,
+      $weight: $font-weight-bold,
       $line: 32px
     );
 
-    color: var(--color-grey);
+    color: $color-grey;
   }
 
   & img {
@@ -28,4 +28,24 @@
   @include flex($align: center, $justify: space-between);
 
   width: 80%;
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .logos {
+    flex-direction: column;
+  }
+
+  .topper {
+    @include flex($direction: column, $align: center);
+
+    margin-bottom: 20px;
+  }
+
+  .logosList {
+    flex-direction: column;
+
+    & img {
+      margin-bottom: 30px;
+    }
+  }
 }

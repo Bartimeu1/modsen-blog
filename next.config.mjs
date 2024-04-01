@@ -9,7 +9,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
   sassOptions: {
     includePaths: [join(__dirname, 'styles')],
-    additionalData: '@import "./src/styles/_mixins.scss";',
+    additionalData:
+      '@import "./src/styles/_mixins.scss"; @import "./src/styles/_globals.scss";',
   },
   env: {
     BASE_URL: process.env.BASE_URL,

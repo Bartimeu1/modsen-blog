@@ -1,11 +1,17 @@
 .featuredPost {
-  background: var(--color-light-purple);
+  background: $--color-light-purple;
   padding: 80px 0;
   margin-bottom: 64px;
 }
 
 .postContainer {
   @include flex($align: center, $justify: space-between);
+
+  & img {
+    max-width: 515px;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .postContent {
@@ -16,41 +22,87 @@
 
 .postSubtitle {
   @include font(
-    $size: var(--font-size-xs3),
-    $weight: var(--font-weight-medium),
+    $size: $font-size-xs3,
+    $weight: $font-weight-medium,
     $family: var(--font-secondary),
     $line: 20px
   );
 
   margin-bottom: 20px;
-  color: var(--color-darkblue);
+  color: $color-darkblue;
   letter-spacing: 3px;
 }
 
 .postTitle {
-  @include font(
-    $size: var(--font-size-lg),
-    $line: 48px,
-    $weight: var(--font-weight-bold)
-  );
+  @include font($size: $font-size-lg, $line: 48px, $weight: $font-weight-bold);
 
   letter-spacing: -2px;
   margin-bottom: 16px;
-  color: var(--color-darkblue);
+  color: $color-darkblue;
 }
 
 .postInfo {
   @include font(
-    $size: var(--font-size-xs3),
+    $size: $font-size-xs3,
     $line: 28px,
     $family: var(--font-secondary),
-    $weight: var(--font-weight-medium)
+    $weight: $font-weight-medium
   );
 
   margin-bottom: 16px;
-  color: var(--color-dark-grey);
+  color: $color-dark-grey;
 }
 
 .postText {
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .featuredPost {
+    padding: 0;
+    padding-top: 30px;
+  }
+
+  .postContainer {
+    flex-direction: column-reverse;
+    width: 90%;
+
+    & img {
+      margin-bottom: 25px;
+      max-width: 70%;
+    }
+  }
+
+  .postContent {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tabletS) {
+  .postContainer {
+    & img {
+      margin-bottom: 25px;
+      max-width: 100%;
+    }
+  }
+
+  .postContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .postTitle {
+    font-size: $font-size-md;
+    line-height: 35px;
+    margin-bottom: 10px;
+  }
+
+  .postInfo {
+    margin-bottom: 5px;
+  }
+
+  .postSubtitle {
+    margin-bottom: 10px;
+  }
 }

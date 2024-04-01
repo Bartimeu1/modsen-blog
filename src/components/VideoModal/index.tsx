@@ -14,7 +14,7 @@ export const VideoModal = (props: IVideoModalProps) => {
   useOnClickOutside(contentRef, closeModal);
 
   return createPortal(
-    <div className={styles.test}>
+    <div className={styles.modalWrapper}>
       <div className={styles.modalContent} ref={contentRef}>
         <h2>About us</h2>
         <iframe

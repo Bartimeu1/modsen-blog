@@ -1,7 +1,5 @@
-@import '@styles/mixins';
-
 .header {
-  background: var(--color-darkblue);
+  background: $color-darkblue;
   padding: 10px 0;
 }
 
@@ -15,20 +13,20 @@
 
 .headerTitle {
   @include font(
-    $size: var(--font-size-sm),
-    $weight: var(--font-weight-bold),
+    $size: $font-size-sm,
+    $weight: $font-weight-bold,
     $family: var(--font-secondary)
   );
 
-  color: var(--color-white);
+  color: $color-white;
 }
 
 .videoButton {
-  @include font($size: var(--font-size-xs2), $weight: var(--font-weight-bold));
+  @include font($size: $font-size-xs2, $weight: $font-weight-bold);
 
-  color: var(--color-darkblue);
-  background: var(--color-white);
-  border: 1px solid var(--color-darkblue);
+  color: $color-darkblue;
+  background: $color-white;
+  border: 1px solid $color-darkblue;
   padding: 16px 48px;
   margin-left: 32px;
   transition: 0.3s;
@@ -36,7 +34,102 @@
   &:hover {
     transition: 0.3s;
     background: inherit;
-    border: 1px solid var(--color-white);
-    color: var(--color-white);
+    border: 1px solid $color-white;
+    color: $color-white;
+  }
+}
+
+.burgerMenu {
+  z-index: 15;
+  border: none;
+  display: none;
+  width: 20px;
+  height: 15px;
+  position: relative;
+  transition: 0.3s;
+  background: $color-darkblue;
+  &::before,
+  &::after {
+    background: $color-white;
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &.active {
+    & span {
+      display: none;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 6.5px;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      bottom: 6.5px;
+    }
+  }
+}
+
+.burgerRow {
+  background: $color-white;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 6px;
+  border-radius: 2px;
+  left: 0;
+}
+
+@media screen and (max-width: ($breakpoint-laptopM)) {
+  .header {
+    padding: 18px 0;
+  }
+
+  .headerControls {
+    display: none;
+
+    &.visible {
+      @include flex($align: center, $direction: column, $justify: center);
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: $color-darkblue;
+
+      & button {
+        margin-left: 0;
+      }
+
+      & > nav {
+        @include flex($direction: column, $align: center);
+        margin-bottom: 20px;
+
+        & a {
+          margin: 0 0 20px 0;
+          font-size: $font-size-md;
+        }
+      }
+    }
+  }
+
+  .burgerMenu {
+    display: block;
   }
 }
