@@ -43,7 +43,7 @@ const HomePage = () => {
 
   return (
     <main>
-      <Banner post={postsData[0]} />
+      {/* <Banner post={postsData[0]} />
       <div className="container">
         <LazyPosts featuredPost={postsData[1]} posts={postsData.slice(1)} />
         <LazyAbout />
@@ -53,7 +53,7 @@ const HomePage = () => {
         <LazyLogos />
         <LazyReviews />
         <LazyJoinUs />
-      </div>
+      </div> */}
     </main>
   );
 };

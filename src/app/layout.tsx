@@ -29,7 +29,7 @@ export default async function RootLayout({
       <body className={`${fontSen.variable} ${fontInter.variable}`}>
         <Header />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
