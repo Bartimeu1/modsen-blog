@@ -14,15 +14,15 @@
 
   & h4 {
     @include font(
-      $size: var(--font-size-sm),
-      $weight: var(--font-weight-bold),
+      $size: $font-size-sm,
+      $weight: $font-weight-bold,
       $line: 32px
     );
   }
 
   & p {
-    @include font($size: var(--font-size-xs3), $family: var(--font-secondary));
+    @include font($size: $font-size-xs3, $family: var(--font-secondary));
 
-    color: var(--color-grey);
+    color: $color-grey;
   }
 }
