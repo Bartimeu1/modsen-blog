@@ -5,9 +5,9 @@
 }
 
 .errorText {
-  @include font($size: var(--font-size-xs4), $family: var(--font-secondary));
+  @include font($size: $font-size-xs4, $family: var(--font-secondary));
 
-  color: var(--color-red);
+  color: $color-red;
   position: absolute;
   bottom: -17px;
   left: 10px;

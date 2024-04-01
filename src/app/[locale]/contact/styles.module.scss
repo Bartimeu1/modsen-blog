@@ -8,9 +8,9 @@
 
   & h1 {
     @include font(
-      $size: var(--font-size-xl),
+      $size: $font-size-xl,
       $line: 64px,
-      $weight: var(--font-weight-bold)
+      $weight: $font-weight-bold
     );
 
     margin-bottom: 24px;
@@ -20,9 +20,9 @@
 
 .topperSubtitle {
   @include font(
-    $size: var(--font-size-xs3),
+    $size: $font-size-xs3,
     $line: 20px,
-    $weight: var(--font-weight-extraBold),
+    $weight: $font-weight-extraBold,
     $family: var(--font-secondary)
   );
 
@@ -38,13 +38,13 @@
   @include flex($justify: space-between);
 
   padding: 48px 64px;
-  background: var(--color-purple);
+  background: $color-purple;
   margin-bottom: 32px;
 }
 
 .contactBlock {
   width: 100%;
-  color: var(--color-white);
+  color: $color-white;
 
   &:first-child {
     margin-right: 42px;
@@ -52,7 +52,7 @@
 
   & h6 {
     @include font(
-      $size: var(--font-size-xs4),
+      $size: $font-size-xs4,
       $line: 20px,
       $family: var(--font-secondary)
     );
@@ -67,7 +67,7 @@
       content: '';
       width: 100%;
       height: 1px;
-      background: var(--color-white);
+      background: $color-white;
       opacity: 20%;
       bottom: 0;
       left: 0;
@@ -76,19 +76,30 @@
 
   & h5 {
     @include font(
-      $size: var(--font-size-xs),
+      $size: $font-size-xs,
       $line: 32px,
-      $weight: var(--font-weight-bold)
+      $weight: $font-weight-bold
     );
   }
 
   & p {
     @include font(
-      $size: var(--font-size-xs3),
+      $size: $font-size-xs3,
       $line: 28px,
       $family: var(--font-secondary)
     );
 
     opacity: 60%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tabletM) {
+  .contactInfo {
+    flex-direction: column;
+    padding: 48px 24px;
+  }
+
+  .contactBlock:first-child {
+    margin-right: 0;
   }
 }

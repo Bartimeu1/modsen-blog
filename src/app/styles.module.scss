@@ -5,6 +5,6 @@
 
   & h2 {
     margin-bottom: 20px;
-    @include font($size: var(--font-size-lg), $weight: var(--font-weight-bold));
+    @include font($size: $font-size-lg, $weight: $font-weight-bold);
   }
 }
