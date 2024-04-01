@@ -10,7 +10,7 @@
 }
 
 .title {
-  @include font($size: var(--font-size-lg), $weight: var(--font-weight-bold));
+  @include font($size: $font-size-lg, $weight: $font-weight-bold);
 
   margin-bottom: 32px;
   letter-spacing: -2px;
@@ -18,8 +18,8 @@
 
 .subtitle {
   @include font(
-    $size: var(--font-size-xs3),
-    $weight: var(--font-weight-bold),
+    $size: $font-size-xs3,
+    $weight: $font-weight-bold,
     $family: var(--font-secondary)
   );
 
@@ -29,10 +29,10 @@
 
 .infoText {
   @include font(
-    $size: var(--font-size-xs3),
+    $size: $font-size-xs3,
     $line: 28px,
     $family: var(--font-secondary)
   );
 
-  color: var(--color-grey);
+  color: $color-grey;
 }

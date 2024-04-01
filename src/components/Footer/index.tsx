@@ -3,6 +3,7 @@ import { NavMenu } from '@components/NavMenu';
 import { Social } from '@components/Social';
 import { routes } from '@root/constants';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 import { mockedNetworkLinks } from './config';
 import styles from './styles.module.scss';
@@ -10,7 +11,7 @@ import styles from './styles.module.scss';
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className={classNames('container', styles.footerContainer)}>
         <div className={styles.footerTopper}>
           <Link href={routes.home} className={styles.topperLink}>
             Modsen Client Blog

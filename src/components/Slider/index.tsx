@@ -42,7 +42,7 @@ export const Slider = (props: ISliderProps) => {
                 })}
               >
                 <h4 className={styles.slideText}>{text}</h4>
-                <UserPreview imageUrl={imageUrl} name={name} city={city} />
+                <UserPreview imageUrl={imageUrl.src} name={name} city={city} />
               </div>
             ),
         )}

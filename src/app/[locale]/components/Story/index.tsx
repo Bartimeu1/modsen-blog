@@ -6,7 +6,7 @@ export const Story = () => {
   return (
     <section className={styles.story}>
       <div className={styles.storyContent}>
-        <h6 className="subtitle">Why we started </h6>
+        <h6 className="subtitle">Why we started</h6>
         <h2 className={styles.storyTitle}>
           It started out as a simple idea and evolved into our passion
         </h2>

@@ -34,3 +34,13 @@
     }
   }
 }
+
+@media screen and (max-width: $breakpoint-mobileS) {
+  .navMenu {
+    margin: 0 -8px;
+  }
+
+  .navLink {
+    margin: 0 8px;
+  }
+}

@@ -17,11 +17,7 @@
 }
 
 .slideText {
-  @include font(
-    $size: var(--font-size-sm),
-    $weight: var(--font-weight-bold),
-    $line: 32px
-  );
+  @include font($size: $font-size-sm, $weight: $font-weight-bold, $line: 32px);
 
   max-width: 470px;
 }
@@ -60,7 +56,55 @@
 }
 
 .nextButton {
-  background: var(--color-darkblue);
+  background: $color-darkblue;
   width: 62px;
   height: 62px;
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .slideItem {
+    height: 250px;
+  }
+
+  .wrapper {
+    min-width: auto;
+  }
+
+  .slider {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .slideItem {
+    height: 250px;
+  }
+
+  .wrapper {
+    min-width: auto;
+  }
+
+  .slider {
+    padding: 0 10px;
+  }
+
+  .navigation {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobileS) {
+  .slideItem {
+    height: 235px;
+  }
+
+  .navigation {
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .slideText {
+    font-size: $font-size-xs;
+  }
 }

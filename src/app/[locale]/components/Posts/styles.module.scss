@@ -14,11 +14,11 @@
   @include flex($direction: column, $align: flex-start);
 
   max-width: 733px;
-  border: 1px solid var(--color-border);
+  border: 1px solid $color-border;
   padding: 32px;
 
   & > a {
-    margin-bottom: 32px;
+    margin-top: 32px;
   }
 }
 
@@ -34,5 +34,42 @@
 
   & > a {
     padding: 32px 0 25px 32px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptopS) {
+  .posts {
+    @include flex($direction: column, $align: center, $justify: center);
+
+    & h3 {
+      text-align: center;
+    }
+  }
+
+  .featuredWrapper {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .postsList {
+    & > a {
+      @include flex($align: center, $direction: column);
+
+      padding: 30px 5px;
+      margin-bottom: 40px;
+      text-align: center;
+      border: 1px solid $color-border;
+      border-radius: $border-radius-md;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobileM) {
+  .featuredPost {
+    padding: 20px 10px;
   }
 }

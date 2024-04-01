@@ -3,8 +3,8 @@
 
   margin-bottom: 128px;
   position: relative;
-  padding: 119px 0 96px 0;
-  background: var(--color-light-purple);
+  padding: 119px 15px 96px 15px;
+  background: $color-light-purple;
 
   &::before {
     height: 23px;
@@ -15,11 +15,11 @@
     left: 0;
     background: linear-gradient(
       to right,
-      var(--color-white) 18%,
-      var(--color-yellow) 18%,
-      var(--color-yellow) 78%,
-      var(--color-purple) 78%,
-      var(--color-purple) 100%
+      $color-white 18%,
+      $color-yellow 18%,
+      $color-yellow 78%,
+      $color-purple 78%,
+      $color-purple 100%
     );
   }
 }
@@ -27,7 +27,7 @@
 .aboutBlock {
   @include flex($direction: column);
 
-  color: var(--color-darkblue);
+  color: $color-darkblue;
   max-width: 515px;
   width: 100%;
 
@@ -37,7 +37,7 @@
 }
 
 .aboutTitle {
-  @include font($size: 36px, $weight: var(--font-weight-bold), $line: 48px);
+  @include font($size: 36px, $weight: $font-weight-bold, $line: 48px);
 
   margin-bottom: 16px;
   letter-spacing: -2px;
@@ -45,7 +45,7 @@
 }
 
 .missionTitle {
-  @include font($size: 28px, $weight: var(--font-weight-bold), $line: 40px);
+  @include font($size: 28px, $weight: $font-weight-bold, $line: 40px);
 
   letter-spacing: -1px;
   margin-bottom: 16px;
@@ -53,14 +53,45 @@
 }
 
 .aboutLink {
-  @include font($size: 18px, $weight: var(--font-weight-bold));
+  @include font($size: 18px, $weight: $font-weight-bold);
 
-  color: var(--color-purple);
+  color: $color-purple;
   margin-top: 16px;
   transition: 0.3s;
 
   &:hover {
-    color: var(--color-yellow);
+    color: $color-yellow;
     transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptopS) {
+  .about {
+    @include flex($direction: column, $align: center);
+  }
+
+  .aboutBlock {
+    text-align: center;
+
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobileM) {
+  .about {
+    padding: 50px 20px 30px 20px;
+  }
+
+  .aboutTitle {
+    font-size: $font-size-md;
+    line-height: 40px;
+  }
+
+  .missionTitle {
+    font-size: $font-size-sm;
+    line-height: 35px;
   }
 }

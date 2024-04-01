@@ -40,12 +40,14 @@ export const Header = () => {
         <div
           className={classNames(styles.headerControls, {
             [styles.visible]: isBurgerActive,
-          })}>
+          })}
+        >
           <NavMenu onLink={closeBurger} />
           <button
             className={styles.videoButton}
             onClick={onVideoButtonClick}
-            type="button">
+            type="button"
+          >
             Video about us
           </button>
         </div>
@@ -54,7 +56,8 @@ export const Header = () => {
           onClick={onBurgerMenuClick}
           className={classNames(styles.burgerMenu, {
             [styles.active]: isBurgerActive,
-          })}>
+          })}
+        >
           <span className={styles.burgerRow} />
         </button>
       </div>

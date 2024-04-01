@@ -1,3 +1,3 @@
 export interface INavMenuProps {
-  onLink: () => void;
+  onLink?: () => void;
 }

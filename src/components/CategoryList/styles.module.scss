@@ -5,22 +5,23 @@
 }
 
 .categoryList {
-  @include flex($justify: space-between, $align: center);
+  @include flex($justify: space-between, $align: center, $wrap: wrap);
 
-  margin: 0 -16px 128px -16px;
+  margin-bottom: 128px;
 }
 
 .categoryItem {
   padding: 32px;
-  margin: 0 16px;
-  border: 1px solid var(--color-border);
+  border: 1px solid $color-border;
   cursor: pointer;
   transition: 0.3s;
+  width: 22%;
+  min-width: 280px;
 
   &:hover {
-    background: var(--color-yellow);
+    background: $color-yellow;
     transition: 0.3s;
-    border: 1px solid var(--color-yellow);
+    border: 1px solid $color-yellow;
   }
 }
 
@@ -28,16 +29,27 @@
   @include flex($align: center, $justify: center);
 
   margin-bottom: 16px;
-  border-radius: var(--border-radius-md);
+  border-radius: $border-radius-md;
   width: 48px;
   height: 48px;
-  background: var(--color-light-yellow);
+  background: $color-light-yellow;
 }
 
 .categoryTitle {
-  @include font($size: var(--font-size-md), $weight: var(--font-weight-bold));
+  @include font($size: $font-size-md, $weight: $font-weight-bold);
 
   letter-spacing: -1px;
-  color: var(--color-darkblue);
+  color: $color-darkblue;
   margin-bottom: 4px;
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .categoryList {
+    justify-content: center;
+  }
+
+  .categoryItem {
+    width: 50%;
+    margin-bottom: 10px;
+  }
 }

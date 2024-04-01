@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button } from '@components/Button';
 import { routes } from '@root/constants';
+import classNames from 'classnames';
 
 import styles from './styles.module.scss';
 import { IBannerProps } from './types';
@@ -11,7 +12,7 @@ export const Banner = ({ post }: IBannerProps) => {
 
   return (
     <section className={styles.banner}>
-      <div className="container">
+      <div className={classNames('container', styles.bannerContainer)}>
         <p className={styles.bannerMeta}>
           POSTED ON<span> STARTUP</span>
         </p>
