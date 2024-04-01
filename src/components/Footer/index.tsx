@@ -2,8 +2,8 @@ import { Button } from '@components/Button';
 import { NavMenu } from '@components/NavMenu';
 import { Social } from '@components/Social';
 import { routes } from '@root/constants';
-import Link from 'next/link';
 import classNames from 'classnames';
+import Link from 'next/link';
 
 import { mockedNetworkLinks } from './config';
 import styles from './styles.module.scss';
