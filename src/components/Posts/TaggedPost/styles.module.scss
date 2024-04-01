@@ -15,18 +15,34 @@
 }
 
 .postTag {
-  color: var(--color-purple);
+  color: $color-purple;
   margin-bottom: 20px;
 }
 
 .postTitle {
-  @include font(
-    $size: var(--font-size-lg),
-    $line: 48px,
-    $weight: var(--font-weight-bold)
-  );
+  @include font($size: $font-size-lg, $line: 48px, $weight: $font-weight-bold);
 
   letter-spacing: -2px;
   margin-bottom: 16px;
-  color: var(--color-darkblue);
+  color: $color-darkblue;
+}
+
+@media screen and (max-width: $breakpoint-laptopM) {
+  .tagPost {
+    flex-direction: column;
+
+    & img {
+      max-width: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  .postTitle {
+    font-size: $font-size-md;
+    line-height: 40px;
+  }
+
+  .postContent {
+    margin-left: 10px;
+  }
 }
