@@ -12,8 +12,8 @@
 }
 
 @mixin font(
-  $size: 16px,
-  $weight: var(--font-weight-regular),
+  $size: $font-size-xs3,
+  $weight: $font-weight-regular,
   $family: var(--font-primary),
   $line: normal
 ) {
