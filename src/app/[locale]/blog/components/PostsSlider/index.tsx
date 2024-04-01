@@ -1,4 +1,4 @@
-import { PostsPagination } from '@components/PostsPagination';
+import { PostsPagination } from '@components/Posts';
 import { getAllPosts } from '@root/services/api';
 
 import styles from './styles.module.scss';

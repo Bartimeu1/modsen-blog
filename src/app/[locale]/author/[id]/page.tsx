@@ -1,5 +1,5 @@
+import { TaggedPost } from '@components/Posts';
 import { Social } from '@components/Social';
-import { TaggedPost } from '@components/TaggedPost';
 import { mockedContentText } from '@root/constants';
 import { getAuthorById, getPostsByAuthorId } from '@services/api';
 import classNames from 'classnames';

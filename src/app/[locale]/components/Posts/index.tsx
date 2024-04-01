@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button } from '@components/Button';
-import { Post } from '@components/Post';
+import { Post } from '@components/Posts';
 import { routes } from '@root/constants';
 import { PostTypesEnum } from '@root/types/enums';
 

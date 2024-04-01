@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import { TaggedPost } from '@components/TaggedPost';
+import { TaggedPost } from '@components/Posts';
 import { routes, tagItems } from '@root/constants';
 import { IPostData } from '@root/types/api';
 import { getPostsByCategory } from '@services/api';
