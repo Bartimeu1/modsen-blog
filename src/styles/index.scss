@@ -36,3 +36,9 @@
 
   color: $color-grey;
 }
+
+@media screen and (max-width: $breakpoint-mobileS) {
+  .title {
+    font-size: $font-size-md;
+  }
+}

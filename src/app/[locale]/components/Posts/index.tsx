@@ -4,6 +4,7 @@ import { Button } from '@components/Button';
 import { Post } from '@components/Posts';
 import { routes } from '@root/constants';
 import { PostTypesEnum } from '@root/types/enums';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 import { IPostsProps } from './types';
@@ -11,11 +12,13 @@ import { IPostsProps } from './types';
 export const Posts = (props: IPostsProps) => {
   const { featuredPost, posts } = props;
 
+  const t = useTranslations('Main.Posts');
+
   const { author, createdDate, title, image, text, id } = featuredPost;
   return (
     <section className={styles.posts}>
       <div className={styles.featuredWrapper}>
-        <h3 className="title">Featured Post</h3>
+        <h3 className="title">{t('featuredTitle')}</h3>
         <div className={styles.featuredPost}>
           <Post
             id={id}
@@ -26,11 +29,11 @@ export const Posts = (props: IPostsProps) => {
             title={title}
             text={text}
           />
-          <Button text="Read More >" href={`${routes.post}/${id}`} />
+          <Button text={t('readMore')} href={`${routes.post}/${id}`} />
         </div>
       </div>
       <div className={styles.postsСatalog}>
-        <h3 className="title">All Posts</h3>
+        <h3 className="title">{t('allPostsTitle')}</h3>
         <div className={styles.postsList}>
           {posts.map(({ id, author, createdDate, title }) => (
             <Post

@@ -9,27 +9,23 @@ export const categoryItems = [
   {
     id: 1,
     icon: <BusinessIcon />,
-    title: 'Business',
     value: 'business',
     text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
     id: 2,
     icon: <StartupIcon />,
-    title: 'Startup',
     value: 'startup',
     text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
     id: 3,
     icon: <EconomyIcon />,
-    title: 'Economy',
     value: 'economy',
     text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
   },
   {
     id: 4,
-    title: 'Technology',
     value: 'technology',
     icon: <TechnologyIcon />,
     text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',

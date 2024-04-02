@@ -10,7 +10,6 @@ import { IAuthorData, IPostData } from '@root/types/api';
 import { getLimitedAuthors, getLimitedPosts } from '@services/api';
 import { WithLazyLoad } from '@services/hocs/WithLazyLoad';
 
-// import { useTranslations } from 'next-intl';
 import { About, Banner, Logos, Posts, Reviews, Story } from './components';
 
 const LazyPosts = WithLazyLoad(Posts);
@@ -35,7 +34,6 @@ const HomePage = () => {
       setAuthorsData(data);
     });
   }, []);
-  // const t = useTranslations('Index');
 
   if (!postsData || !authorsData) {
     return <Loader />;

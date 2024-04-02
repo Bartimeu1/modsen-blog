@@ -2,12 +2,16 @@ import { useRef } from 'react';
 import { createPortal } from 'react-dom';
 
 import { useLockBodyScroll, useOnClickOutside } from '@root/hooks';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 import { IVideoModalProps } from './types';
 
 export const VideoModal = (props: IVideoModalProps) => {
   const { closeModal } = props;
+
+  const t = useTranslations('Header');
+
   const contentRef = useRef(null);
 
   useLockBodyScroll();
@@ -16,7 +20,7 @@ export const VideoModal = (props: IVideoModalProps) => {
   return createPortal(
     <div className={styles.modalWrapper}>
       <div className={styles.modalContent} ref={contentRef}>
-        <h2>About us</h2>
+        <h2>{t('modalTitle')}</h2>
         <iframe
           width="560"
           height="315"

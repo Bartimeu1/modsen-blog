@@ -4,11 +4,14 @@ import { Social } from '@components/Social';
 import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { mockedNetworkLinks } from './config';
 import styles from './styles.module.scss';
 
 export const Footer = () => {
+  const t = useTranslations('Footer');
+
   return (
     <footer className={styles.footer}>
       <div className={classNames('container', styles.footerContainer)}>
@@ -19,16 +22,14 @@ export const Footer = () => {
           <NavMenu />
         </div>
         <div className={styles.subscribe}>
-          <h2 className={styles.subscribeTitle}>
-            Subscribe to our news letter to get latest updates and news
-          </h2>
+          <h2 className={styles.subscribeTitle}>{t('title')}</h2>
           <div className={styles.subscribeControls}>
             <input
               className={styles.subscribeInput}
               type="text"
-              placeholder="Enter Your Email"
+              placeholder={t('input')}
             />
-            <Button text="Subscribe" />
+            <Button text={t('button')} />
           </div>
         </div>
         <div className={styles.footerBottomer}>

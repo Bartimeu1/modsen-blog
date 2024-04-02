@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@components/Button';
 import { routes } from '@root/constants';
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 import { IBannerProps } from './types';
@@ -10,18 +11,21 @@ import { IBannerProps } from './types';
 export const Banner = ({ post }: IBannerProps) => {
   const { id, title, author, createdDate, text } = post;
 
+  const t = useTranslations('Header');
+
   return (
     <section className={styles.banner}>
       <div className={classNames('container', styles.bannerContainer)}>
         <p className={styles.bannerMeta}>
-          POSTED ON<span> STARTUP</span>
+          {t('postedOn').toUpperCase()}
+          <span> STARTUP</span>
         </p>
         <h1 className={styles.bannerTitle}>{title}</h1>
         <p className={styles.bannerAuthor}>
           By <span>{author.name}</span> | {createdDate}
         </p>
         <p className={styles.bannerText}>{text}</p>
-        <Button text="Read More >" href={`${routes.post}/${id}`} />
+        <Button text={t('readMore')} href={`${routes.post}/${id}`} />
       </div>
     </section>
   );

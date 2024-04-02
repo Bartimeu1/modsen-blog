@@ -1,17 +1,20 @@
 import { Button } from '@components/Button';
 import { routes } from '@root/constants';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 
 export const JoinUs = () => {
+  const t = useTranslations('JoinUs');
+
   return (
     <section className={styles.joinUs}>
-      <h2 className="title">Join our team to be a part of our story</h2>
+      <h2 className="title">{t('title')}</h2>
       <p className="infoText">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt.
       </p>
-      <Button text="Join Now" href={routes.contact} />
+      <Button text={t('button')} href={routes.contact} />
     </section>
   );
 };
