@@ -5,6 +5,7 @@ import { mockedContentText, mockedContentTitle } from '@root/constants';
 import { PostTypesEnum } from '@root/types/enums';
 import { getLimitedPosts, getPostById } from '@services/api';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
 import { categoryImages } from './config';
 import styles from './styles.module.scss';
@@ -12,6 +13,8 @@ import { IPostPageProps } from './types';
 
 const PostPage = async (props: IPostPageProps) => {
   const { params } = props;
+
+  const t = await getTranslations('Post');
 
   const postId = Number(params.id);
   const postData = await getPostById(postId);
@@ -61,7 +64,7 @@ const PostPage = async (props: IPostPageProps) => {
           </div>
         </section>
         <section className={styles.recommended}>
-          <h2 className="title">What to read next</h2>
+          <h2 className="title">{t('recommendedTitle')}</h2>
           <div className={styles.postsList}>
             {recommendedPosts.map((post) => (
               <Post key={post.id} {...post} type={PostTypesEnum.medium} />

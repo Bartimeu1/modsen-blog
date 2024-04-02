@@ -59,5 +59,8 @@
     "postsTitle": "All Posts",
     "prevButton": "< Prev",
     "nextButton": "Next >"
+  },
+  "Post": {
+    "recommendedTitle": "What to read next"
   }
 }
