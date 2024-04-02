@@ -68,7 +68,8 @@
     "categoryTitle": "Категории",
     "tagsTitle": "Все теги",
     "input": "Искать тег...",
-    "searchButton": "Искать"
+    "searchButton": "Искать",
+    "nothingFound": "Ничего не найдено"
   },
   "Author": {
     "postsTitle": "Мои посты"

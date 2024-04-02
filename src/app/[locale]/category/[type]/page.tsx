@@ -90,7 +90,9 @@ const CategoryPage = (props: ICategoryPageProps) => {
                 />
               ))
             ) : (
-              <p className={styles.notFoundText}>Nothing found</p>
+              <p className={styles.notFoundText}>
+                {categoryLocalization('nothingFound')}
+              </p>
             )}
           </div>
           <aside className={styles.filterAside}>

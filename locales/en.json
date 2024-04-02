@@ -68,7 +68,8 @@
     "categoryTitle": "Categories",
     "tagsTitle": "All tags",
     "input": "Search for tag...",
-    "searchButton": "Search"
+    "searchButton": "Search",
+    "nothingFound": "Nothing found"
   },
   "Author": {
     "postsTitle": "My posts"
