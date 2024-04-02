@@ -69,5 +69,8 @@
     "tagsTitle": "Все теги",
     "input": "Искать тег...",
     "searchButton": "Искать"
+  },
+  "Author": {
+    "postsTitle": "Мои посты"
   }
 }

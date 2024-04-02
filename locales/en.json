@@ -69,5 +69,8 @@
     "tagsTitle": "All tags",
     "input": "Search for tag...",
     "searchButton": "Search"
+  },
+  "Author": {
+    "postsTitle": "My posts"
   }
 }

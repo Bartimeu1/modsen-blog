@@ -4,12 +4,15 @@ import { mockedContentText } from '@root/constants';
 import { getAuthorById, getPostsByAuthorId } from '@services/api';
 import classNames from 'classnames';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
 import styles from './styles.module.scss';
 import { IAuthorPageProps } from './types';
 
 const AuthorPage = async (props: IAuthorPageProps) => {
   const { params } = props;
+
+  const t = await getTranslations('Author');
 
   const authorId = params.id;
 
@@ -36,7 +39,7 @@ const AuthorPage = async (props: IAuthorPageProps) => {
         </div>
       </section>
       <section className={styles.posts}>
-        <h2 className="title">My Posts</h2>
+        <h2 className="title">{t('postsTitle')}</h2>
         {postsData.map(({ id, title, text, image, category }) => (
           <TaggedPost
             key={id}
