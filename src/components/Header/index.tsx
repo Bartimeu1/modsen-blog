@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+import { LocalizationToggle } from '@components/LocalizationToggle';
 import { NavMenu } from '@components/NavMenu';
 import { VideoModal } from '@components/VideoModal';
 import { routes } from '@root/constants';
@@ -45,6 +46,7 @@ export const Header = () => {
             [styles.visible]: isBurgerActive,
           })}
         >
+          <LocalizationToggle />
           <NavMenu onLink={closeBurger} />
           <button
             className={styles.videoButton}
