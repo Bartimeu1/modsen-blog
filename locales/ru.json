@@ -72,5 +72,22 @@
   },
   "Author": {
     "postsTitle": "Мои посты"
+  },
+  "Contact": {
+    "topperSubtitle": "Свяжитесь с нами",
+    "topperTitle": "Давайте начнём диалог",
+    "hoursTitle": "Часы работы",
+    "timeText": "Понедельник - пятница с 9:00 до 18:00",
+    "supportText": "Наша служба поддержки доступна 24/7",
+    "contactTitle": "Связь с нами",
+    "Form": {
+      "name": "Ваше Имя",
+      "email": "Ваша почта",
+      "message": "Сообщение",
+      "submit": "Отправить"
+    }
+  },
+  "Select": {
+    "placeholder": "Ваша профессия"
   }
 }

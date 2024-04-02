@@ -80,6 +80,8 @@
       $line: 32px,
       $weight: $font-weight-bold
     );
+
+    max-width: 200px;
   }
 
   & p {
@@ -90,16 +92,19 @@
     );
 
     opacity: 60%;
+    max-width: 200px;
   }
 }
 
 @media screen and (max-width: $breakpoint-tabletM) {
   .contactInfo {
     flex-direction: column;
+    justify-content: center;
     padding: 48px 24px;
   }
 
   .contactBlock:first-child {
     margin-right: 0;
+    margin-bottom: 30px;
   }
 }

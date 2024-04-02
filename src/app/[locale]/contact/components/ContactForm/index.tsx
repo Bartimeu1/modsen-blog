@@ -4,6 +4,7 @@ import { ChangeEvent, SyntheticEvent, useState } from 'react';
 
 import { CustomSelect } from '@components/CustomSelect';
 import { sendMail } from '@services/sendMail';
+import { useTranslations } from 'next-intl';
 import { ValidationError } from 'yup';
 
 import { FormField } from '../FormField';
@@ -12,6 +13,8 @@ import styles from './styles.module.scss';
 import { IErrorsObject } from './types';
 
 export const ContactForm = () => {
+  const t = useTranslations('Contact.Form');
+
   const [formValues, setFormValues] = useState(baseFormValues);
   const [validationErrors, setValidationErrors] = useState<IErrorsObject>({});
   const [targetSelectOption, setTargetSelectOption] = useState('');
@@ -69,7 +72,7 @@ export const ContactForm = () => {
           type="text"
           name="fullName"
           className={styles.contactInput}
-          placeholder="Full Name"
+          placeholder={t('name')}
           value={formValues.fullName}
           onChange={onFormValueChange}
         />
@@ -79,7 +82,7 @@ export const ContactForm = () => {
           type="text"
           name="email"
           className={styles.contactInput}
-          placeholder="Your Email"
+          placeholder={t('email')}
           value={formValues.email}
           onChange={onFormValueChange}
         />
@@ -95,7 +98,7 @@ export const ContactForm = () => {
         <textarea
           className={styles.contactTextarea}
           name="message"
-          placeholder="Message"
+          placeholder={t('message')}
           value={formValues.message}
           onChange={onFormValueChange}
         />
@@ -103,7 +106,7 @@ export const ContactForm = () => {
       <input
         type="submit"
         className={styles.submitButton}
-        value="Send Message"
+        value={t('submit')}
       />
     </form>
   );

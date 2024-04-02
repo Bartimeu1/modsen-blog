@@ -5,11 +5,14 @@ import { useRef, useState } from 'react';
 import { ChevronIcon } from '@root/constants';
 import { useOnClickOutside } from '@root/hooks';
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 import { ICustomSelectProps } from './types';
 export const CustomSelect = (props: ICustomSelectProps) => {
   const { options, onSelect, targetOption } = props;
+
+  const t = useTranslations('Select');
 
   const selectRef = useRef(null);
 
@@ -41,7 +44,7 @@ export const CustomSelect = (props: ICustomSelectProps) => {
         {targetOption ? (
           <p className={styles.labelValue}>{targetOption}</p>
         ) : (
-          <p className={styles.placeholder}>Your profession</p>
+          <p className={styles.placeholder}>{t('placeholder')}</p>
         )}
         <ChevronIcon />
       </div>
