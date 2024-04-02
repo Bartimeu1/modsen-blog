@@ -62,5 +62,12 @@
   },
   "Post": {
     "recommendedTitle": "Прочитать ещё"
+  },
+  "Category": {
+    "blogLink": "Блог >",
+    "categoryTitle": "Категории",
+    "tagsTitle": "Все теги",
+    "input": "Искать тег...",
+    "searchButton": "Искать"
   }
 }

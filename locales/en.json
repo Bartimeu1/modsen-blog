@@ -62,5 +62,12 @@
   },
   "Post": {
     "recommendedTitle": "What to read next"
+  },
+  "Category": {
+    "blogLink": "Blog >",
+    "categoryTitle": "Categories",
+    "tagsTitle": "All tags",
+    "input": "Search for tag...",
+    "searchButton": "Search"
   }
 }

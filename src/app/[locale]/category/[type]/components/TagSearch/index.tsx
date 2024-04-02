@@ -1,10 +1,14 @@
 import { ChangeEvent, useState } from 'react';
 
+import { useTranslations } from 'next-intl';
+
 import styles from './styles.module.scss';
 import { ITagSearchProps } from './types';
 
 export const TagSearch = (props: ITagSearchProps) => {
   const { tags, onSearch, onChange, value } = props;
+
+  const t = useTranslations('Category');
 
   const [isInputFocused, setIsInputFocused] = useState(false);
 
@@ -33,7 +37,7 @@ export const TagSearch = (props: ITagSearchProps) => {
       <input
         type="text"
         className={styles.searchInput}
-        placeholder="Search for tag..."
+        placeholder={t('input')}
         value={value}
         onChange={onInputValueChange}
         onBlur={onInputBlur}
@@ -53,7 +57,7 @@ export const TagSearch = (props: ITagSearchProps) => {
         </div>
       )}
       <button type="button" className={styles.searchButton} onClick={onSearch}>
-        Search
+        {t('searchButton')}
       </button>
     </div>
   );
