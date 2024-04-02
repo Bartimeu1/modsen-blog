@@ -52,5 +52,12 @@
       "subtitle": "testimonials",
       "title": "What people say about our blog"
     }
+  },
+  "Blog": {
+    "featuredTitle": "Featured Post",
+    "moreButton": "Read more >",
+    "postsTitle": "All Posts",
+    "prevButton": "< Prev",
+    "nextButton": "Next >"
   }
 }

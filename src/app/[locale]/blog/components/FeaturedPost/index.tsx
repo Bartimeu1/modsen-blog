@@ -3,15 +3,20 @@ import { Button } from '@components/Button';
 import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 
 export const FeaturedPost = () => {
+  const t = useTranslations('Blog');
+
   return (
     <section className={styles.featuredPost}>
       <div className={classNames('container', styles.postContainer)}>
         <div className={styles.postContent}>
-          <p className={styles.postSubtitle}>FEATURED POST</p>
+          <p className={styles.postSubtitle}>
+            {t('featuredTitle').toUpperCase()}
+          </p>
           <h2 className={styles.postTitle}>
             Step-by-step guide to choosing great font pairs
           </h2>
@@ -21,7 +26,7 @@ export const FeaturedPost = () => {
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident.
           </p>
-          <Button text="Read More >" href={`${routes.post}/${1}`} />
+          <Button text={t('moreButton')} href={`${routes.post}/${1}`} />
         </div>
         <Image alt="post-image" src={featuredPostImage} />
       </div>

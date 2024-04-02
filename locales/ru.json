@@ -52,5 +52,12 @@
       "subtitle": "отзывы",
       "title": "Что люди говорят о нас"
     }
+  },
+  "Blog": {
+    "featuredTitle": "Избранный пост",
+    "moreButton": "Читать ещё >",
+    "postsTitle": "Все посты",
+    "prevButton": "< Назад",
+    "nextButton": "Дальше >"
   }
 }
