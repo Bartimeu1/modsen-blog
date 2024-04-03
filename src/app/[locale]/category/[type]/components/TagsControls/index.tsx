@@ -1,5 +1,6 @@
 import { tagItems } from '@root/constants';
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 import { ITagsControls } from './type';
@@ -7,9 +8,11 @@ import { ITagsControls } from './type';
 export const TagsControls = (props: ITagsControls) => {
   const { onTagButtonClick, targetTags } = props;
 
+  const t = useTranslations('Category');
+
   return (
     <div className={styles.tagsControls}>
-      <h2>All Tags</h2>
+      <h2>{t('tagsTitle')}</h2>
       <div className={styles.tagsList}>
         {tagItems.map(({ id, value, title }) => (
           <button

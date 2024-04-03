@@ -1,5 +1,94 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "Header": {
+    "videoButton": "Video about us",
+    "modalTitle": "About Us",
+    "postedOn": "Posted On",
+    "readMore": "Read More >"
+  },
+  "Footer": {
+    "title": "Subscribe to our news letter to get latest updates and news",
+    "input": "Enter Your Email",
+    "button": "Subscribe"
+  },
+  "NavMenu": {
+    "home": "Home",
+    "blog": "Blog",
+    "about-us": "About Us",
+    "contact-us": "Contact Us"
+  },
+  "CategoryList": {
+    "title": "Choose A Category",
+    "business": "business",
+    "startup": "Startup",
+    "economy": "Economy",
+    "technology": "Technology"
+  },
+  "AuthorsList": {
+    "title": "List of Authors"
+  },
+  "JoinUs": {
+    "title": "Join our team to be a part of our story",
+    "button": "Join Now"
+  },
+  "Main": {
+    "Posts": {
+      "featuredTitle": "Featured Post",
+      "allPostsTitle": "All Posts",
+      "readMore": "Read More >"
+    },
+    "About": {
+      "aboutSubtitle": "about us",
+      "aboutTitle": "We are a community of content writers who share their learnings",
+      "missionSubtitle": "our mission",
+      "missionTitle": "Creating valuable content for creatives all around the world",
+      "readMore": "Read More >"
+    },
+    "Story": {
+      "subtitle": "Why we started",
+      "title": "It started out as a simple idea and evolved into our passion",
+      "button": "Discover our story >"
+    },
+    "Reviews": {
+      "subtitle": "testimonials",
+      "title": "What people say about our blog"
+    }
+  },
+  "Blog": {
+    "featuredTitle": "Featured Post",
+    "moreButton": "Read more >",
+    "postsTitle": "All Posts",
+    "prevButton": "< Prev",
+    "nextButton": "Next >"
+  },
+  "Post": {
+    "recommendedTitle": "What to read next"
+  },
+  "Category": {
+    "blogLink": "Blog >",
+    "categoryTitle": "Categories",
+    "tagsTitle": "All tags",
+    "input": "Search for tag...",
+    "searchButton": "Search",
+    "nothingFound": "Nothing found"
+  },
+  "Author": {
+    "postsTitle": "My posts"
+  },
+  "Contact": {
+    "topperSubtitle": "contact us",
+    "topperTitle": "Let’s Start a Conversation",
+    "hoursTitle": "Working hours",
+    "timeText": "Monday To Friday 9:00 AM to 8:00 PM",
+    "supportText": "Our Support Team is available 24/7",
+    "contactTitle": "Contact Us",
+    "Form": {
+      "name": "Full Name",
+      "email": "Your Email",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  },
+  "Select": {
+    "placeholder": "Your profession"
   }
 }

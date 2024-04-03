@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { MAPBOX_TOKEN } from '@root/config';
 import { mapCenter, mapStyle, mapZoom } from '@root/constants';
@@ -12,8 +12,6 @@ import styles from './styles.module.scss';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 export const Map = () => {
-  // eslint-disable-next-line
-  const [map, setMap] = useState<mapboxgl.Map>();
   const mapContainerRef = useRef(null);
 
   const addMarkersToMap = (map: mapboxgl.Map) => {
@@ -37,7 +35,7 @@ export const Map = () => {
     });
 
     map.on('load', () => {
-      setMap(map);
+      addMarkersToMap(map);
     });
 
     return map;
@@ -50,13 +48,13 @@ export const Map = () => {
     }
 
     const map = createMap(node);
-    addMarkersToMap(map);
 
     return () => {
       if (map) {
         map.remove();
       }
     };
+    // eslint-disable-next-line
   }, []);
 
   return <div ref={mapContainerRef} className={styles.map} />;

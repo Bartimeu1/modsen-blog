@@ -2,15 +2,19 @@
 
 import { useState } from 'react';
 
+import { LocalizationToggle } from '@components/LocalizationToggle';
 import { NavMenu } from '@components/NavMenu';
 import { VideoModal } from '@components/VideoModal';
 import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 
 export const Header = () => {
+  const t = useTranslations('Header');
+
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isBurgerActive, setIsBurgerActive] = useState(false);
 
@@ -42,13 +46,14 @@ export const Header = () => {
             [styles.visible]: isBurgerActive,
           })}
         >
+          <LocalizationToggle />
           <NavMenu onLink={closeBurger} />
           <button
             className={styles.videoButton}
             onClick={onVideoButtonClick}
             type="button"
           >
-            Video about us
+            {t('videoButton')}
           </button>
         </div>
         <button

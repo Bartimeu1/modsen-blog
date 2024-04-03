@@ -1,6 +1,7 @@
 import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
 import { Inter, Sen } from 'next/font/google';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 import '@styles/index.scss';
 
@@ -20,16 +21,20 @@ interface RootLayoutProps {
   params: { locale: string };
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params: { locale },
 }: RootLayoutProps) {
+  const messages = useMessages();
+
   return (
     <html lang={locale}>
       <body className={`${fontSen.variable} ${fontInter.variable}`}>
-        <Header />
-        {children}
-        <Footer />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
