@@ -12,7 +12,7 @@ export const metadata = {
   title: 'Modsen blog',
   description: 'Best blog right here',
   icons: {
-    icon: '/favicon.ico',
+    icon: './favicon.ico',
   },
 };
 
