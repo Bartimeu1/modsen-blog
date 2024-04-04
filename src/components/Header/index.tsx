@@ -36,7 +36,7 @@ export const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-testid="header">
       <div className={classNames('container', styles.headerContainer)}>
         <Link href={routes.home} className={styles.headerTitle}>
           Modsen Client Blog

@@ -13,7 +13,11 @@ export const TaggedPost = (props: ITaggedPostProps) => {
   const t = useTranslations('CategoryList');
 
   return (
-    <Link href={`${routes.post}/${id}`} className={styles.tagPost}>
+    <Link
+      href={`${routes.post}/${id}`}
+      className={styles.tagPost}
+      data-testid="tagged-post"
+    >
       <Image
         src={image}
         alt="tag-post-image"

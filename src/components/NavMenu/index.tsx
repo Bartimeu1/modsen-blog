@@ -13,7 +13,13 @@ export const NavMenu = (props: INavMenuProps) => {
   return (
     <nav className={styles.navMenu}>
       {navLinks.map(({ id, key, href }) => (
-        <Link className={styles.navLink} key={id} href={href} onClick={onLink}>
+        <Link
+          data-testid="nav-link"
+          className={styles.navLink}
+          key={id}
+          href={href}
+          onClick={onLink}
+        >
           {t(key)}
         </Link>
       ))}
