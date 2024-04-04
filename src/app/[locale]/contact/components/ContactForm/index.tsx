@@ -104,6 +104,7 @@ export const ContactForm = () => {
         />
       </FormField>
       <input
+        data-testid="form-submit"
         type="submit"
         className={styles.submitButton}
         value={t('submit')}

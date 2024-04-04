@@ -23,7 +23,11 @@ export const LocalizationToggle = () => {
   };
 
   return (
-    <div className={styles.wrapper} onClick={onChangeLocale}>
+    <div
+      className={styles.wrapper}
+      onClick={onChangeLocale}
+      data-testid="locale-button"
+    >
       <input
         type="checkbox"
         className={classNames(styles.toggleButton, {

@@ -27,7 +27,10 @@ export const TaggedPost = (props: ITaggedPostProps) => {
         priority
       />
       <div className={styles.postContent}>
-        <p className={classNames('subtitle', styles.postTag)}>
+        <p
+          className={classNames('subtitle', styles.postTag)}
+          data-testid="post-category"
+        >
           {t(category).toUpperCase()}
         </p>
         <h2 className={styles.postTitle}>{title}</h2>

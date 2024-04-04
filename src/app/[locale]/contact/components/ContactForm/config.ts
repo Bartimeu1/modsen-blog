@@ -15,7 +15,7 @@ export const validationSchema = yup.object({
     .required(requiredValidationText),
   message: yup.string().max(400).required(requiredValidationText),
   fullName: yup.string().min(2).max(20).required(requiredValidationText),
-  profession: yup.string().required(requiredValidationText),
+  profession: yup.string(),
 });
 
 export const baseFormValues = {

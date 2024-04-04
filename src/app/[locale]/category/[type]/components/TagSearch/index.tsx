@@ -33,7 +33,7 @@ export const TagSearch = (props: ITagSearchProps) => {
   };
 
   return (
-    <div className={styles.tagSearch}>
+    <div className={styles.tagSearch} data-testid="search-controls">
       <input
         type="text"
         className={styles.searchInput}

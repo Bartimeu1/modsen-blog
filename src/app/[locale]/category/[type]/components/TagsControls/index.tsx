@@ -11,7 +11,7 @@ export const TagsControls = (props: ITagsControls) => {
   const t = useTranslations('Category');
 
   return (
-    <div className={styles.tagsControls}>
+    <div className={styles.tagsControls} data-testid="tags-controls">
       <h2>{t('tagsTitle')}</h2>
       <div className={styles.tagsList}>
         {tagItems.map(({ id, value, title }) => (
