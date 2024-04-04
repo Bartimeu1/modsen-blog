@@ -48,10 +48,18 @@ export const Slider = (props: ISliderProps) => {
         )}
       </div>
       <div className={styles.navigation}>
-        <button onClick={handleClickPrev} className={styles.prevButton}>
+        <button
+          onClick={handleClickPrev}
+          className={styles.prevButton}
+          data-testid="slider-prev-button"
+        >
           <ArrowPrev />
         </button>
-        <button onClick={handleClickNext} className={styles.nextButton}>
+        <button
+          onClick={handleClickNext}
+          className={styles.nextButton}
+          data-testid="slider-next-button"
+        >
           <ArrowNext />
         </button>
       </div>

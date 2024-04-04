@@ -2,9 +2,7 @@ import { BASE_URL } from '@root/config';
 import { IAuthorData, IPostData } from '@root/types/api';
 
 export const getAllPosts = async (): Promise<IPostData[]> => {
-  const response = await fetch(`${BASE_URL}/posts`, {
-    cache: 'no-store',
-  });
+  const response = await fetch(`${BASE_URL}/posts`);
 
   const posts = await response.json();
 
@@ -25,9 +23,7 @@ export const getLimitedPosts = async (
 };
 
 export const getPostById = async (id: number): Promise<IPostData> => {
-  const response = await fetch(`${BASE_URL}/posts?id=${id}`, {
-    cache: 'no-store',
-  });
+  const response = await fetch(`${BASE_URL}/posts?id=${id}`);
 
   const post = await response.json();
 
@@ -45,9 +41,7 @@ export const getPostsByCategory = async (
     queryString += `&tags_like=${tagsString}`;
   }
 
-  const response = await fetch(queryString, {
-    cache: 'force-cache',
-  });
+  const response = await fetch(queryString);
 
   const posts = await response.json();
 
@@ -68,9 +62,6 @@ export const getLimitedAuthors = async (
 ): Promise<IAuthorData[]> => {
   const response = await fetch(
     `${BASE_URL}/authors?_start=${start}&_limit=${limit}`,
-    {
-      cache: 'no-store',
-    },
   );
 
   const authors = await response.json();
@@ -79,9 +70,7 @@ export const getLimitedAuthors = async (
 };
 
 export const getAuthorById = async (id: string): Promise<IAuthorData> => {
-  const response = await fetch(`${BASE_URL}/authors?id=${id}`, {
-    cache: 'no-store',
-  });
+  const response = await fetch(`${BASE_URL}/authors?id=${id}`);
 
   const author = await response.json();
 

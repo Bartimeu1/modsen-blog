@@ -1,25 +1,24 @@
 import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
+
+const createJestConfig = nextJest({
+  dir: './',
+});
 
 const config: Config = {
-  verbose: true,
-  preset: 'ts-jest',
-  testEnvironment: 'jest-environment-jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
+  coverageProvider: 'v8',
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: [
+    '<rootDir>/jest-setup.ts',
+    '<rootDir>/src/__mocks__/mocks.ts',
+  ],
   moduleNameMapper: {
-    '\\.svg': '<rootDir>/src/__mocks__/svg.ts',
-    '^@root/(.*)$': '<rootDir>/src/$1',
-    '^@components/(.*)$': '<rootDir>/src/components/$1',
-    '^@utils/(.*)$': '<rootDir>/src/utils/$1',
-    '^@services/(.*)$': '<rootDir>/src/services/$1',
-    '^@pages/(.*)$': '<rootDir>/src/pages/$1',
-    '^@constants/(.*)$': '<rootDir>/src/constants/$1',
-    '^@store/(.*)$': '<rootDir>/src/store/$1',
-    '^@assets/(.*)$': '<rootDir>/src/assets/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^.+\\.(svg)$': '<rootDir>/src/__mocks__/svg.ts',
   },
   transform: {
-    '^.+\\.tsx?$': ['ts-jest', { useESM: true }],
-    '.+\\.(png|jpg|svg)$': 'jest-transform-stub',
+    '^.+\\.(svg)$': 'jest-transformer-svg',
   },
 };
 
-export default config;
+export default createJestConfig(config);

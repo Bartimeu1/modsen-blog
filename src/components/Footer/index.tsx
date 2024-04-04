@@ -13,7 +13,7 @@ export const Footer = () => {
   const t = useTranslations('Footer');
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} data-testid="footer">
       <div className={classNames('container', styles.footerContainer)}>
         <div className={styles.footerTopper}>
           <Link href={routes.home} className={styles.topperLink}>

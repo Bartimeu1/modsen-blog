@@ -36,6 +36,7 @@ export const CustomSelect = (props: ICustomSelectProps) => {
   return (
     <div className={styles.select} ref={selectRef}>
       <div
+        data-testid="select-label"
         className={classNames(styles.label, {
           [styles.active]: isSelectActive,
         })}
@@ -49,9 +50,10 @@ export const CustomSelect = (props: ICustomSelectProps) => {
         <ChevronIcon />
       </div>
       {isSelectActive && (
-        <div className={styles.options}>
+        <div className={styles.options} data-testid="select-dropdown">
           {options.map(({ id, value }) => (
             <button
+              data-testid="select-dropdown-option"
               key={id}
               onClick={onSelectOptionClick(value)}
               className={styles.option}

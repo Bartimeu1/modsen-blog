@@ -8,7 +8,7 @@ export const JoinUs = () => {
   const t = useTranslations('JoinUs');
 
   return (
-    <section className={styles.joinUs}>
+    <section className={styles.joinUs} data-testid="join-us">
       <h2 className="title">{t('title')}</h2>
       <p className="infoText">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
