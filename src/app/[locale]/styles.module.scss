@@ -1,0 +1,10 @@
+.notFound {
+  @include flex($align: center, $justify: center, $direction: column);
+
+  height: 100%;
+
+  & h2 {
+    margin-bottom: 20px;
+    @include font($size: $font-size-lg, $weight: $font-weight-bold);
+  }
+}

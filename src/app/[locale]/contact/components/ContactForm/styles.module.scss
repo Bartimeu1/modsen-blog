@@ -1,0 +1,43 @@
+.contactForm {
+  @include flex($direction: column);
+
+  color: $color-darkblue;
+  margin-bottom: 70px;
+}
+
+.contactInput,
+.contactTextarea {
+  @include font(
+    $size: $font-size-xs3,
+    $line: 28px,
+    $family: var(--font-secondary)
+  );
+
+  border: 1px solid $color-input-border;
+  padding: 24px 0 24px 24px;
+  outline: none;
+  border-radius: $border-radius-sm;
+  width: calc(100% - 24px);
+}
+
+.contactTextarea {
+  resize: none;
+  min-height: 144px;
+}
+
+.submitButton {
+  @include font($size: $font-size-sm, $line: 32px, $weight: $font-weight-bold);
+
+  cursor: pointer;
+  color: $color-darkblue;
+  background: $color-yellow;
+  padding: 16px 0;
+  border: 1px solid $color-yellow;
+  transition: 0.3s;
+
+  &:hover {
+    background: inherit;
+    color: $color-yellow;
+    transition: 0.3s;
+  }
+}

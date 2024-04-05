@@ -1,0 +1,51 @@
+.logos {
+  @include flex($align: center, $justify: space-between);
+
+  margin-bottom: 96px;
+
+  & h4 {
+    @include font(
+      $size: $font-size-sm,
+      $weight: $font-weight-bold,
+      $line: 32px
+    );
+
+    color: $color-grey;
+  }
+
+  & img {
+    opacity: 70%;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 100%;
+      transition: 0.3s;
+    }
+  }
+}
+
+.logosList {
+  @include flex($align: center, $justify: space-between);
+
+  width: 80%;
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .logos {
+    flex-direction: column;
+  }
+
+  .topper {
+    @include flex($direction: column, $align: center);
+
+    margin-bottom: 20px;
+  }
+
+  .logosList {
+    flex-direction: column;
+
+    & img {
+      margin-bottom: 30px;
+    }
+  }
+}

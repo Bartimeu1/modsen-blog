@@ -1,0 +1,42 @@
+.posts {
+  & a {
+    margin-bottom: 64px;
+  }
+}
+
+.postsTitle {
+  @include font($size: $font-size-xl, $line: 64px, $weight: $font-weight-bold);
+
+  letter-spacing: -2px;
+  position: relative;
+  margin-bottom: 96px;
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background: $color-grey;
+    bottom: -32px;
+    left: 0;
+    opacity: 32%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptopM) {
+  .posts {
+    & a {
+      margin-bottom: 30px;
+      border: 1px solid $color-border;
+      padding: 25px 10px;
+    }
+  }
+
+  .postsTitle {
+    margin-bottom: 30px;
+
+    &::after {
+      bottom: -15px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.tagSearch {
+  @include flex($align: center);
+
+  margin-bottom: 58px;
+  position: relative;
+  letter-spacing: -1.5%;
+}
+
+.searchInput {
+  @include font($size: $font-size-xs4, $line: 24px, $weight: bold);
+
+  color: $color-darkblue;
+  border: 1px solid $color-grey;
+  padding: 15px 0 15px 25px;
+  border-radius: $border-radius-md;
+  outline: none;
+  width: 100%;
+}
+
+.searchButton {
+  @include font($size: $font-size-xs3, $line: 24px, $weight: bold);
+
+  background: $color-yellow;
+  color: $color-darkblue;
+  height: 100%;
+  width: 83px;
+  border-radius: $border-radius-md;
+  position: absolute;
+  border: 1px solid $color-yellow;
+  right: 0;
+  transition: 0.3s;
+
+  &:hover {
+    background: $color-white;
+    transition: 0.3s;
+  }
+}
+
+.elasticSearch {
+  @include flex($direction: column, $align: flex-start);
+
+  position: absolute;
+  left: 0;
+  top: 105%;
+  width: 100%;
+  border: 1px solid $color-grey;
+  border-radius: $border-radius-md;
+  background: $color-white;
+}
+
+.elasticButton {
+  @include font($size: $font-size-xs2, $line: 24px, $weight: bold);
+
+  background: none;
+  width: 100%;
+  padding: 10px 0 10px 20px;
+  text-align: left;
+
+  &:hover {
+    background: $color-yellow;
+  }
+}

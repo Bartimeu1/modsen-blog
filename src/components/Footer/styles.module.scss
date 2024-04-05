@@ -1,0 +1,150 @@
+.footer {
+  background: $color-darkblue;
+  padding: 59px 0 56px 0;
+}
+
+.footerTopper {
+  @include flex($align: center, $justify: space-between);
+
+  margin-bottom: 48px;
+}
+
+.topperLink {
+  @include font(
+    $size: $font-size-sm,
+    $weight: $font-weight-bold,
+    $family: var(--font-secondary)
+  );
+
+  color: $color-white;
+}
+
+.subscribe {
+  @include flex($justify: space-between, $align: flex-start);
+
+  background: $color-footer-subscribe;
+  padding: 80px 64px;
+  margin-bottom: 48px;
+}
+
+.subscribeTitle {
+  @include font($line: 48px, $weight: $font-weight-bold, $size: $font-size-lg);
+
+  letter-spacing: -2px;
+  color: $color-white;
+}
+
+.subscribeControls {
+  @include flex($align: center);
+}
+
+.subscribeInput {
+  @include font(
+    $family: var(--font-secondary),
+    $size: $font-size-xs3,
+    $line: 28px
+  );
+
+  border: 1px solid $color-dark-grey;
+  padding: 14px 0 14px 25px;
+  background: inherit;
+  margin-right: 24px;
+  color: $color-white;
+  width: 323px;
+
+  &::placeholder {
+    color: $color-grey;
+  }
+}
+
+.footerBottomer {
+  @include flex($align: center, $justify: space-between);
+
+  & a {
+    & path {
+      transition: 0.2s;
+      fill: $color-grey;
+    }
+
+    &:hover {
+      & path {
+        transition: 0.2s;
+        fill: $color-white;
+      }
+    }
+  }
+}
+
+.bottomerText {
+  @include font(
+    $family: var(--font-secondary),
+    $size: $font-size-xs3,
+    $line: 28px
+  );
+
+  color: $color-white;
+  opacity: 70%;
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .subscribe {
+    text-align: center;
+
+    @include flex($direction: column, $align: center);
+  }
+
+  .subscribeTitle {
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+
+  .subscribeInput {
+    width: 100%;
+    max-width: 323px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tabletM) {
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footerTopper {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .topperLink {
+    margin-bottom: 15px;
+  }
+
+  .subscribe {
+    padding: 40px 10px;
+    margin-bottom: 15px;
+  }
+
+  .subscribeControls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .subscribeInput {
+    max-width: 85%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .subscribeTitle {
+    font-size: $font-size-sm;
+    line-height: 38px;
+  }
+
+  .footerBottomer {
+    flex-direction: column;
+    text-align: center;
+
+    & p:last-child {
+      margin-bottom: 10px;
+    }
+  }
+}

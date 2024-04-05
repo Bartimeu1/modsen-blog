@@ -1,0 +1,94 @@
+{
+  "Header": {
+    "videoButton": "Видео о нас",
+    "modalTitle": "О Нас",
+    "readMore": "Читать ещё >",
+    "postedOn": "Опубликовано в"
+  },
+  "Footer": {
+    "title": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
+    "input": "Введите Свой Email ",
+    "button": "Подписаться"
+  },
+  "NavMenu": {
+    "home": "Главная",
+    "blog": "Блог",
+    "about-us": "О нас",
+    "contact-us": "Связь"
+  },
+  "CategoryList": {
+    "title": "Выберите категорию",
+    "business": "Бизнес",
+    "startup": "Стартап",
+    "economy": "Экономика",
+    "technology": "Технологии"
+  },
+  "AuthorsList": {
+    "title": "Список авторов"
+  },
+  "JoinUs": {
+    "title": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
+    "button": "Присоединиться сейчас"
+  },
+  "Main": {
+    "Posts": {
+      "featuredTitle": "Избранный пост",
+      "allPostsTitle": "Все посты",
+      "readMore": "Читать ещё >"
+    },
+    "About": {
+      "aboutSubtitle": "о нас",
+      "aboutTitle": "Мы — сообщество авторов контента, которые делятся своими знаниями",
+      "missionSubtitle": "наша миссия",
+      "missionTitle": "Создание ценного контента для творческих людей со всего мира",
+      "readMore": "Читать ещё>"
+    },
+    "Story": {
+      "subtitle": "Как мы начали",
+      "title": "Все началось с простой идеи и превратилось в нашу страсть",
+      "button": "Наша история >"
+    },
+    "Reviews": {
+      "subtitle": "отзывы",
+      "title": "Что люди говорят о нас"
+    }
+  },
+  "Blog": {
+    "featuredTitle": "Избранный пост",
+    "moreButton": "Читать ещё >",
+    "postsTitle": "Все посты",
+    "prevButton": "< Назад",
+    "nextButton": "Дальше >"
+  },
+  "Post": {
+    "recommendedTitle": "Прочитать ещё"
+  },
+  "Category": {
+    "blogLink": "Блог >",
+    "categoryTitle": "Категории",
+    "tagsTitle": "Все теги",
+    "input": "Искать тег...",
+    "searchButton": "Искать",
+    "nothingFound": "Ничего не найдено"
+  },
+  "Author": {
+    "postsTitle": "Мои посты"
+  },
+  "Contact": {
+    "topperSubtitle": "Свяжитесь с нами",
+    "topperTitle": "Давайте начнём диалог",
+    "hoursTitle": "Часы работы",
+    "timeText": "Понедельник - пятница с 9:00 до 18:00",
+    "supportText": "Наша служба поддержки доступна 24/7",
+    "contactTitle": "Связь с нами",
+    "Form": {
+      "name": "Ваше Имя",
+      "email": "Ваша почта",
+      "message": "Сообщение",
+      "submit": "Отправить"
+    }
+  },
+  "Select": {
+    "placeholder": "Ваша профессия"
+  }
+}

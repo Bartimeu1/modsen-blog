@@ -1,0 +1,79 @@
+@import '@styles/mixins';
+
+.post {
+  @include flex($direction: column);
+
+  &--large {
+    .postText {
+      max-width: 550px;
+    }
+
+    & h4 {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &--small {
+    cursor: pointer;
+
+    .postTitle {
+      @include font(
+        $size: $font-size-sm,
+        $line: 32px,
+        $weight: $font-weight-bold
+      );
+
+      max-width: 370px;
+    }
+
+    .postInfo {
+      margin-bottom: 8px;
+    }
+
+    &:hover {
+      background: $color-light-yellow;
+    }
+  }
+
+  &--middle {
+    .postTitle {
+      @include font(
+        $size: $font-size-md,
+        $line: 40px,
+        $weight: $font-weight-bold
+      );
+
+      letter-spacing: -1px;
+    }
+    .postInfo {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.postImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.postInfo {
+  @include font(
+    $size: $font-size-xs4,
+    $weight: $font-weight-medium,
+    $family: var(--font-secondary)
+  );
+
+  margin-bottom: 18px;
+  color: $color-dark-grey;
+}
+
+.postTitle {
+  @include font(
+    $size: $font-size-md,
+    $line: 40px,
+    $weight: $font-weight-medium
+  );
+
+  color: $color-darkblue;
+}

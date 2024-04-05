@@ -1,0 +1,28 @@
+.userPreview {
+  @include flex($align: center);
+
+  & img {
+    border-radius: 100%;
+    object-fit: cover;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.userInfo {
+  margin-left: 16px;
+
+  & h4 {
+    @include font(
+      $size: $font-size-sm,
+      $weight: $font-weight-bold,
+      $line: 32px
+    );
+  }
+
+  & p {
+    @include font($size: $font-size-xs3, $family: var(--font-secondary));
+
+    color: $color-grey;
+  }
+}

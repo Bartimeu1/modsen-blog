@@ -1,0 +1,79 @@
+.select {
+  @include font(
+    $size: $font-size-xs3,
+    $line: 28px,
+    $family: var(--font-secondary)
+  );
+
+  position: relative;
+  z-index: 10;
+}
+
+.label {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid $color-input-border;
+  padding: 24px 0 24px 24px;
+  border-radius: $border-radius-sm;
+
+  & svg {
+    position: absolute;
+    right: 63px;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: 0.3s;
+  }
+
+  &.active {
+    & svg {
+      transform: translate(0, -50%) rotate(180deg);
+      transition: 0.3s;
+    }
+  }
+}
+
+.placeholder {
+  opacity: 80%;
+}
+
+.options {
+  @include flex($direction: column, $align: flex-start);
+
+  position: absolute;
+  background: $color-white;
+  top: 100%;
+  width: 100%;
+  border: 1px solid $color-input-border;
+  border-radius: $border-radius-md;
+}
+
+.option {
+  @include font(
+    $size: $font-size-xs2,
+    $line: 28px,
+    $weight: $font-weight-bold,
+    $family: var(--font-secondary)
+  );
+
+  cursor: pointer;
+  background: inherit;
+  width: 100%;
+  padding: 24px 0;
+  transition: 0.2s;
+  border-radius: $border-radius-md;
+
+  &:hover {
+    background: $color-yellow;
+    transition: 0.2s;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tabletM) {
+  .label svg {
+    right: 30px;
+  }
+}

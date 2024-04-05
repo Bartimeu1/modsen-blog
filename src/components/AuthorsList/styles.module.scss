@@ -1,0 +1,80 @@
+.authors {
+  margin-bottom: 96px;
+
+  & h2 {
+    text-align: center;
+  }
+}
+
+.authorsList {
+  @include flex($align: center, $justify: space-between);
+}
+
+.authorItem {
+  @include flex($align: center, $justify: center, $direction: column);
+
+  width: 32%;
+  max-width: 296px;
+  background: $color-light-grey;
+  padding: 40px 0;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-light-yellow;
+    transition: 0.3s;
+  }
+
+  & img {
+    border-radius: 100%;
+    object-fit: cover;
+    width: 128px;
+    height: 128px;
+  }
+
+  & h4 {
+    @include font(
+      $size: $font-size-md,
+      $weight: $font-weight-bold,
+      $line: 40px
+    );
+
+    letter-spacing: -1px;
+    margin-top: 20px;
+    color: $color-darkblue;
+  }
+
+  & p {
+    @include font(
+      $size: $font-size-xs4,
+      $family: var(--font-secondary),
+      $line: 20px
+    );
+
+    margin-bottom: 20px;
+    color: $color-grey;
+  }
+
+  & a {
+    @include flex($align: center, $direction: column);
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .authorsList {
+    flex-wrap: wrap;
+  }
+
+  .authorItem {
+    width: 49%;
+    max-width: none;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tabletS) {
+  .authorItem {
+    width: 100%;
+    max-width: none;
+  }
+}

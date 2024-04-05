@@ -1,0 +1,97 @@
+.about {
+  @include flex($justify: center);
+
+  margin-bottom: 128px;
+  position: relative;
+  padding: 119px 15px 96px 15px;
+  background: $color-light-purple;
+
+  &::before {
+    height: 23px;
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      to right,
+      $color-white 18%,
+      $color-yellow 18%,
+      $color-yellow 78%,
+      $color-purple 78%,
+      $color-purple 100%
+    );
+  }
+}
+
+.aboutBlock {
+  @include flex($direction: column);
+
+  color: $color-darkblue;
+  max-width: 515px;
+  width: 100%;
+
+  &:first-child {
+    margin-right: 60px;
+  }
+}
+
+.aboutTitle {
+  @include font($size: 36px, $weight: $font-weight-bold, $line: 48px);
+
+  margin-bottom: 16px;
+  letter-spacing: -2px;
+  max-width: 493px;
+}
+
+.missionTitle {
+  @include font($size: 28px, $weight: $font-weight-bold, $line: 40px);
+
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  max-width: 480px;
+}
+
+.aboutLink {
+  @include font($size: 18px, $weight: $font-weight-bold);
+
+  color: $color-purple;
+  margin-top: 16px;
+  transition: 0.3s;
+
+  &:hover {
+    color: $color-yellow;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptopS) {
+  .about {
+    @include flex($direction: column, $align: center);
+  }
+
+  .aboutBlock {
+    text-align: center;
+
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobileM) {
+  .about {
+    padding: 50px 20px 30px 20px;
+  }
+
+  .aboutTitle {
+    font-size: $font-size-md;
+    line-height: 40px;
+  }
+
+  .missionTitle {
+    font-size: $font-size-sm;
+    line-height: 35px;
+  }
+}

@@ -1,0 +1,110 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slider {
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  min-width: 470px;
+}
+
+.slideText {
+  @include font($size: $font-size-sm, $weight: $font-weight-bold, $line: 32px);
+
+  max-width: 470px;
+}
+
+.slideItem {
+  @include flex(
+    $direction: column,
+    $align: flex-start,
+    $justify: space-between
+  );
+
+  animation: fadeIn 1s;
+  height: 300px;
+  transition: 0.3s all ease;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.navigation {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+
+  & button {
+    border-radius: 100%;
+  }
+}
+
+.prevButton {
+  width: 48px;
+  height: 48px;
+  margin-right: 24px;
+}
+
+.nextButton {
+  background: $color-darkblue;
+  width: 62px;
+  height: 62px;
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .slideItem {
+    height: 250px;
+  }
+
+  .wrapper {
+    min-width: auto;
+  }
+
+  .slider {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktopM) {
+  .slideItem {
+    height: 250px;
+  }
+
+  .wrapper {
+    min-width: auto;
+  }
+
+  .slider {
+    padding: 0 10px;
+  }
+
+  .navigation {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobileS) {
+  .slideItem {
+    height: 235px;
+  }
+
+  .navigation {
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .slideText {
+    font-size: $font-size-xs;
+  }
+}

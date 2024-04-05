@@ -1,0 +1,48 @@
+.tagPost {
+  @include flex($align: center);
+
+  & img {
+    width: 100%;
+    max-width: 43%;
+    height: auto;
+  }
+}
+
+.postContent {
+  @include flex($direction: column, $align: flex-start);
+
+  margin-left: 32px;
+}
+
+.postTag {
+  color: $color-purple;
+  margin-bottom: 20px;
+}
+
+.postTitle {
+  @include font($size: $font-size-lg, $line: 48px, $weight: $font-weight-bold);
+
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+  color: $color-darkblue;
+}
+
+@media screen and (max-width: $breakpoint-laptopM) {
+  .tagPost {
+    flex-direction: column;
+
+    & img {
+      max-width: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  .postTitle {
+    font-size: $font-size-md;
+    line-height: 40px;
+  }
+
+  .postContent {
+    margin-left: 10px;
+  }
+}

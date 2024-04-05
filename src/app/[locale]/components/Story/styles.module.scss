@@ -1,0 +1,60 @@
+@import '@styles/mixins';
+
+.story {
+  @include flex($justify: flex-end, $align: flex-end);
+
+  margin-bottom: 128px;
+  padding-top: 120px;
+  position: relative;
+
+  &::before {
+    @include bgImage($image: '../assets/images/storyBg.jpg');
+    z-index: 1;
+    position: absolute;
+    width: 73%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: '';
+  }
+}
+
+.storyContent {
+  background: $color-white;
+  padding: 80px;
+  max-width: 550px;
+  z-index: 2;
+
+  & a {
+    margin-top: 32px;
+  }
+}
+
+.storyTitle {
+  @include font($size: $font-size-xl, $weight: $font-weight-bold, $line: 64px);
+
+  letter-spacing: -2px;
+  max-width: 550px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: $breakpoint-tabletM) {
+  .story {
+    justify-content: center;
+    text-align: center;
+    padding-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .storyContent {
+    padding: 0;
+  }
+
+  .storyTitle {
+    font-size: $font-size-md2;
+    line-height: 50px;
+  }
+}

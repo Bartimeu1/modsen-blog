@@ -1,0 +1,17 @@
+@import '@styles/mixins';
+
+.button {
+  @include font($size: $font-size-xs2, $weight: $font-weight-bold);
+
+  color: $color-darkblue;
+  background: $color-yellow;
+  border: 1px solid $color-yellow;
+  padding: 16px 48px;
+  transition: 0.3s;
+  display: inline-block;
+
+  &:hover {
+    color: $color-yellow;
+    background: inherit;
+  }
+}

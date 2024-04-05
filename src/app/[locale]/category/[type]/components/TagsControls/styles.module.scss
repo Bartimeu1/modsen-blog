@@ -1,0 +1,29 @@
+.tagsControls {
+  width: 100%;
+}
+
+.tagsList {
+  @include flex($justify: space-around, $wrap: wrap);
+}
+
+.tagButton {
+  @include font($weight: $font-weight-bold, $size: $font-size-xs4, $line: 32px);
+
+  margin-bottom: 16px;
+  background: inherit;
+  border: 2px solid $color-grey;
+  border-radius: $border-radius-lg;
+  padding: 8px 38px;
+  max-width: max-content;
+  transition: 0.3s;
+
+  &.active {
+    background: $color-yellow;
+    color: $color-white;
+  }
+
+  &:hover {
+    background: $color-yellow;
+    transition: 0.3s;
+  }
+}
