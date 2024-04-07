@@ -52,6 +52,7 @@ export const Header = () => {
             className={styles.videoButton}
             onClick={onVideoButtonClick}
             type="button"
+            data-testid="video-button"
           >
             {t('videoButton')}
           </button>

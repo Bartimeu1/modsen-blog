@@ -12,9 +12,9 @@ export const NavMenu = (props: INavMenuProps) => {
 
   return (
     <nav className={styles.navMenu}>
-      {navLinks.map(({ id, key, href }) => (
+      {navLinks.map(({ id, key, href, testId }) => (
         <Link
-          data-testid="nav-link"
+          data-testid={testId}
           className={styles.navLink}
           key={id}
           href={href}
