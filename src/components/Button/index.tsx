@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
-import styles from './styles.module.scss';
 import { IButtonProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const Button = (props: IButtonProps) => {
   const { text, href } = props;

@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 
 import { slides } from './config';
+
 import styles from './styles.module.scss';
 
 export const Reviews = () => {

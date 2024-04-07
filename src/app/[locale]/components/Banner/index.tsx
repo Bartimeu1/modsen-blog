@@ -1,12 +1,12 @@
 import React from 'react';
-
 import { Button } from '@components/Button';
 import { routes } from '@root/constants';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { IBannerProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const Banner = ({ post }: IBannerProps) => {
   const { id, title, author, createdDate, text } = post;

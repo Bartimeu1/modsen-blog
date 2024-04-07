@@ -1,11 +1,11 @@
 import { useRef } from 'react';
-import { createPortal } from 'react-dom';
-
 import { useLockBodyScroll, useOnClickOutside } from '@root/hooks';
 import { useTranslations } from 'next-intl';
+import { createPortal } from 'react-dom';
+
+import { IVideoModalProps } from './types';
 
 import styles from './styles.module.scss';
-import { IVideoModalProps } from './types';
 
 export const VideoModal = (props: IVideoModalProps) => {
   const { closeModal } = props;

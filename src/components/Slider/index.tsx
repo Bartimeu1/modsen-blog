@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-
 import { UserPreview } from '@components/UserPreview';
 import { ArrowNext, ArrowPrev } from '@root/constants';
 import classNames from 'classnames';
 
-import styles from './styles.module.scss';
 import { ISliderProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const Slider = (props: ISliderProps) => {
   const { slides } = props;

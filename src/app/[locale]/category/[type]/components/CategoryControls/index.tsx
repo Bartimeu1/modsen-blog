@@ -3,8 +3,9 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { ICategoryControls } from './types';
+
+import styles from './styles.module.scss';
 
 export const CategoryControls = (props: ICategoryControls) => {
   const { targetCategory } = props;

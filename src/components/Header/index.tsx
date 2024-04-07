@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-
 import { LocalizationToggle } from '@components/LocalizationToggle';
 import { NavMenu } from '@components/NavMenu';
 import { VideoModal } from '@components/VideoModal';

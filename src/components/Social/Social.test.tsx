@@ -2,6 +2,7 @@ import { NetworksEnum } from '@root/types/enums';
 import { render } from '@testing-library/react';
 
 import { Social } from '.';
+
 import { ISocialProps } from './types';
 
 const mockedProps: ISocialProps = {

@@ -1,6 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
 
 import { CustomSelect } from '.';
+
 import { ICustomSelectProps } from './types';
 
 jest.mock('next-intl', () => ({

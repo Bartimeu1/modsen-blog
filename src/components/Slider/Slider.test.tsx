@@ -2,6 +2,7 @@ import { fireEvent, render } from '@testing-library/react';
 import { StaticImageData } from 'next/image';
 
 import { Slider } from '.';
+
 import { ISliderProps } from './types';
 
 const mockedProps: ISliderProps = {

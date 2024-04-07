@@ -1,14 +1,14 @@
 'use client';
 
 import { useRef, useState } from 'react';
-
 import { ChevronIcon } from '@root/constants';
 import { useOnClickOutside } from '@root/hooks';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { ICustomSelectProps } from './types';
+
+import styles from './styles.module.scss';
 export const CustomSelect = (props: ICustomSelectProps) => {
   const { options, onSelect, targetOption } = props;
 

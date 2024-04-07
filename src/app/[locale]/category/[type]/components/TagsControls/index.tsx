@@ -2,8 +2,9 @@ import { tagItems } from '@root/constants';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { ITagsControls } from './type';
+
+import styles from './styles.module.scss';
 
 export const TagsControls = (props: ITagsControls) => {
   const { onTagButtonClick, targetTags } = props;

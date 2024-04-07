@@ -1,5 +1,4 @@
 import React, { ComponentType, useEffect, useState } from 'react';
-
 import { useIntersectionObserver } from '@root/hooks';
 
 export const WithLazyLoad = <P extends object>(

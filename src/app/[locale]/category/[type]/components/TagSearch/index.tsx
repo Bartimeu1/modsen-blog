@@ -1,9 +1,9 @@
 import { ChangeEvent, useState } from 'react';
-
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { ITagSearchProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const TagSearch = (props: ITagSearchProps) => {
   const { tags, onSearch, onChange, value } = props;

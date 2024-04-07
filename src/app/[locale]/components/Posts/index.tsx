@@ -1,13 +1,13 @@
 import React from 'react';
-
 import { Button } from '@components/Button';
 import { Post } from '@components/Posts';
 import { routes } from '@root/constants';
 import { PostTypesEnum } from '@root/types/enums';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { IPostsProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const Posts = (props: IPostsProps) => {
   const { featuredPost, posts } = props;

@@ -1,16 +1,17 @@
 'use client';
 
 import { ChangeEvent, SyntheticEvent, useState } from 'react';
-
 import { CustomSelect } from '@components/CustomSelect';
 import { sendMail } from '@services/sendMail';
 import { useTranslations } from 'next-intl';
 import { ValidationError } from 'yup';
 
 import { FormField } from '../FormField';
+
 import { baseFormValues, selectOptions, validationSchema } from './config';
-import styles from './styles.module.scss';
 import { IErrorsObject } from './types';
+
+import styles from './styles.module.scss';
 
 export const ContactForm = () => {
   const t = useTranslations('Contact.Form');

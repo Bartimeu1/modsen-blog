@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { navLinks } from './config';
-import styles from './styles.module.scss';
 import { INavMenuProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const NavMenu = (props: INavMenuProps) => {
   const { onLink } = props;

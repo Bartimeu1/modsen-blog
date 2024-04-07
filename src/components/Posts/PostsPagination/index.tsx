@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-
 import { TaggedPost } from '@components/Posts';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { IPostsPaginationProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const PostsPagination = (props: IPostsPaginationProps) => {
   const { posts } = props;

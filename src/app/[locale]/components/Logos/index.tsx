@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { logosItems } from './config';
+
 import styles from './styles.module.scss';
 
 export const Logos = () => {

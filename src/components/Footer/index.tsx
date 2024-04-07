@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { mockedNetworkLinks } from './config';
+
 import styles from './styles.module.scss';
 
 export const Footer = () => {

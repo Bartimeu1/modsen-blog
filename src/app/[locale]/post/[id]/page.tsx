@@ -8,8 +8,9 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import { categoryImages } from './config';
-import styles from './styles.module.scss';
 import { IPostPageProps } from './types';
+
+import styles from './styles.module.scss';
 
 const PostPage = async (props: IPostPageProps) => {
   const { params } = props;

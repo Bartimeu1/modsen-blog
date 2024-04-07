@@ -1,5 +1,6 @@
-import styles from './styles.module.scss';
 import { IFormFieldProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const FormField = (props: IFormFieldProps) => {
   const { errorText, children } = props;

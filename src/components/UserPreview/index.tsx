@@ -1,7 +1,8 @@
 import Image from 'next/image';
 
-import styles from './styles.module.scss';
 import { IUserPreviewProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const UserPreview = (props: IUserPreviewProps) => {
   const { name, city, imageUrl } = props;

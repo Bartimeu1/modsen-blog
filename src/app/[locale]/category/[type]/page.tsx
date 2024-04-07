@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-
 import { TaggedPost } from '@components/Posts';
 import { routes, tagItems } from '@root/constants';
 import { IPostData } from '@root/types/api';
@@ -10,8 +9,9 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { CategoryControls, TagsControls, TagSearch } from './components';
-import styles from './styles.module.scss';
 import { ICategoryPageProps } from './types';
+
+import styles from './styles.module.scss';
 
 const CategoryPage = (props: ICategoryPageProps) => {
   const { params } = props;
