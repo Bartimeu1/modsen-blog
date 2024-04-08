@@ -13,3 +13,5 @@ export const SENDMAIL_PUBLIC_KEY = process.env.SENDMAIL_PUBLIC_KEY as string;
 export const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN as string;
 
 export const MAPBOX_STYLE = process.env.MAPBOX_STYLE as string;
+
+export const YOUTUBE_VIDEO_URL = process.env.YOUTUBE_VIDEO_URL as string;

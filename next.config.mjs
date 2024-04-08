@@ -20,6 +20,7 @@ const nextConfig = {
     SENDMAIL_PUBLIC_KEY: process.env.SENDMAIL_PUBLIC_KEY,
     MAPBOX_TOKEN: process.env.MAPBOX_TOKEN,
     MAPBOX_STYLE: process.env.MAPBOX_STYLE,
+    YOUTUBE_VIDEO_URL: process.env.YOUTUBE_VIDEO_URL,
   },
   images: {
     remotePatterns: [
