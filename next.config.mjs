@@ -15,9 +15,11 @@ const nextConfig = {
   env: {
     BASE_URL: process.env.BASE_URL,
     SENDMAIL_SERVICE_ID: process.env.SENDMAIL_SERVICE_ID,
-    SENDMAIL_TEMPLATE_ID: process.env.SENDMAIL_TEMPLATE_ID,
+    SENDMAIL_CONTACT_TEMPLATE_ID: process.env.SENDMAIL_CONTACT_TEMPLATE_ID,
+    SENDMAIL_SUBSCRIBE_TEMPLATE_ID: process.env.SENDMAIL_SUBSCRIBE_TEMPLATE_ID,
     SENDMAIL_PUBLIC_KEY: process.env.SENDMAIL_PUBLIC_KEY,
     MAPBOX_TOKEN: process.env.MAPBOX_TOKEN,
+    MAPBOX_STYLE: process.env.MAPBOX_STYLE,
   },
   images: {
     remotePatterns: [

@@ -38,6 +38,21 @@
   @include flex($align: center);
 }
 
+.subscribeField {
+  position: relative;
+  width: 323px;
+  margin-right: 24px;
+}
+
+.errorText {
+  @include font($size: $font-size-xs4, $family: var(--font-secondary));
+
+  color: $color-red;
+  position: absolute;
+  bottom: -19px;
+  left: 10px;
+}
+
 .subscribeInput {
   @include font(
     $family: var(--font-secondary),
@@ -48,12 +63,30 @@
   border: 1px solid $color-dark-grey;
   padding: 14px 0 14px 25px;
   background: inherit;
-  margin-right: 24px;
+  width: 100%;
+  max-width: 90%;
   color: $color-white;
-  width: 323px;
 
   &::placeholder {
     color: $color-grey;
+  }
+}
+
+.subscribeButton {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-primary);
+  line-height: normal;
+  color: rgb(35, 37, 54);
+  background: rgb(255, 208, 80);
+  border: 1px solid rgb(255, 208, 80);
+  padding: 16px 48px;
+  transition: 0.3s;
+  display: inline-block;
+
+  &:hover {
+    color: $color-yellow;
+    background: inherit;
   }
 }
 
@@ -98,8 +131,7 @@
     margin-bottom: 30px;
   }
 
-  .subscribeInput {
-    width: 100%;
+  .subscribeField {
     max-width: 323px;
   }
 }
@@ -128,7 +160,7 @@
     width: 100%;
   }
 
-  .subscribeInput {
+  .subscribeField {
     max-width: 85%;
     margin-right: 0;
     margin-bottom: 20px;

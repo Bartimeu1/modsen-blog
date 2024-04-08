@@ -2,7 +2,7 @@
 
 import { ChangeEvent, SyntheticEvent, useState } from 'react';
 import { CustomSelect } from '@components/CustomSelect';
-import { sendMail } from '@services/sendMail';
+import { sendContactMail } from '@services/sendMail';
 import { useTranslations } from 'next-intl';
 import { ValidationError } from 'yup';
 
@@ -36,7 +36,7 @@ export const ContactForm = () => {
     validationSchema
       .validate(formValues, { abortEarly: false })
       .then(() => {
-        sendMail(formValues);
+        sendContactMail(formValues);
         setFormValues(baseFormValues);
         setTargetSelectOption('');
         setValidationErrors({});
