@@ -7,3 +7,7 @@ export const mockedContentTitle =
 export const emailValidationText = 'Must be a valid email';
 
 export const requiredValidationText = 'This field is required';
+
+export const successText = 'Operation completed successfully!';
+
+export const errorText = 'Something went wrong!';
