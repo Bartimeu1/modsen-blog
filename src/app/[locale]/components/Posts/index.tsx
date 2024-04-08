@@ -16,7 +16,7 @@ export const Posts = (props: IPostsProps) => {
 
   const { author, createdDate, title, image, text, id } = featuredPost;
   return (
-    <section className={styles.posts}>
+    <div className={styles.posts}>
       <div className={styles.featuredWrapper}>
         <h3 className="title">{t('featuredTitle')}</h3>
         <div className={styles.featuredPost}>
@@ -47,6 +47,6 @@ export const Posts = (props: IPostsProps) => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };

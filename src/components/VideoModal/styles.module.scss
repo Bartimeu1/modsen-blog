@@ -7,7 +7,6 @@
   top: 0;
   left: 0;
   backdrop-filter: blur(10px);
-  z-index: 10;
   transition: 0.5s all;
   z-index: 20;
 }
@@ -17,7 +16,7 @@
 
   width: 100%;
   max-width: 600px;
-  padding: 20px 20px 35px 20px;
+  padding: 20px 20px 35px;
   margin: 0 10px;
   border-radius: $border-radius-lg;
   background: $color-darkblue;
@@ -34,7 +33,7 @@
   }
 
   @media screen and (max-width: ($breakpoint-tabletS)) {
-    padding: 15px 10px 25px 10px;
+    padding: 15px 10px 25px;
     margin: 0 5px;
   }
 }

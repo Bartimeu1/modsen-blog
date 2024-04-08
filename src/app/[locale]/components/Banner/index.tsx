@@ -14,7 +14,7 @@ export const Banner = ({ post }: IBannerProps) => {
   const t = useTranslations('Header');
 
   return (
-    <section className={styles.banner}>
+    <div className={styles.banner}>
       <div className={classNames('container', styles.bannerContainer)}>
         <p className={styles.bannerMeta}>
           {t('postedOn').toUpperCase()}
@@ -27,6 +27,6 @@ export const Banner = ({ post }: IBannerProps) => {
         <p className={styles.bannerText}>{text}</p>
         <Button text={t('readMore')} href={`${routes.post}/${id}`} />
       </div>
-    </section>
+    </div>
   );
 };

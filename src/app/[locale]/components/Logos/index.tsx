@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 
 export const Logos = () => {
   return (
-    <section className={styles.logos}>
+    <div className={styles.logos}>
       <div className={styles.topper}>
         <p className="infoText">We are</p>
         <h4>Featured in</h4>
@@ -24,6 +24,6 @@ export const Logos = () => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };

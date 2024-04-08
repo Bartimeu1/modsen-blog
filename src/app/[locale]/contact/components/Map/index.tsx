@@ -54,7 +54,6 @@ export const Map = () => {
         map.remove();
       }
     };
-    // eslint-disable-next-line
   }, []);
 
   return <div ref={mapContainerRef} className={styles.map} />;

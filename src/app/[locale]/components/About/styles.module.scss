@@ -3,7 +3,7 @@
 
   margin-bottom: 128px;
   position: relative;
-  padding: 119px 15px 96px 15px;
+  padding: 119px 15px 96px;
   background: $color-light-purple;
 
   &::before {
@@ -82,7 +82,7 @@
 
 @media screen and (max-width: $breakpoint-mobileM) {
   .about {
-    padding: 50px 20px 30px 20px;
+    padding: 50px 20px 30px;
   }
 
   .aboutTitle {

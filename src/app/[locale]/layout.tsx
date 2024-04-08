@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
 import { Inter, Sen } from 'next/font/google';
@@ -11,13 +12,10 @@ const fontInter = Inter({ subsets: ['latin'], variable: '--font-secondary' });
 export const metadata = {
   title: 'Modsen blog',
   description: 'Best blog right here',
-  icons: {
-    icon: './favicon.ico',
-  },
 };
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   params: { locale: string };
 }
 

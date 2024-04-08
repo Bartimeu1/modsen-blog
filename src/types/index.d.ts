@@ -1,9 +1,11 @@
+import { FC, SVGProps } from 'react';
+
 declare module '*.jpg';
 declare module '*.png';
 declare module '*.webp';
 
 declare module '*.svg' {
-  const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
+  const ReactComponent: FC<SVGProps<SVGSVGElement>>;
   const content: string;
 
   export { ReactComponent };
@@ -14,8 +16,4 @@ declare namespace Cypress {
   interface Chainable {
     login(name: string): void;
   }
-}
-
-interface Window {
-  Cypress?: unknown;
 }

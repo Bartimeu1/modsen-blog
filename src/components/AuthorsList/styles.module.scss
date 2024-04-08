@@ -13,7 +13,7 @@
 .authorItem {
   @include flex($align: center, $justify: center, $direction: column);
 
-  width: 32%;
+  width: 100%;
   max-width: 296px;
   background: $color-light-grey;
   padding: 40px 0;
@@ -66,8 +66,7 @@
   }
 
   .authorItem {
-    width: 49%;
-    max-width: none;
+    max-width: 49%;
     margin-bottom: 15px;
   }
 }
