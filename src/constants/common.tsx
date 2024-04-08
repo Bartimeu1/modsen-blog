@@ -5,6 +5,11 @@ import {
   TechnologyIcon,
 } from '@root/constants';
 
+export const localizationItems = {
+  ru: 'ru',
+  en: 'en',
+};
+
 export const categoryItems = [
   {
     id: 1,

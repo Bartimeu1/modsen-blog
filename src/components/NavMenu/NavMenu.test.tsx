@@ -16,10 +16,10 @@ describe('LocalizationToggle component', () => {
   });
 
   test('should call onLink prop after link click', () => {
-    const { getAllByTestId } = render(<NavMenu {...mockedProps} />);
+    const { getByTestId } = render(<NavMenu {...mockedProps} />);
 
-    const firstLink = getAllByTestId('nav-link')[0];
-    fireEvent.click(firstLink);
+    const blogLink = getByTestId('blog-link');
+    fireEvent.click(blogLink);
 
     expect(mockedProps.onLink).toHaveBeenCalled();
   });
