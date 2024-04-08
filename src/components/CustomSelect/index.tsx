@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { memo, useRef, useState } from 'react';
 import { ChevronIcon } from '@root/constants';
 import { useOnClickOutside } from '@root/hooks';
 import classNames from 'classnames';
@@ -9,7 +9,9 @@ import { useTranslations } from 'next-intl';
 import { ICustomSelectProps } from './types';
 
 import styles from './styles.module.scss';
-export const CustomSelect = (props: ICustomSelectProps) => {
+export const CustomSelect = memo(function CustomSelect(
+  props: ICustomSelectProps,
+) {
   const { options, onSelect, targetOption } = props;
 
   const t = useTranslations('Select');
@@ -65,4 +67,4 @@ export const CustomSelect = (props: ICustomSelectProps) => {
       )}
     </div>
   );
-};
+});

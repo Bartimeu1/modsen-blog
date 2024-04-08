@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { categoryItems, routes } from '@root/constants';
 import classNames from 'classnames';
 import Link from 'next/link';
@@ -7,7 +8,9 @@ import { ICategoryControls } from './types';
 
 import styles from './styles.module.scss';
 
-export const CategoryControls = (props: ICategoryControls) => {
+export const CategoryControls = memo(function CategoryControls(
+  props: ICategoryControls,
+) {
   const { targetCategory } = props;
 
   const listLocalization = useTranslations('CategoryList');
@@ -31,4 +34,4 @@ export const CategoryControls = (props: ICategoryControls) => {
       ))}
     </div>
   );
-};
+});

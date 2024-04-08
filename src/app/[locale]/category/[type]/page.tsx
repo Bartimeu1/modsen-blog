@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { TaggedPost } from '@components/Posts';
 import { routes, tagItems } from '@root/constants';
 import { IPostData } from '@root/types/api';
@@ -31,32 +31,35 @@ const CategoryPage = (props: ICategoryPageProps) => {
     );
   }, [targetTags, targetCategory]);
 
-  const onTagButtonClick = (value: string) => () => {
-    setTargetTags((prevState) => {
-      const isTagIncluded = prevState.includes(value);
-      const inputValue = searchInputValue.toLowerCase();
+  const onTagButtonClick = useCallback(
+    (value: string) => () => {
+      setTargetTags((prevState) => {
+        const isTagIncluded = prevState.includes(value);
+        const inputValue = searchInputValue.toLowerCase();
 
-      const updatedTags = isTagIncluded
-        ? prevState.filter((tag) => tag !== value)
-        : [...prevState, value];
+        const updatedTags = isTagIncluded
+          ? prevState.filter((tag) => tag !== value)
+          : [...prevState, value];
 
-      if (isTagIncluded && inputValue === value) {
-        setSearchInputValue('');
-      }
+        if (isTagIncluded && inputValue === value) {
+          setSearchInputValue('');
+        }
 
-      return updatedTags;
-    });
-  };
+        return updatedTags;
+      });
+    },
+    [searchInputValue],
+  );
 
-  const onSearchInputChange = (value: string) => {
+  const onSearchInputChange = useCallback((value: string) => {
     setSearchInputValue(value);
-  };
+  }, []);
 
-  const onSearchButtonClick = () => {
+  const onSearchButtonClick = useCallback(() => {
     const inputValue = searchInputValue.toLowerCase();
 
     setTargetTags([inputValue]);
-  };
+  }, [searchInputValue]);
 
   return (
     <main>

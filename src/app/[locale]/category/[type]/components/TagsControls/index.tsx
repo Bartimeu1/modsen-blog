@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { tagItems } from '@root/constants';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
@@ -6,7 +7,7 @@ import { ITagsControls } from './type';
 
 import styles from './styles.module.scss';
 
-export const TagsControls = (props: ITagsControls) => {
+export const TagsControls = memo(function TagsControls(props: ITagsControls) {
   const { onTagButtonClick, targetTags } = props;
 
   const t = useTranslations('Category');
@@ -29,4 +30,4 @@ export const TagsControls = (props: ITagsControls) => {
       </div>
     </div>
   );
-};
+});

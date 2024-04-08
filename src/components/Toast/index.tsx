@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useTimeout } from '@root/hooks';
 import classNames from 'classnames';
 import { createPortal } from 'react-dom';
@@ -7,7 +8,7 @@ import { IToastProps } from './types';
 
 import styles from './styles.module.scss';
 
-export const Toast = (props: IToastProps) => {
+export const Toast = memo(function Toast(props: IToastProps) {
   const { type, closeToast } = props;
 
   useTimeout(() => closeToast(), 8000);
@@ -18,4 +19,4 @@ export const Toast = (props: IToastProps) => {
     </aside>,
     document.body,
   );
-};
+});

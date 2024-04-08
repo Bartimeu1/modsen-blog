@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useCallback, useState } from 'react';
 import { NavMenu } from '@components/NavMenu';
 import { Social } from '@components/Social';
 import { Toast } from '@components/Toast';
@@ -52,9 +52,9 @@ export const Footer = () => {
       });
   };
 
-  const closeToast = () => {
+  const closeToast = useCallback(() => {
     setToastControls((prevState) => ({ ...prevState, isVisible: false }));
-  };
+  }, []);
 
   return (
     <>

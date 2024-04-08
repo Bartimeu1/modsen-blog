@@ -1,11 +1,11 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, memo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { ITagSearchProps } from './types';
 
 import styles from './styles.module.scss';
 
-export const TagSearch = (props: ITagSearchProps) => {
+export const TagSearch = memo(function TagSearch(props: ITagSearchProps) {
   const { tags, onSearch, onChange, value } = props;
 
   const t = useTranslations('Category');
@@ -61,4 +61,4 @@ export const TagSearch = (props: ITagSearchProps) => {
       </button>
     </div>
   );
-};
+});

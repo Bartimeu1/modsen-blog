@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, SyntheticEvent, useState } from 'react';
+import { ChangeEvent, SyntheticEvent, useCallback, useState } from 'react';
 import { CustomSelect } from '@components/CustomSelect';
 import { Toast } from '@components/Toast';
 import { ToastTypesEnum } from '@root/types/enums';
@@ -62,14 +62,14 @@ export const ContactForm = () => {
     setFormValues((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const onSelectValueChange = (value: string) => {
+  const onSelectValueChange = useCallback((value: string) => {
     setFormValues((prevState) => ({ ...prevState, profession: value }));
     setTargetSelectOption(value);
-  };
+  }, []);
 
-  const closeToast = () => {
+  const closeToast = useCallback(() => {
     setToastControls((prevState) => ({ ...prevState, isVisible: false }));
-  };
+  }, []);
 
   const {
     fullName: fullNameError,
