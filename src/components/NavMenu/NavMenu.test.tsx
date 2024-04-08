@@ -6,6 +6,10 @@ jest.mock('next-intl', () => ({
   useTranslations: jest.fn(() => jest.fn((key) => key)),
 }));
 
+jest.mock('@/navigation', () => ({
+  usePathname: jest.fn(() => '/mock-pathname'),
+}));
+
 const mockedProps = {
   onLink: jest.fn(),
 };

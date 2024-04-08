@@ -13,6 +13,12 @@
   margin: 0 12px;
   position: relative;
 
+  &.target {
+    &::after {
+      opacity: 1;
+    }
+  }
+
   &::after {
     background: $color-white;
     position: absolute;
