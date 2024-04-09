@@ -24,6 +24,7 @@ export default function RootLayout({
   params: { locale },
 }: RootLayoutProps) {
   const messages = useMessages();
+  console.log(messages);
 
   return (
     <html lang={locale}>
