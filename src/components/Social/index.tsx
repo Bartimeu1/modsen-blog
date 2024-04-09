@@ -15,6 +15,7 @@ export const Social = (props: ISocialProps) => {
           className={styles.socialLink}
           key={id}
           href={href}
+          aria-label={name}
           data-testid="user-social-link"
         >
           {socialIcons[name]}

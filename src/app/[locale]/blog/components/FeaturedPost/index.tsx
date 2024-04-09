@@ -1,3 +1,4 @@
+import featuredPostImage from '@assets/images/blogFeatured.webp';
 import { Button } from '@components/Button';
 import { routes } from '@root/constants';
 import classNames from 'classnames';
@@ -5,8 +6,6 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
-
-import featuredPostImage from '@assets/images/blogFeatured.jpg';
 
 export const FeaturedPost = () => {
   const t = useTranslations('Blog');
