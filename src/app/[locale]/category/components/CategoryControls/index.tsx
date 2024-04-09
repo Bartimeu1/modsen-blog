@@ -26,7 +26,7 @@ export const CategoryControls = memo(function CategoryControls(
           className={classNames(styles.categoryItem, {
             [styles.active]: value === targetCategory,
           })}
-          href={`${routes.category}/${value}`}
+          href={`${routes.category}?category=${value}`}
         >
           <div className={styles.iconWrapper}>{icon}</div>
           <p>{listLocalization(value)}</p>

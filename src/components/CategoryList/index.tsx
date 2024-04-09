@@ -14,7 +14,7 @@ export const CategoryList = () => {
       <div className={styles.categoryList}>
         {categoryItems.map(({ id, text, icon, value }) => (
           <Link
-            href={`${routes.category}/${value}`}
+            href={`${routes.category}?category=${value}`}
             key={id}
             className={styles.categoryItem}
           >
