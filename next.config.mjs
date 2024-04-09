@@ -37,6 +37,10 @@ const nextConfig = {
     });
     return config;
   },
+  compiler:
+    process.env.NODE_ENV === 'production'
+      ? { reactRemoveProperties: true }
+      : undefined,
 };
 
 export default withNextIntl(nextConfig);
