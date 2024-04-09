@@ -11,3 +11,5 @@ export const requiredValidationText = 'This field is required';
 export const successText = 'Operation completed successfully!';
 
 export const errorText = 'Something went wrong!';
+
+export const fetchErrorText = 'Failed to load data';
