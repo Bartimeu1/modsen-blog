@@ -8,7 +8,7 @@
   position: relative;
 
   &::before {
-    @include bgImage($image: '../assets/images/storyBg.webp');
+    @include bgImage($image: '~src/assets/images/storyBg.webp');
 
     z-index: 1;
     position: absolute;
