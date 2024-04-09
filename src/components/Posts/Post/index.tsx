@@ -1,12 +1,12 @@
 import React from 'react';
-
 import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './styles.module.scss';
 import { IPostProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const Post = (props: IPostProps) => {
   const { id, title, author, type, image, createdDate, text } = props;

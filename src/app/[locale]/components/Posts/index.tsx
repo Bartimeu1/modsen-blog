@@ -1,13 +1,13 @@
 import React from 'react';
-
 import { Button } from '@components/Button';
 import { Post } from '@components/Posts';
 import { routes } from '@root/constants';
 import { PostTypesEnum } from '@root/types/enums';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { IPostsProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const Posts = (props: IPostsProps) => {
   const { featuredPost, posts } = props;
@@ -16,7 +16,7 @@ export const Posts = (props: IPostsProps) => {
 
   const { author, createdDate, title, image, text, id } = featuredPost;
   return (
-    <section className={styles.posts}>
+    <div className={styles.posts}>
       <div className={styles.featuredWrapper}>
         <h3 className="title">{t('featuredTitle')}</h3>
         <div className={styles.featuredPost}>
@@ -47,6 +47,6 @@ export const Posts = (props: IPostsProps) => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };

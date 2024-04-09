@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-
 import { LocalizationToggle } from '@components/LocalizationToggle';
 import { NavMenu } from '@components/NavMenu';
 import { VideoModal } from '@components/VideoModal';
@@ -52,6 +51,7 @@ export const Header = () => {
             className={styles.videoButton}
             onClick={onVideoButtonClick}
             type="button"
+            data-testid="video-button"
           >
             {t('videoButton')}
           </button>

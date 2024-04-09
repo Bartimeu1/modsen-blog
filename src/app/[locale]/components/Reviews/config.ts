@@ -1,4 +1,4 @@
-import defaultAvatar from '@assets/images/defaultAvatar.jpg';
+import defaultAvatar from '@assets/images/defaultAvatar.webp';
 
 export const slides = [
   {

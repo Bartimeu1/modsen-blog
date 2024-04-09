@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 
 import { TaggedPost } from '.';
+
 import { ITaggedPostProps } from './types';
 
 jest.mock('next-intl', () => ({

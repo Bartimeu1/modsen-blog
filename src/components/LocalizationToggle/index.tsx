@@ -1,5 +1,6 @@
 'use client';
 
+import { localizationItems } from '@root/constants';
 import { usePathname, useRouter } from '@root/navigation';
 import classNames from 'classnames';
 import { useParams } from 'next/navigation';
@@ -12,13 +13,17 @@ export const LocalizationToggle = () => {
   const locale = useLocale();
   const params = useParams();
 
+  const { ru, en } = localizationItems;
+
   const onChangeLocale = () => {
     router.replace(
       // @ts-expect-error -- TypeScript will validate that only known params
       // are used in combination with a given pathname. Since the two will
       // always match for the current route, we can skip runtime checks.
       { pathname, params },
-      { locale: locale === 'ru' ? 'en' : 'ru' },
+      {
+        locale: locale === ru ? en : ru,
+      },
     );
   };
 
@@ -31,7 +36,7 @@ export const LocalizationToggle = () => {
       <input
         type="checkbox"
         className={classNames(styles.toggleButton, {
-          [styles.active]: locale === 'ru',
+          [styles.active]: locale === ru,
         })}
       />
     </div>

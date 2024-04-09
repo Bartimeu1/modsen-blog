@@ -3,13 +3,14 @@ import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 
 import { slides } from './config';
+
 import styles from './styles.module.scss';
 
 export const Reviews = () => {
   const t = useTranslations('Main.Reviews');
 
   return (
-    <section className={styles.reviews}>
+    <div className={styles.reviews}>
       <div className={styles.reviewsInfo}>
         <p className={classNames('subtitle', styles.reviewsSubtitle)}>
           {t('subtitle').toUpperCase()}
@@ -23,6 +24,6 @@ export const Reviews = () => {
         </p>
       </div>
       <Slider slides={slides} />
-    </section>
+    </div>
   );
 };

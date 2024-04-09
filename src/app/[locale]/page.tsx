@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-
 import { AuthorsList } from '@components/AuthorsList';
 import { CategoryList } from '@components/CategoryList';
 import { JoinUs } from '@components/JoinUs';

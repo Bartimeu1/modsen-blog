@@ -2,6 +2,7 @@ import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { VideoModal } from '.';
+
 import { IVideoModalProps } from './types';
 
 jest.mock('next-intl', () => ({

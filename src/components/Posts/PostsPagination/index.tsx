@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-
 import { TaggedPost } from '@components/Posts';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
+import { itemsPerPage } from './config';
 import { IPostsPaginationProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const PostsPagination = (props: IPostsPaginationProps) => {
   const { posts } = props;
@@ -15,7 +16,6 @@ export const PostsPagination = (props: IPostsPaginationProps) => {
 
   const [currentSlide, setCurrentSlide] = useState(1);
 
-  const itemsPerPage = 5;
   const startIndex = (currentSlide - 1) * itemsPerPage;
   const endIndex = currentSlide * itemsPerPage;
 

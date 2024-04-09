@@ -1,16 +1,19 @@
 'use client';
 
-import { ChangeEvent, SyntheticEvent, useState } from 'react';
-
+import { ChangeEvent, SyntheticEvent, useCallback, useState } from 'react';
 import { CustomSelect } from '@components/CustomSelect';
-import { sendMail } from '@services/sendMail';
+import { Toast } from '@components/Toast';
+import { ToastTypesEnum } from '@root/types/enums';
+import { sendContactMail } from '@services/sendMail';
 import { useTranslations } from 'next-intl';
 import { ValidationError } from 'yup';
 
 import { FormField } from '../FormField';
+
 import { baseFormValues, selectOptions, validationSchema } from './config';
+import { IErrorsObject, IToastControls } from './types';
+
 import styles from './styles.module.scss';
-import { IErrorsObject } from './types';
 
 export const ContactForm = () => {
   const t = useTranslations('Contact.Form');
@@ -18,6 +21,10 @@ export const ContactForm = () => {
   const [formValues, setFormValues] = useState(baseFormValues);
   const [validationErrors, setValidationErrors] = useState<IErrorsObject>({});
   const [targetSelectOption, setTargetSelectOption] = useState('');
+  const [toastControls, setToastControls] = useState<IToastControls>({
+    isVisible: false,
+    type: ToastTypesEnum.success,
+  });
 
   const handleValidationErrors = (error: ValidationError) => {
     const errors: IErrorsObject = {};
@@ -35,13 +42,15 @@ export const ContactForm = () => {
     validationSchema
       .validate(formValues, { abortEarly: false })
       .then(() => {
-        sendMail(formValues);
+        sendContactMail(formValues);
+        setToastControls({ isVisible: true, type: ToastTypesEnum.success });
         setFormValues(baseFormValues);
         setTargetSelectOption('');
         setValidationErrors({});
       })
       .catch((error: ValidationError) => {
         handleValidationErrors(error);
+        setToastControls({ isVisible: true, type: ToastTypesEnum.error });
       });
   };
 
@@ -53,10 +62,14 @@ export const ContactForm = () => {
     setFormValues((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const onSelectValueChange = (value: string) => {
+  const onSelectValueChange = useCallback((value: string) => {
     setFormValues((prevState) => ({ ...prevState, profession: value }));
     setTargetSelectOption(value);
-  };
+  }, []);
+
+  const closeToast = useCallback(() => {
+    setToastControls((prevState) => ({ ...prevState, isVisible: false }));
+  }, []);
 
   const {
     fullName: fullNameError,
@@ -66,49 +79,54 @@ export const ContactForm = () => {
   } = validationErrors;
 
   return (
-    <form className={styles.contactForm} onSubmit={onFormSubmit}>
-      <FormField errorText={fullNameError}>
+    <>
+      <form className={styles.contactForm} onSubmit={onFormSubmit}>
+        <FormField errorText={fullNameError}>
+          <input
+            type="text"
+            name="fullName"
+            className={styles.contactInput}
+            placeholder={t('name')}
+            value={formValues.fullName}
+            onChange={onFormValueChange}
+          />
+        </FormField>
+        <FormField errorText={emailError}>
+          <input
+            type="text"
+            name="email"
+            className={styles.contactInput}
+            placeholder={t('email')}
+            value={formValues.email}
+            onChange={onFormValueChange}
+          />
+        </FormField>
+        <FormField errorText={professionError}>
+          <CustomSelect
+            options={selectOptions}
+            onSelect={onSelectValueChange}
+            targetOption={targetSelectOption}
+          />
+        </FormField>
+        <FormField errorText={messageError}>
+          <textarea
+            className={styles.contactTextarea}
+            name="message"
+            placeholder={t('message')}
+            value={formValues.message}
+            onChange={onFormValueChange}
+          />
+        </FormField>
         <input
-          type="text"
-          name="fullName"
-          className={styles.contactInput}
-          placeholder={t('name')}
-          value={formValues.fullName}
-          onChange={onFormValueChange}
+          data-testid="form-submit"
+          type="submit"
+          className={styles.submitButton}
+          value={t('submit')}
         />
-      </FormField>
-      <FormField errorText={emailError}>
-        <input
-          type="text"
-          name="email"
-          className={styles.contactInput}
-          placeholder={t('email')}
-          value={formValues.email}
-          onChange={onFormValueChange}
-        />
-      </FormField>
-      <FormField errorText={professionError}>
-        <CustomSelect
-          options={selectOptions}
-          onSelect={onSelectValueChange}
-          targetOption={targetSelectOption}
-        />
-      </FormField>
-      <FormField errorText={messageError}>
-        <textarea
-          className={styles.contactTextarea}
-          name="message"
-          placeholder={t('message')}
-          value={formValues.message}
-          onChange={onFormValueChange}
-        />
-      </FormField>
-      <input
-        data-testid="form-submit"
-        type="submit"
-        className={styles.submitButton}
-        value={t('submit')}
-      />
-    </form>
+      </form>
+      {toastControls.isVisible && (
+        <Toast type={toastControls.type} closeToast={closeToast} />
+      )}
+    </>
   );
 };

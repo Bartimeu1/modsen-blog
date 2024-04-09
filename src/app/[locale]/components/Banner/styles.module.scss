@@ -2,14 +2,14 @@
 
 .banner {
   width: 100%;
-  padding: 128px 0 192px 0;
+  padding: 128px 0 192px;
   position: relative;
   background: linear-gradient(
       to bottom,
       $color-banner-shadow,
       $color-banner-shadow
     ),
-    url('../../../../assets/images/homeBanner.jpg');
+    url('~src/assets/images/homeBanner.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

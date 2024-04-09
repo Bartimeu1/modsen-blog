@@ -17,3 +17,8 @@ export enum CategoriesEnum {
   startup = 'startup',
   technology = 'technology',
 }
+
+export enum ToastTypesEnum {
+  error = 'error',
+  success = 'success',
+}

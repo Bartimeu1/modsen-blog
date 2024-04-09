@@ -1,4 +1,4 @@
-import featuredPostImage from '@assets/images/blogFeatured.jpg';
+import featuredPostImage from '@assets/images/blogFeatured.webp';
 import { Button } from '@components/Button';
 import { routes } from '@root/constants';
 import classNames from 'classnames';

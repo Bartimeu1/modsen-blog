@@ -6,8 +6,9 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
-import styles from './styles.module.scss';
 import { IAuthorPageProps } from './types';
+
+import styles from './styles.module.scss';
 
 const AuthorPage = async (props: IAuthorPageProps) => {
   const { params } = props;

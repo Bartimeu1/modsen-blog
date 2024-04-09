@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
 
 import { ContactForm, Map } from './components';
+
 import styles from './styles.module.scss';
 
 const ContactPage = () => {

@@ -2,6 +2,7 @@ import { CategoriesEnum } from '@root/types/enums';
 import { render } from '@testing-library/react';
 
 import { PostsPagination } from '.';
+
 import { IPostsPaginationProps } from './types';
 
 jest.mock('next-intl', () => ({

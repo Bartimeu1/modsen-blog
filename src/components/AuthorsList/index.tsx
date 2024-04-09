@@ -4,8 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'use-intl';
 
-import styles from './styles.module.scss';
 import { IAuthorsListProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const AuthorsList = (props: IAuthorsListProps) => {
   const { authors } = props;

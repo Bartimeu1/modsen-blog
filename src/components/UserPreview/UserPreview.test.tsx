@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 
 import { UserPreview } from '.';
+
 import { IUserPreviewProps } from './types';
 
 const mockedProps: IUserPreviewProps = {

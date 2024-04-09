@@ -4,8 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
 import { ITaggedPostProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const TaggedPost = (props: ITaggedPostProps) => {
   const { id, title, text, image, category } = props;
