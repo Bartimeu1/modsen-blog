@@ -1,9 +1,8 @@
-import { IntlProvider } from 'next-intl';
-import { AbstractIntlMessages } from 'next-intl';
+import { getStory } from '@utils/storybook';
 
 import { CustomSelect } from '.';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 const enMessages = {
   Select: {
@@ -28,18 +27,11 @@ const mockedProps = {
   targetOption: '',
 };
 
-const getStory = (
-  locale: string,
-  messages: AbstractIntlMessages,
-): StoryObj => ({
-  render: () => (
-    <IntlProvider locale={locale} messages={messages}>
-      <div style={{ minWidth: '320px' }}>
-        <CustomSelect {...mockedProps} />
-      </div>
-    </IntlProvider>
-  ),
-});
+const StoryComponent = (
+  <div style={{ minWidth: '320px' }}>
+    <CustomSelect {...mockedProps} />
+  </div>
+);
 
 const meta: Meta<typeof CustomSelect> = {
   title: 'CustomSelect',
@@ -52,5 +44,5 @@ const meta: Meta<typeof CustomSelect> = {
 
 export default meta;
 
-export const WithEnglish = getStory('en', enMessages);
-export const WithRussian = getStory('ru', ruMessages);
+export const WithEnglish = getStory('en', enMessages, StoryComponent);
+export const WithRussian = getStory('ru', ruMessages, StoryComponent);

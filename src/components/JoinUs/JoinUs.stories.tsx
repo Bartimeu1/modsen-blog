@@ -1,9 +1,8 @@
-import { IntlProvider } from 'next-intl';
-import { AbstractIntlMessages } from 'next-intl';
+import { getStory } from '@utils/storybook';
 
 import { JoinUs } from '.';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 const enMessages = {
   JoinUs: {
@@ -19,17 +18,6 @@ const ruMessages = {
   },
 };
 
-const getStory = (
-  locale: string,
-  messages: AbstractIntlMessages,
-): StoryObj => ({
-  render: () => (
-    <IntlProvider locale={locale} messages={messages}>
-      <JoinUs />
-    </IntlProvider>
-  ),
-});
-
 const meta: Meta<typeof JoinUs> = {
   title: 'JoinUs',
   component: JoinUs,
@@ -41,5 +29,5 @@ const meta: Meta<typeof JoinUs> = {
 
 export default meta;
 
-export const WithEnglish = getStory('en', enMessages);
-export const WithRussian = getStory('ru', ruMessages);
+export const WithEnglish = getStory('en', enMessages, <JoinUs />);
+export const WithRussian = getStory('ru', ruMessages, <JoinUs />);

@@ -1,9 +1,8 @@
-import { IntlProvider } from 'next-intl';
-import { AbstractIntlMessages } from 'next-intl';
+import { getStory } from '@utils/storybook';
 
 import { Header } from '.';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 const enMessages = {
   Header: {
@@ -35,22 +34,6 @@ const ruMessages = {
   },
 };
 
-const getStory = (
-  locale: string,
-  messages: AbstractIntlMessages,
-): StoryObj => ({
-  render: () => (
-    <IntlProvider locale={locale} messages={messages}>
-      <Header />
-    </IntlProvider>
-  ),
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
-});
-
 const meta: Meta<typeof Header> = {
   title: 'Header',
   component: Header,
@@ -62,5 +45,5 @@ const meta: Meta<typeof Header> = {
 
 export default meta;
 
-export const WithEnglish = getStory('en', enMessages);
-export const WithRussian = getStory('ru', ruMessages);
+export const WithEnglish = getStory('en', enMessages, <Header />);
+export const WithRussian = getStory('ru', ruMessages, <Header />);
