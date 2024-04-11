@@ -46,6 +46,12 @@
 
   & button {
     border-radius: 100%;
+    transition: 0.3s;
+
+    &:hover {
+      background: $color-yellow;
+      transition: 0.3s;
+    }
   }
 }
 
@@ -59,6 +65,7 @@
   background: $color-darkblue;
   width: 62px;
   height: 62px;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: $breakpoint-desktopM) {
