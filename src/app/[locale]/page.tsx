@@ -1,13 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+
 import { AuthorsList } from '@components/AuthorsList';
 import { CategoryList } from '@components/CategoryList';
 import { JoinUs } from '@components/JoinUs';
 import { Loader } from '@components/Loader';
-import { IAuthorData, IPostData } from '@root/types/api';
+
 import { getLimitedAuthors, getLimitedPosts } from '@services/api';
 import { WithLazyLoad } from '@services/hocs/WithLazyLoad';
+
+import { IAuthorData, IPostData } from '@root/types/api';
 
 import { About, Banner, Logos, Posts, Reviews, Story } from './components';
 

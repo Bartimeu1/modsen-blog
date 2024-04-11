@@ -1,7 +1,8 @@
 import { localizationItems } from '@root/constants';
-import { render } from '@testing-library/react';
 
 import { Header } from '.';
+
+import { render } from '@testing-library/react';
 
 jest.mock('@/navigation', () => ({
   useRouter: jest.fn(),

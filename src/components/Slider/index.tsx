@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { UserPreview } from '@components/UserPreview';
-import { ArrowNext, ArrowPrev } from '@root/constants';
 import classNames from 'classnames';
+
+import { UserPreview } from '@components/UserPreview';
+
+import { ArrowNext, ArrowPrev } from '@root/constants';
 
 import { ISliderProps } from './types';
 

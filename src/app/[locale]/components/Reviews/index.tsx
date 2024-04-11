@@ -1,6 +1,7 @@
-import { Slider } from '@components/Slider';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
+
+import { Slider } from '@components/Slider';
 
 import { slides } from './config';
 

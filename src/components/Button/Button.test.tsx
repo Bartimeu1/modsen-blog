@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-
 import { Button } from '.';
+
+import { render } from '@testing-library/react';
 
 const mockedProps = {
   href: 'mocked href',

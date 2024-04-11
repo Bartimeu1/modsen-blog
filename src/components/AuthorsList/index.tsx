@@ -1,8 +1,10 @@
-import { Social } from '@components/Social';
-import { routes } from '@root/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'use-intl';
+
+import { Social } from '@components/Social';
+
+import { routes } from '@root/constants';
 
 import { IAuthorsListProps } from './types';
 

@@ -1,8 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { IntlProvider } from 'next-intl';
 import { AbstractIntlMessages } from 'next-intl';
 
 import { Header } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const enMessages = {
   Header: {

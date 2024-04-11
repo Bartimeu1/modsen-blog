@@ -1,8 +1,10 @@
-import { usePathname } from '@root/navigation';
-import { extractPathFromURL } from '@utils/helpers';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+import { extractPathFromURL } from '@utils/helpers';
+
+import { usePathname } from '@root/navigation';
 
 import { navLinks } from './config';
 import { INavMenuProps } from './types';

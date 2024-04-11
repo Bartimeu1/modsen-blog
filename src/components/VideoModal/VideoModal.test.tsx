@@ -1,9 +1,8 @@
-import { render, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-
+import { IVideoModalProps } from './types';
 import { VideoModal } from '.';
 
-import { IVideoModalProps } from './types';
+import { render, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 jest.mock('next-intl', () => ({
   useTranslations: jest.fn(() => jest.fn((key) => key)),

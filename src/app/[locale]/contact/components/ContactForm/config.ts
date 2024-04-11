@@ -1,5 +1,6 @@
-import { emailValidationText, requiredValidationText } from '@root/constants';
 import * as yup from 'yup';
+
+import { emailValidationText, requiredValidationText } from '@root/constants';
 
 export const selectOptions = [
   { id: 1, value: 'Developer' },

@@ -1,7 +1,7 @@
-import { categoryItems } from '@root/constants';
-import { routes } from '@root/constants';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+import { categoryItems, routes } from '@root/constants';
 
 import styles from './styles.module.scss';
 

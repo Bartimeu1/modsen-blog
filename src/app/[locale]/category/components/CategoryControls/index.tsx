@@ -1,8 +1,9 @@
 import { memo } from 'react';
-import { categoryItems, routes } from '@root/constants';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+import { categoryItems, routes } from '@root/constants';
 
 import { ICategoryControls } from './types';
 

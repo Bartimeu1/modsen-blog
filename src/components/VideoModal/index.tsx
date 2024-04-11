@@ -1,8 +1,9 @@
 import { useRef } from 'react';
+import { createPortal } from 'react-dom';
+import { useTranslations } from 'next-intl';
+
 import { YOUTUBE_VIDEO_URL } from '@root/config';
 import { useLockBodyScroll, useOnClickOutside } from '@root/hooks';
-import { useTranslations } from 'next-intl';
-import { createPortal } from 'react-dom';
 
 import { IVideoModalProps } from './types';
 

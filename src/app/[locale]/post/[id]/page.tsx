@@ -1,11 +1,14 @@
+import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
+
 import { JoinUs } from '@components/JoinUs';
 import { Post } from '@components/Posts';
 import { UserPreview } from '@components/UserPreview';
+
+import { getLimitedPosts, getPostById } from '@services/api';
+
 import { mockedContentText, mockedContentTitle } from '@root/constants';
 import { PostTypesEnum } from '@root/types/enums';
-import { getLimitedPosts, getPostById } from '@services/api';
-import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
 
 import { categoryImages } from './config';
 import { IPostPageProps } from './types';

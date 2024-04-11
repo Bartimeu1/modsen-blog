@@ -1,9 +1,9 @@
 import { CategoriesEnum } from '@root/types/enums';
-import { render } from '@testing-library/react';
-
-import { PostsPagination } from '.';
 
 import { IPostsPaginationProps } from './types';
+import { PostsPagination } from '.';
+
+import { render } from '@testing-library/react';
 
 jest.mock('next-intl', () => ({
   useTranslations: jest.fn(() => jest.fn((key) => key)),

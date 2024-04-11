@@ -1,9 +1,10 @@
 'use client';
 
-import { tagItems } from '@root/constants';
 import classNames from 'classnames';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+
+import { tagItems } from '@root/constants';
 
 import styles from './styles.module.scss';
 

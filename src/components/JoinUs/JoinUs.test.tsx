@@ -1,7 +1,8 @@
 import { localizationItems } from '@root/constants';
-import { render } from '@testing-library/react';
 
 import { JoinUs } from '.';
+
+import { render } from '@testing-library/react';
 
 jest.mock('next-intl', () => ({
   useLocale: jest.fn(() => localizationItems.en),

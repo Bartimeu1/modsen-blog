@@ -1,10 +1,13 @@
-import { TaggedPost } from '@components/Posts';
-import { Social } from '@components/Social';
-import { mockedContentText } from '@root/constants';
-import { getAuthorById, getPostsByAuthorId } from '@services/api';
 import classNames from 'classnames';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+
+import { TaggedPost } from '@components/Posts';
+import { Social } from '@components/Social';
+
+import { getAuthorById, getPostsByAuthorId } from '@services/api';
+
+import { mockedContentText } from '@root/constants';
 
 import { IAuthorPageProps } from './types';
 

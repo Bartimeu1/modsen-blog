@@ -1,8 +1,11 @@
-import { TaggedPost } from '@components/Posts';
-import { routes, tagItems } from '@root/constants';
-import { getPostsByCategory } from '@services/api';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+
+import { TaggedPost } from '@components/Posts';
+
+import { getPostsByCategory } from '@services/api';
+
+import { routes, tagItems } from '@root/constants';
 
 import { CategoryControls, TagsControls, TagSearch } from './components';
 import { ICategoryPageProps } from './types';

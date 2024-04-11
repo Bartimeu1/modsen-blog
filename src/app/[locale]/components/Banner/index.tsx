@@ -1,8 +1,10 @@
 import React from 'react';
-import { Button } from '@components/Button';
-import { routes } from '@root/constants';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
+
+import { Button } from '@components/Button';
+
+import { routes } from '@root/constants';
 
 import { IBannerProps } from './types';
 

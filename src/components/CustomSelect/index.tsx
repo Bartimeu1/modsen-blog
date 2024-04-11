@@ -1,10 +1,11 @@
 'use client';
 
 import { memo, useRef, useState } from 'react';
-import { ChevronIcon } from '@root/constants';
-import { useOnClickOutside } from '@root/hooks';
 import classNames from 'classnames';
 import { useTranslations } from 'next-intl';
+
+import { ChevronIcon } from '@root/constants';
+import { useOnClickOutside } from '@root/hooks';
 
 import { ICustomSelectProps } from './types';
 

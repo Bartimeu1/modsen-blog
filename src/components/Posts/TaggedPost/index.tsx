@@ -1,8 +1,9 @@
-import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+import { routes } from '@root/constants';
 
 import { ITaggedPostProps } from './types';
 

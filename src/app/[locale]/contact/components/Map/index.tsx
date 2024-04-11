@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { MAPBOX_TOKEN } from '@root/config';
-import { mapCenter, mapStyle, mapZoom } from '@root/constants';
 import mapboxgl from 'mapbox-gl';
 
-import 'mapbox-gl/dist/mapbox-gl.css';
+import { MAPBOX_TOKEN } from '@root/config';
+import { mapCenter, mapStyle, mapZoom } from '@root/constants';
 
 import { mapMarkers } from './config';
 
+import 'mapbox-gl/dist/mapbox-gl.css';
 import styles from './styles.module.scss';
 
 export const Map = () => {

@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { TaggedPost } from '@components/Posts';
 import { useTranslations } from 'next-intl';
+
+import { TaggedPost } from '@components/Posts';
 
 import { itemsPerPage } from './config';
 import { IPostsPaginationProps } from './types';

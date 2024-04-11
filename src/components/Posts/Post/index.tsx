@@ -1,8 +1,9 @@
 import React from 'react';
-import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { routes } from '@root/constants';
 
 import { IPostProps } from './types';
 

@@ -1,5 +1,6 @@
-import { Button } from '@components/Button';
 import { useTranslations } from 'next-intl';
+
+import { Button } from '@components/Button';
 
 import styles from './styles.module.scss';
 

@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
-import { Footer } from '@components/Footer';
-import { Header } from '@components/Header';
 import { Inter, Sen } from 'next/font/google';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+
+import { Footer } from '@components/Footer';
+import { Header } from '@components/Header';
 
 import '@styles/index.scss';
 

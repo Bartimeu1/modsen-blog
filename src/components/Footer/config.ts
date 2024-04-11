@@ -1,6 +1,7 @@
+import * as yup from 'yup';
+
 import { emailValidationText, requiredValidationText } from '@root/constants';
 import { NetworksEnum } from '@root/types/enums';
-import * as yup from 'yup';
 
 export const mockedNetworkLinks = [
   { id: 1, name: NetworksEnum.facebook, href: '#' },

@@ -1,8 +1,7 @@
-import { render } from '@testing-library/react';
-
+import { IUserPreviewProps } from './types';
 import { UserPreview } from '.';
 
-import { IUserPreviewProps } from './types';
+import { render } from '@testing-library/react';
 
 const mockedProps: IUserPreviewProps = {
   imageUrl: 'http://test',

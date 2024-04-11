@@ -1,12 +1,15 @@
 'use client';
 
 import { ChangeEvent, SyntheticEvent, useCallback, useState } from 'react';
-import { CustomSelect } from '@components/CustomSelect';
-import { Toast } from '@components/Toast';
-import { ToastTypesEnum } from '@root/types/enums';
-import { sendContactMail } from '@services/sendMail';
 import { useTranslations } from 'next-intl';
 import { ValidationError } from 'yup';
+
+import { CustomSelect } from '@components/CustomSelect';
+import { Toast } from '@components/Toast';
+
+import { sendContactMail } from '@services/sendMail';
+
+import { ToastTypesEnum } from '@root/types/enums';
 
 import { FormField } from '../FormField';
 

@@ -1,6 +1,8 @@
-import { Button } from '@components/Button';
-import { routes } from '@root/constants';
 import { useTranslations } from 'next-intl';
+
+import { Button } from '@components/Button';
+
+import { routes } from '@root/constants';
 
 import styles from './styles.module.scss';
 

@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
+
 import { Button } from '@components/Button';
 import { Post } from '@components/Posts';
+
 import { routes } from '@root/constants';
 import { PostTypesEnum } from '@root/types/enums';
-import { useTranslations } from 'next-intl';
 
 import { IPostsProps } from './types';
 

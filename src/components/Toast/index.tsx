@@ -1,7 +1,8 @@
 import { memo } from 'react';
-import { useTimeout } from '@root/hooks';
-import classNames from 'classnames';
 import { createPortal } from 'react-dom';
+import classNames from 'classnames';
+
+import { useTimeout } from '@root/hooks';
 
 import { toastTextContent } from './config';
 import { IToastProps } from './types';

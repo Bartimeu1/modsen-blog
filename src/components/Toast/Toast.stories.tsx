@@ -1,7 +1,8 @@
 import { ToastTypesEnum } from '@root/types/enums';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { Toast } from '.';
+
+import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Toast',

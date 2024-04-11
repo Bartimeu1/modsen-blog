@@ -1,10 +1,11 @@
 'use client';
 
-import { localizationItems } from '@root/constants';
-import { usePathname, useRouter } from '@root/navigation';
 import classNames from 'classnames';
 import { useParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
+
+import { localizationItems } from '@root/constants';
+import { usePathname, useRouter } from '@root/navigation';
 
 import styles from './styles.module.scss';
 export const LocalizationToggle = () => {

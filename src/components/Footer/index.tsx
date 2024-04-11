@@ -1,16 +1,19 @@
 'use client';
 
 import { ChangeEvent, useCallback, useState } from 'react';
-import { NavMenu } from '@components/NavMenu';
-import { Social } from '@components/Social';
-import { Toast } from '@components/Toast';
-import { routes } from '@root/constants';
-import { ToastTypesEnum } from '@root/types/enums';
-import { sendSubscribeMail } from '@services/sendMail';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { ValidationError } from 'yup';
+
+import { NavMenu } from '@components/NavMenu';
+import { Social } from '@components/Social';
+import { Toast } from '@components/Toast';
+
+import { sendSubscribeMail } from '@services/sendMail';
+
+import { routes } from '@root/constants';
+import { ToastTypesEnum } from '@root/types/enums';
 
 import { inputValidationSchema, mockedNetworkLinks } from './config';
 import { IToastControls } from './types';

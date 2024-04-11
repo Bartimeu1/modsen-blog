@@ -1,9 +1,9 @@
-import { fireEvent, render } from '@testing-library/react';
 import { StaticImageData } from 'next/image';
 
+import { ISliderProps } from './types';
 import { Slider } from '.';
 
-import { ISliderProps } from './types';
+import { fireEvent, render } from '@testing-library/react';
 
 const mockedProps: ISliderProps = {
   slides: [
