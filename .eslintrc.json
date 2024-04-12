@@ -11,7 +11,8 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -49,7 +50,20 @@
     "simple-import-sort/imports": [
       "error",
       {
-        "groups": [["^react"], ["^antd"], ["^@?\\w"], ["@/(.*)"], ["^[./]"]]
+        "groups": [
+          ["^react", "^\\w"],
+          ["^@components(/.*|$)"],
+          ["^@pages(/.*|$)"],
+          ["^@utils(/.*|$)"],
+          ["^@hooks(/.*|$)"],
+          ["^@services(/.*|$)"],
+          ["^@constants(/.*|$)"],
+          ["^@root(/.*|$)"],
+          ["^\\u0000"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^.+\\.?(css)$"]
+        ]
       }
     ]
   }

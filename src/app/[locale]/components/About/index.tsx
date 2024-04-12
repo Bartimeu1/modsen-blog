@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
@@ -9,7 +8,7 @@ export const About = () => {
   const t = useTranslations('Main.About');
 
   return (
-    <section className={styles.about}>
+    <div className={styles.about}>
       <div className={styles.aboutBlock}>
         <p className="subtitle">{t('aboutSubtitle').toUpperCase()}</p>
         <h2 className={styles.aboutTitle}>{t('aboutTitle')}</h2>
@@ -31,6 +30,6 @@ export const About = () => {
           aliquip ex ea commodo consequat.
         </p>
       </div>
-    </section>
+    </div>
   );
 };

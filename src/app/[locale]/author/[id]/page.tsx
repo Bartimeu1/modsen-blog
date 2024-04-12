@@ -1,13 +1,17 @@
-import { TaggedPost } from '@components/Posts';
-import { Social } from '@components/Social';
-import { mockedContentText } from '@root/constants';
-import { getAuthorById, getPostsByAuthorId } from '@services/api';
 import classNames from 'classnames';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
-import styles from './styles.module.scss';
+import { TaggedPost } from '@components/Posts';
+import { Social } from '@components/Social';
+
+import { getAuthorById, getPostsByAuthorId } from '@services/api';
+
+import { mockedContentText } from '@root/constants';
+
 import { IAuthorPageProps } from './types';
+
+import styles from './styles.module.scss';
 
 const AuthorPage = async (props: IAuthorPageProps) => {
   const { params } = props;

@@ -1,12 +1,17 @@
-import { categoryItems, routes } from '@root/constants';
+import { memo } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
+import { categoryItems, routes } from '@root/constants';
+
 import { ICategoryControls } from './types';
 
-export const CategoryControls = (props: ICategoryControls) => {
+import styles from './styles.module.scss';
+
+export const CategoryControls = memo(function CategoryControls(
+  props: ICategoryControls,
+) {
   const { targetCategory } = props;
 
   const listLocalization = useTranslations('CategoryList');
@@ -22,7 +27,7 @@ export const CategoryControls = (props: ICategoryControls) => {
           className={classNames(styles.categoryItem, {
             [styles.active]: value === targetCategory,
           })}
-          href={`${routes.category}/${value}`}
+          href={`${routes.category}?category=${value}`}
         >
           <div className={styles.iconWrapper}>{icon}</div>
           <p>{listLocalization(value)}</p>
@@ -30,4 +35,4 @@ export const CategoryControls = (props: ICategoryControls) => {
       ))}
     </div>
   );
-};
+});

@@ -1,7 +1,8 @@
 import { PostTypesEnum } from '@root/types/enums';
-import { render } from '@testing-library/react';
 
 import { Post } from '.';
+
+import { render } from '@testing-library/react';
 
 const mockedProps = {
   id: 1,

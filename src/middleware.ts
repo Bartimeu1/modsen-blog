@@ -1,8 +1,12 @@
 import createMiddleware from 'next-intl/middleware';
 
+import { localizationItems } from './constants';
+
+const { ru, en } = localizationItems;
+
 export default createMiddleware({
-  locales: ['en', 'ru'],
-  defaultLocale: 'en',
+  locales: [en, ru],
+  defaultLocale: en,
   localePrefix: 'always',
 });
 

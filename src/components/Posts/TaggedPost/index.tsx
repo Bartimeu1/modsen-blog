@@ -1,11 +1,13 @@
-import { routes } from '@root/constants';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
+import { routes } from '@root/constants';
+
 import { ITaggedPostProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const TaggedPost = (props: ITaggedPostProps) => {
   const { id, title, text, image, category } = props;

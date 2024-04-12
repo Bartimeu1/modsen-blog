@@ -1,15 +1,19 @@
-import { JoinUs } from '@components/JoinUs';
-import { Post } from '@components/Posts';
-import { UserPreview } from '@components/UserPreview';
-import { mockedContentText, mockedContentTitle } from '@root/constants';
-import { PostTypesEnum } from '@root/types/enums';
-import { getLimitedPosts, getPostById } from '@services/api';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
+import { JoinUs } from '@components/JoinUs';
+import { Post } from '@components/Posts';
+import { UserPreview } from '@components/UserPreview';
+
+import { getLimitedPosts, getPostById } from '@services/api';
+
+import { mockedContentText, mockedContentTitle } from '@root/constants';
+import { PostTypesEnum } from '@root/types/enums';
+
 import { categoryImages } from './config';
-import styles from './styles.module.scss';
 import { IPostPageProps } from './types';
+
+import styles from './styles.module.scss';
 
 const PostPage = async (props: IPostPageProps) => {
   const { params } = props;

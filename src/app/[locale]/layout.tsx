@@ -1,7 +1,9 @@
-import { Footer } from '@components/Footer';
-import { Header } from '@components/Header';
+import { ReactNode } from 'react';
 import { Inter, Sen } from 'next/font/google';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+
+import { Footer } from '@components/Footer';
+import { Header } from '@components/Header';
 
 import '@styles/index.scss';
 
@@ -11,13 +13,10 @@ const fontInter = Inter({ subsets: ['latin'], variable: '--font-secondary' });
 export const metadata = {
   title: 'Modsen blog',
   description: 'Best blog right here',
-  icons: {
-    icon: './favicon.ico',
-  },
 };
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   params: { locale: string };
 }
 

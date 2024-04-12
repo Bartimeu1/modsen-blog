@@ -1,11 +1,14 @@
-import { Social } from '@components/Social';
-import { routes } from '@root/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'use-intl';
 
-import styles from './styles.module.scss';
+import { Social } from '@components/Social';
+
+import { routes } from '@root/constants';
+
 import { IAuthorsListProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const AuthorsList = (props: IAuthorsListProps) => {
   const { authors } = props;

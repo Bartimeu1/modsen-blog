@@ -1,6 +1,8 @@
-import { PostsPagination } from '@components/Posts';
-import { getAllPosts } from '@root/services/api';
 import { getTranslations } from 'next-intl/server';
+
+import { PostsPagination } from '@components/Posts';
+
+import { getAllPosts } from '@root/services/api';
 
 import styles from './styles.module.scss';
 

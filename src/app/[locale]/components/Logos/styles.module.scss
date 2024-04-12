@@ -27,7 +27,8 @@
 .logosList {
   @include flex($align: center, $justify: space-between);
 
-  width: 80%;
+  width: 100%;
+  max-width: 80%;
 }
 
 @media screen and (max-width: $breakpoint-desktopM) {

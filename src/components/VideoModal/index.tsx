@@ -1,11 +1,13 @@
 import { useRef } from 'react';
 import { createPortal } from 'react-dom';
-
-import { useLockBodyScroll, useOnClickOutside } from '@root/hooks';
 import { useTranslations } from 'next-intl';
 
-import styles from './styles.module.scss';
+import { YOUTUBE_VIDEO_URL } from '@root/config';
+import { useLockBodyScroll, useOnClickOutside } from '@root/hooks';
+
 import { IVideoModalProps } from './types';
+
+import styles from './styles.module.scss';
 
 export const VideoModal = (props: IVideoModalProps) => {
   const { closeModal } = props;
@@ -26,7 +28,7 @@ export const VideoModal = (props: IVideoModalProps) => {
           height="315"
           allow="autoplay; encrypted-media"
           allowFullScreen
-          src={`https://www.youtube.com/embed/dQw4w9WgXcQ?si=v2GC-SPI9MNfMBOG?&autoplay=1`}
+          src={YOUTUBE_VIDEO_URL}
         ></iframe>
       </div>
     </div>,

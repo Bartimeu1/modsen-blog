@@ -1,8 +1,13 @@
 import { BASE_URL } from '@root/config';
+import { fetchErrorText } from '@root/constants';
 import { IAuthorData, IPostData } from '@root/types/api';
 
 export const getAllPosts = async (): Promise<IPostData[]> => {
   const response = await fetch(`${BASE_URL}/posts`);
+
+  if (!response.ok) {
+    throw new Error(fetchErrorText);
+  }
 
   const posts = await response.json();
 
@@ -17,6 +22,10 @@ export const getLimitedPosts = async (
     `${BASE_URL}/posts?_start=${start}&_limit=${limit}`,
   );
 
+  if (!response.ok) {
+    throw new Error(fetchErrorText);
+  }
+
   const posts = await response.json();
 
   return posts;
@@ -24,6 +33,10 @@ export const getLimitedPosts = async (
 
 export const getPostById = async (id: number): Promise<IPostData> => {
   const response = await fetch(`${BASE_URL}/posts?id=${id}`);
+
+  if (!response.ok) {
+    throw new Error(fetchErrorText);
+  }
 
   const post = await response.json();
 
@@ -43,6 +56,10 @@ export const getPostsByCategory = async (
 
   const response = await fetch(queryString);
 
+  if (!response.ok) {
+    throw new Error(fetchErrorText);
+  }
+
   const posts = await response.json();
 
   return posts;
@@ -50,6 +67,10 @@ export const getPostsByCategory = async (
 
 export const getPostsByAuthorId = async (id: string): Promise<IPostData[]> => {
   const response = await fetch(`${BASE_URL}/posts?authorId=${id}`);
+
+  if (!response.ok) {
+    throw new Error(fetchErrorText);
+  }
 
   const posts = await response.json();
 
@@ -64,6 +85,10 @@ export const getLimitedAuthors = async (
     `${BASE_URL}/authors?_start=${start}&_limit=${limit}`,
   );
 
+  if (!response.ok) {
+    throw new Error(fetchErrorText);
+  }
+
   const authors = await response.json();
 
   return authors;
@@ -71,6 +96,10 @@ export const getLimitedAuthors = async (
 
 export const getAuthorById = async (id: string): Promise<IAuthorData> => {
   const response = await fetch(`${BASE_URL}/authors?id=${id}`);
+
+  if (!response.ok) {
+    throw new Error(fetchErrorText);
+  }
 
   const author = await response.json();
 

@@ -1,7 +1,7 @@
-import { categoryItems } from '@root/constants';
-import { routes } from '@root/constants';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+import { categoryItems, routes } from '@root/constants';
 
 import styles from './styles.module.scss';
 
@@ -14,7 +14,7 @@ export const CategoryList = () => {
       <div className={styles.categoryList}>
         {categoryItems.map(({ id, text, icon, value }) => (
           <Link
-            href={`${routes.category}/${value}`}
+            href={`${routes.category}?category=${value}`}
             key={id}
             className={styles.categoryItem}
           >

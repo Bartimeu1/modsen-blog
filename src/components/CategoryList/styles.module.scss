@@ -15,7 +15,8 @@
   border: 1px solid $color-border;
   cursor: pointer;
   transition: 0.3s;
-  width: 22%;
+  width: 100%;
+  max-width: 22%;
   min-width: 280px;
 
   &:hover {
@@ -49,7 +50,7 @@
   }
 
   .categoryItem {
-    width: 50%;
+    max-width: 50%;
     margin-bottom: 10px;
   }
 }

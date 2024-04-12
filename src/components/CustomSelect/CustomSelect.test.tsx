@@ -1,7 +1,7 @@
-import { fireEvent, render } from '@testing-library/react';
-
-import { CustomSelect } from '.';
 import { ICustomSelectProps } from './types';
+import { CustomSelect } from '.';
+
+import { fireEvent, render } from '@testing-library/react';
 
 jest.mock('next-intl', () => ({
   useTranslations: jest.fn(() => jest.fn((key) => key)),

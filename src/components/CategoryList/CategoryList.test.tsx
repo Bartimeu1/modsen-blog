@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-
 import { CategoryList } from '.';
+
+import { render } from '@testing-library/react';
 
 jest.mock('next-intl', () => ({
   useTranslations: jest.fn(() => jest.fn((key) => key)),

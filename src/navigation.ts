@@ -1,7 +1,9 @@
 import { createLocalizedPathnamesNavigation } from 'next-intl/navigation';
 import { Pathnames } from 'next-intl/navigation';
 
-export const locales = ['en', 'ru'] as const;
+import { localizationItems } from './constants';
+
+export const locales = [localizationItems.en, localizationItems.ru] as const;
 
 export const pathnames = {
   '/': '/',

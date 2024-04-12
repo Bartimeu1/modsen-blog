@@ -1,5 +1,6 @@
-import { Button } from '@components/Button';
 import { useTranslations } from 'next-intl';
+
+import { Button } from '@components/Button';
 
 import styles from './styles.module.scss';
 
@@ -7,7 +8,7 @@ export const Story = () => {
   const t = useTranslations('Main.Story');
 
   return (
-    <section className={styles.story}>
+    <div className={styles.story}>
       <div className={styles.storyContent}>
         <h6 className="subtitle">{t('subtitle')}</h6>
         <h2 className={styles.storyTitle}>{t('title')}</h2>
@@ -19,6 +20,6 @@ export const Story = () => {
         </p>
         <Button text={t('button')} />
       </div>
-    </section>
+    </div>
   );
 };

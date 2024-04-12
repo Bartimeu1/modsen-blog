@@ -1,14 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import classNames from 'classnames';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { LocalizationToggle } from '@components/LocalizationToggle';
 import { NavMenu } from '@components/NavMenu';
 import { VideoModal } from '@components/VideoModal';
+
 import { routes } from '@root/constants';
-import classNames from 'classnames';
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
 import styles from './styles.module.scss';
 
@@ -52,6 +53,7 @@ export const Header = () => {
             className={styles.videoButton}
             onClick={onVideoButtonClick}
             type="button"
+            data-testid="video-button"
           >
             {t('videoButton')}
           </button>
